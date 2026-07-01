@@ -1,0 +1,87 @@
+CRITICAL - 2025-08-05 21:21:21 --> ErrorException: Undefined property: App\Controllers\Shinsa::$taikaiLibrarie
+[Method: POST, Route: shinsa/shinsa_request]
+in APPPATH\Controllers\Shinsa.php on line 150.
+ 1 APPPATH\Controllers\Shinsa.php(150): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Shinsa::$taikaiLibrarie', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Controllers\\Shinsa.php', 150)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-05 21:25:29 --> ErrorException: Undefined property: App\Controllers\Shinsa::$taikaiLibrarie
+[Method: POST, Route: shinsa/shinsa_request]
+in APPPATH\Controllers\Shinsa.php on line 150.
+ 1 APPPATH\Controllers\Shinsa.php(150): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Shinsa::$taikaiLibrarie', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Controllers\\Shinsa.php', 150)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-05 22:08:23 --> ErrorException: Undefined array key "modefied"
+[Method: GET, Route: shinsa/detail/4]
+in APPPATH\Helpers\shinsa_helper.php on line 548.
+ 1 APPPATH\Helpers\shinsa_helper.php(548): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "modefied"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\shinsa_helper.php', 548)
+ 2 APPPATH\Views\shinsa\detail_chiho.php(11): shinsa_offer_member_list_html([...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\detail_chiho.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shinsa/detail_chiho', [], true)
+ 6 APPPATH\Controllers\Shinsa.php(123): view('shinsa/detail_chiho')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('4')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-05 22:36:44 --> ErrorException: Undefined variable $shinsaResultFlg
+[Method: POST, Route: shinsa/shinsa_result_report]
+in APPPATH\Models\ShinsaModel.php on line 479.
+ 1 APPPATH\Models\ShinsaModel.php(479): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $shinsaResultFlg', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Models\\ShinsaModel.php', 479)
+ 2 APPPATH\Libraries\ShinsaLibrarie.php(243): App\Models\ShinsaModel->shinsa_result_report(4, 2, 65)
+ 3 APPPATH\Controllers\Shinsa.php(181): App\Libraries\ShinsaLibrarie->shinsa_result_report(4, 2, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_result_report()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-05 22:37:11 --> ErrorException: Undefined variable $shinsaTargetId
+[Method: POST, Route: shinsa/shinsa_result_report]
+in APPPATH\Libraries\ShinsaLibrarie.php on line 251.
+ 1 APPPATH\Libraries\ShinsaLibrarie.php(251): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $shinsaTargetId', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\ShinsaLibrarie.php', 251)
+ 2 APPPATH\Controllers\Shinsa.php(181): App\Libraries\ShinsaLibrarie->shinsa_result_report(4, 2, [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_result_report()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-05 22:44:17 --> ErrorException: Undefined variable $shinsaTargetId
+[Method: POST, Route: shinsa/shinsa_result_report]
+in APPPATH\Libraries\ShinsaLibrarie.php on line 251.
+ 1 APPPATH\Libraries\ShinsaLibrarie.php(251): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $shinsaTargetId', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\ShinsaLibrarie.php', 251)
+ 2 APPPATH\Controllers\Shinsa.php(181): App\Libraries\ShinsaLibrarie->shinsa_result_report(4, 1, [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_result_report()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-05 22:56:02 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2025-08-05 22:56:02 --> 
+ERROR - 2025-08-05 22:57:06 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2025-08-05 22:57:06 --> 
+ERROR - 2025-08-05 23:16:35 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2025-08-05 23:16:35 --> 
+ERROR - 2025-08-05 23:35:29 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2025-08-05 23:35:29 --> 
+ERROR - 2025-08-05 23:35:49 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2025-08-05 23:35:49 --> 
+ERROR - 2025-08-05 23:38:47 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2025-08-05 23:38:47 --> 
+ERROR - 2025-08-05 23:38:59 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2025-08-05 23:38:59 --> 
+ERROR - 2025-08-05 23:39:41 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2025-08-05 23:39:41 --> 
+ERROR - 2025-08-05 23:40:19 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2025-08-05 23:40:19 --> 

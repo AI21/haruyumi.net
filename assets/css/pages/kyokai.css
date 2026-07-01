@@ -1,0 +1,7 @@
+table.event-list td {
+	padding: .5rem .2rem;
+}
+button.event-cancel {
+	position: absolute;
+	right: 0.5em;
+}

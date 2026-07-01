@@ -1,0 +1,198 @@
+ERROR - 2025-06-03 22:40:48 --> mysqli_sql_exception: Unknown column 'kom.use_flg' in 'where clause' in C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n\t\t\tSELECT\n\t\t\t\t...', 0)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t\tSELECT\n\t\t\t\t...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t\tSELECT\n\t\t\t\t...')
+#3 C:\xampp_htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('\n\t\t\tSELECT\n\t\t\t\t...', Array)
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Models\LoginModel.php(99): App\Models\BaseQueryModel->get_result_array('\n\t\t\tSELECT\n\t\t\t\t...', Array)
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\LoginLibrarie.php(114): App\Models\LoginModel->get_notice_admin_id_list(65)
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\CommonController.php(85): App\Libraries\LoginLibrarie->get_notice_admin_id_list(65)
+#7 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\CommonController.php(36): App\Controllers\CommonController->get_member_data()
+#8 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Kyokai.php(14): App\Controllers\CommonController->__construct('kyokai')
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(903): App\Controllers\Kyokai->__construct()
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-06-03 22:40:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kom.use_flg' in 'where clause'
+[Method: GET, Route: kyokai]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				mkon.notice_id
+			FROM
+				m_kyokai_officer_member kom 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = kom.kyokai_officer_id
+			WHERE
+				kom.use_flg = :useFlg:
+				AND kom.member_id = :memberId:
+			GROUP BY
+				mkon.notice_id
+		', [...])
+ 2 APPPATH\Models\LoginModel.php(99): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				mkon.notice_id
+			FROM
+				m_kyokai_officer_member kom 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = kom.kyokai_officer_id
+			WHERE
+				kom.use_flg = :useFlg:
+				AND kom.member_id = :memberId:
+			GROUP BY
+				mkon.notice_id
+		', [...])
+ 3 APPPATH\Libraries\LoginLibrarie.php(114): App\Models\LoginModel->get_notice_admin_id_list(65)
+ 4 APPPATH\Controllers\CommonController.php(85): App\Libraries\LoginLibrarie->get_notice_admin_id_list(65)
+ 5 APPPATH\Controllers\CommonController.php(36): App\Controllers\CommonController->get_member_data()
+ 6 APPPATH\Controllers\Kyokai.php(14): App\Controllers\CommonController->__construct('kyokai')
+ 7 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Kyokai->__construct()
+ 8 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-03 22:40:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kom.use_flg' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT
+				mkon.notice_id
+			FROM
+				m_kyokai_officer_member kom 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = kom.kyokai_officer_id
+			WHERE
+				kom.use_flg = \'1\'
+				AND kom.member_id = 65
+			GROUP BY
+				mkon.notice_id
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT
+				mkon.notice_id
+			FROM
+				m_kyokai_officer_member kom 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = kom.kyokai_officer_id
+			WHERE
+				kom.use_flg = \'1\'
+				AND kom.member_id = 65
+			GROUP BY
+				mkon.notice_id
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				mkon.notice_id
+			FROM
+				m_kyokai_officer_member kom 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = kom.kyokai_officer_id
+			WHERE
+				kom.use_flg = :useFlg:
+				AND kom.member_id = :memberId:
+			GROUP BY
+				mkon.notice_id
+		', [...])
+ 4 APPPATH\Models\LoginModel.php(99): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				mkon.notice_id
+			FROM
+				m_kyokai_officer_member kom 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = kom.kyokai_officer_id
+			WHERE
+				kom.use_flg = :useFlg:
+				AND kom.member_id = :memberId:
+			GROUP BY
+				mkon.notice_id
+		', [...])
+ 5 APPPATH\Libraries\LoginLibrarie.php(114): App\Models\LoginModel->get_notice_admin_id_list(65)
+ 6 APPPATH\Controllers\CommonController.php(85): App\Libraries\LoginLibrarie->get_notice_admin_id_list(65)
+ 7 APPPATH\Controllers\CommonController.php(36): App\Controllers\CommonController->get_member_data()
+ 8 APPPATH\Controllers\Kyokai.php(14): App\Controllers\CommonController->__construct('kyokai')
+ 9 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Kyokai->__construct()
+10 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-03 22:40:48 --> [Caused by] mysqli_sql_exception: Unknown column 'kom.use_flg' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+			SELECT
+				mkon.notice_id
+			FROM
+				m_kyokai_officer_member kom 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = kom.kyokai_officer_id
+			WHERE
+				kom.use_flg = \'1\'
+				AND kom.member_id = 65
+			GROUP BY
+				mkon.notice_id
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT
+				mkon.notice_id
+			FROM
+				m_kyokai_officer_member kom 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = kom.kyokai_officer_id
+			WHERE
+				kom.use_flg = \'1\'
+				AND kom.member_id = 65
+			GROUP BY
+				mkon.notice_id
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT
+				mkon.notice_id
+			FROM
+				m_kyokai_officer_member kom 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = kom.kyokai_officer_id
+			WHERE
+				kom.use_flg = \'1\'
+				AND kom.member_id = 65
+			GROUP BY
+				mkon.notice_id
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				mkon.notice_id
+			FROM
+				m_kyokai_officer_member kom 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = kom.kyokai_officer_id
+			WHERE
+				kom.use_flg = :useFlg:
+				AND kom.member_id = :memberId:
+			GROUP BY
+				mkon.notice_id
+		', [...])
+ 5 APPPATH\Models\LoginModel.php(99): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				mkon.notice_id
+			FROM
+				m_kyokai_officer_member kom 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = kom.kyokai_officer_id
+			WHERE
+				kom.use_flg = :useFlg:
+				AND kom.member_id = :memberId:
+			GROUP BY
+				mkon.notice_id
+		', [...])
+ 6 APPPATH\Libraries\LoginLibrarie.php(114): App\Models\LoginModel->get_notice_admin_id_list(65)
+ 7 APPPATH\Controllers\CommonController.php(85): App\Libraries\LoginLibrarie->get_notice_admin_id_list(65)
+ 8 APPPATH\Controllers\CommonController.php(36): App\Controllers\CommonController->get_member_data()
+ 9 APPPATH\Controllers\Kyokai.php(14): App\Controllers\CommonController->__construct('kyokai')
+10 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Kyokai->__construct()
+11 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

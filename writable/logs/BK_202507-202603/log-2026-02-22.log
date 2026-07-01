@@ -1,0 +1,67 @@
+CRITICAL - 2026-02-22 23:19:17 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: kyokai/26]
+in SYSTEMPATH\Database\BaseConnection.php on line 927.
+ 1 SYSTEMPATH\Model.php(716): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(922): CodeIgniter\Model->builder()
+ 3 APPPATH\Libraries\KyokaiLibrarie.php(23): CodeIgniter\Model->__call('get_kyokai_regist_nendo_list', [])
+ 4 APPPATH\Controllers\Kyokai.php(31): App\Libraries\KyokaiLibrarie->get_kyokai_regist_nendo_list('26', null)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kyokai->index('26')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kyokai))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-22 23:19:33 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: kyokai/26]
+in SYSTEMPATH\Database\BaseConnection.php on line 927.
+ 1 SYSTEMPATH\Model.php(716): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(922): CodeIgniter\Model->builder()
+ 3 APPPATH\Libraries\KyokaiLibrarie.php(23): CodeIgniter\Model->__call('get_kyokai_regist_nendo_list', [])
+ 4 APPPATH\Controllers\Kyokai.php(31): App\Libraries\KyokaiLibrarie->get_kyokai_regist_nendo_list('26', null)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kyokai->index('26')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kyokai))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-22 23:20:05 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: kyokai/26]
+in SYSTEMPATH\Database\BaseConnection.php on line 927.
+ 1 SYSTEMPATH\Model.php(716): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(922): CodeIgniter\Model->builder()
+ 3 APPPATH\Libraries\KyokaiLibrarie.php(23): CodeIgniter\Model->__call('get_kyokai_regist_nendo_list', [])
+ 4 APPPATH\Controllers\Kyokai.php(31): App\Libraries\KyokaiLibrarie->get_kyokai_regist_nendo_list('26', null)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kyokai->index('26')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kyokai))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-22 23:29:58 --> ErrorException: Undefined variable $fiscalYearId
+[Method: GET, Route: kyokai/detail/27]
+in APPPATH\Views\common\menu.php on line 22.
+ 1 APPPATH\Views\common\menu.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fiscalYearId', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\common\\menu.php', 22)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\common\\menu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('common/menu', [], true)
+ 5 APPPATH\Controllers\Kyokai.php(92): view('common/menu')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kyokai->detail('27')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kyokai))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-22 23:30:04 --> ErrorException: Undefined variable $fiscalYearId
+[Method: GET, Route: kyokai/detail/14]
+in APPPATH\Views\common\menu.php on line 22.
+ 1 APPPATH\Views\common\menu.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fiscalYearId', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\common\\menu.php', 22)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\common\\menu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('common/menu', [], true)
+ 5 APPPATH\Controllers\Kyokai.php(92): view('common/menu')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kyokai->detail('14')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kyokai))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

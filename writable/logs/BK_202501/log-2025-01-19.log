@@ -1,0 +1,340 @@
+CRITICAL - 2025-01-19 08:06:12 --> ErrorException: Undefined variable $errMsg
+[Method: POST, Route: login/check]
+in APPPATH\Controllers\Login.php on line 47.
+ 1 APPPATH\Controllers\Login.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $errMsg', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Controllers\\Login.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->check()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-19 08:06:12 --> ErrorException: Undefined variable $errMsg
+[Method: POST, Route: login/check]
+in APPPATH\Controllers\Login.php on line 47.
+ 1 APPPATH\Controllers\Login.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $errMsg', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Controllers\\Login.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->check()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-19 08:06:21 --> ErrorException: Undefined variable $errMsg
+[Method: POST, Route: login/check]
+in APPPATH\Controllers\Login.php on line 47.
+ 1 APPPATH\Controllers\Login.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $errMsg', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Controllers\\Login.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->check()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-19 08:06:34 --> ErrorException: Undefined variable $errMsg
+[Method: POST, Route: login/check]
+in APPPATH\Controllers\Login.php on line 47.
+ 1 APPPATH\Controllers\Login.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $errMsg', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Controllers\\Login.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->check()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-19 08:09:33 --> ErrorException: Undefined variable $errMsg
+[Method: POST, Route: login/check]
+in APPPATH\Controllers\Login.php on line 47.
+ 1 APPPATH\Controllers\Login.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $errMsg', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Controllers\\Login.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->check()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-19 08:32:08 --> ParseError: syntax error, unexpected identifier "common", expecting ")"
+[Method: GET, Route: shinsa/detail/2]
+in APPPATH\Controllers\Shinsa.php on line 92.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Controllers\\Shinsa.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Shinsa')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Shinsa')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Shinsa', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-19 09:02:14 --> ErrorException: Undefined variable $taikaiId
+[Method: POST, Route: shinsa/shinsa_request]
+in APPPATH\Libraries\ShinsaLibrarie.php on line 83.
+ 1 APPPATH\Libraries\ShinsaLibrarie.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $taikaiId', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Libraries\\ShinsaLibrarie.php', 83)
+ 2 APPPATH\Controllers\Shinsa.php(116): App\Libraries\ShinsaLibrarie->shinsa_request_member(2, 7, 65, 'join')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-19 09:11:39 --> ErrorException: Undefined array key "shinsa_target_name"
+[Method: GET, Route: shinsa/detail/2]
+in APPPATH\Helpers\shinsa_helper.php on line 144.
+ 1 APPPATH\Helpers\shinsa_helper.php(144): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "shinsa_target_name"', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Helpers\\shinsa_helper.php', 144)
+ 2 APPPATH\Views\shinsa\detail_chiho.php(4): get_shinsa_chiho_detail_html([...], [...], [...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\detail_chiho.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shinsa/detail_chiho', [], true)
+ 6 APPPATH\Controllers\Shinsa.php(90): view('shinsa/detail_chiho', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('2')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-19 09:25:05 --> ErrorException: Undefined array key "shinsa_target_id"
+[Method: GET, Route: shinsa/detail/2]
+in APPPATH\Views\shinsa\detail_chiho.php on line 6.
+ 1 APPPATH\Views\shinsa\detail_chiho.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "shinsa_target_id"', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\detail_chiho.php', 6)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\detail_chiho.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shinsa/detail_chiho', [], true)
+ 5 APPPATH\Controllers\Shinsa.php(90): view('shinsa/detail_chiho', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-19 09:26:11 --> ErrorException: Undefined array key "shinsa_target_id"
+[Method: GET, Route: shinsa/detail/2]
+in APPPATH\Views\shinsa\detail_chiho.php on line 6.
+ 1 APPPATH\Views\shinsa\detail_chiho.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "shinsa_target_id"', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\detail_chiho.php', 6)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\detail_chiho.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shinsa/detail_chiho', [], true)
+ 5 APPPATH\Controllers\Shinsa.php(90): view('shinsa/detail_chiho', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-01-19 09:39:33 --> mysqli_sql_exception: Unknown column 'shinsa_id' in 'where clause' in C:\xampp\htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n\t\t\tDELETE FROM...', 0)
+#1 C:\xampp\htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t\tDELETE FROM...')
+#2 C:\xampp\htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t\tDELETE FROM...')
+#3 C:\xampp\htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(69): CodeIgniter\Database\BaseConnection->query('\n\t\t\tDELETE FROM...', Array)
+#4 C:\xampp\htdocs\kasugaikyudo\production\app\Models\ShinsaModel.php(240): App\Models\BaseQueryModel->get_result_query('\n\t\t\tDELETE FROM...', Array)
+#5 C:\xampp\htdocs\kasugaikyudo\production\app\Libraries\ShinsaLibrarie.php(90): App\Models\ShinsaModel->shinsa_cancel_member(2, 65)
+#6 C:\xampp\htdocs\kasugaikyudo\production\app\Controllers\Shinsa.php(116): App\Libraries\ShinsaLibrarie->shinsa_request_member(2, 7, 65, 'cancel')
+#7 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+#8 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+#9 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\kasugaikyudo\production\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-01-19 09:39:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'shinsa_id' in 'where clause'
+[Method: POST, Route: shinsa/shinsa_request]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(69): CodeIgniter\Database\BaseConnection->query('
+			DELETE FROM t_taikai_offer_member 
+			WHERE 
+				shinsa_id = :shinsaId:
+				AND member_id = :memberId:
+		', [...])
+ 2 APPPATH\Models\ShinsaModel.php(240): App\Models\BaseQueryModel->get_result_query('
+			DELETE FROM t_taikai_offer_member 
+			WHERE 
+				shinsa_id = :shinsaId:
+				AND member_id = :memberId:
+		', [...])
+ 3 APPPATH\Libraries\ShinsaLibrarie.php(90): App\Models\ShinsaModel->shinsa_cancel_member(2, 65)
+ 4 APPPATH\Controllers\Shinsa.php(116): App\Libraries\ShinsaLibrarie->shinsa_request_member(2, 7, 65, 'cancel')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-19 09:39:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'shinsa_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			DELETE FROM t_taikai_offer_member 
+			WHERE 
+				shinsa_id = 2
+				AND member_id = 65
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			DELETE FROM t_taikai_offer_member 
+			WHERE 
+				shinsa_id = 2
+				AND member_id = 65
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(69): CodeIgniter\Database\BaseConnection->query('
+			DELETE FROM t_taikai_offer_member 
+			WHERE 
+				shinsa_id = :shinsaId:
+				AND member_id = :memberId:
+		', [...])
+ 4 APPPATH\Models\ShinsaModel.php(240): App\Models\BaseQueryModel->get_result_query('
+			DELETE FROM t_taikai_offer_member 
+			WHERE 
+				shinsa_id = :shinsaId:
+				AND member_id = :memberId:
+		', [...])
+ 5 APPPATH\Libraries\ShinsaLibrarie.php(90): App\Models\ShinsaModel->shinsa_cancel_member(2, 65)
+ 6 APPPATH\Controllers\Shinsa.php(116): App\Libraries\ShinsaLibrarie->shinsa_request_member(2, 7, 65, 'cancel')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-19 09:39:33 --> [Caused by] mysqli_sql_exception: Unknown column 'shinsa_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+			DELETE FROM t_taikai_offer_member 
+			WHERE 
+				shinsa_id = 2
+				AND member_id = 65
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			DELETE FROM t_taikai_offer_member 
+			WHERE 
+				shinsa_id = 2
+				AND member_id = 65
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			DELETE FROM t_taikai_offer_member 
+			WHERE 
+				shinsa_id = 2
+				AND member_id = 65
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(69): CodeIgniter\Database\BaseConnection->query('
+			DELETE FROM t_taikai_offer_member 
+			WHERE 
+				shinsa_id = :shinsaId:
+				AND member_id = :memberId:
+		', [...])
+ 5 APPPATH\Models\ShinsaModel.php(240): App\Models\BaseQueryModel->get_result_query('
+			DELETE FROM t_taikai_offer_member 
+			WHERE 
+				shinsa_id = :shinsaId:
+				AND member_id = :memberId:
+		', [...])
+ 6 APPPATH\Libraries\ShinsaLibrarie.php(90): App\Models\ShinsaModel->shinsa_cancel_member(2, 65)
+ 7 APPPATH\Controllers\Shinsa.php(116): App\Libraries\ShinsaLibrarie->shinsa_request_member(2, 7, 65, 'cancel')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-19 10:43:00 --> ErrorException: Undefined array key "login_id"
+[Method: GET, Route: login/change]
+in APPPATH\Views\login\change.php on line 9.
+ 1 APPPATH\Views\login\change.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "login_id"', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\login\\change.php', 9)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\login\\change.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('login/change', [], true)
+ 5 APPPATH\Controllers\Login.php(43): view('login/change', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->change()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-19 10:43:19 --> ErrorException: Undefined array key "login_id"
+[Method: GET, Route: login/change]
+in APPPATH\Views\login\change.php on line 9.
+ 1 APPPATH\Views\login\change.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "login_id"', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\login\\change.php', 9)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\login\\change.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('login/change', [], true)
+ 5 APPPATH\Controllers\Login.php(43): view('login/change', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->change()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-19 10:45:10 --> ErrorException: Undefined array key "login_id"
+[Method: GET, Route: login/change]
+in APPPATH\Views\login\change.php on line 9.
+ 1 APPPATH\Views\login\change.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "login_id"', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\login\\change.php', 9)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\login\\change.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('login/change', [], true)
+ 5 APPPATH\Controllers\Login.php(43): view('login/change', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->change()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-01-19 22:01:23 --> Error connecting to the database: mysqli_sql_exception: 対象のコンピューターによって拒否されたため、接続できませんでした。 in C:\xampp\htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'kasugai_kyudo', 3306, '', 0)
+#1 C:\xampp\htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('\n\t\t\tSELECT\n\t\t\t\t...', Array)
+#4 C:\xampp\htdocs\kasugaikyudo\production\app\Models\CommonModel.php(32): App\Models\BaseQueryModel->get_first_row('\n\t\t\tSELECT\n\t\t\t\t...', Array)
+#5 C:\xampp\htdocs\kasugaikyudo\production\app\Libraries\CommonLibrarie.php(20): App\Models\CommonModel->get_setting_data()
+#6 C:\xampp\htdocs\kasugaikyudo\production\app\Controllers\CommonController.php(54): App\Libraries\CommonLibrarie->get_setting_data()
+#7 C:\xampp\htdocs\kasugaikyudo\production\app\Controllers\CommonController.php(31): App\Controllers\CommonController->get_setting()
+#8 C:\xampp\htdocs\kasugaikyudo\production\app\Controllers\Login.php(10): App\Controllers\CommonController->__construct()
+#9 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(903): App\Controllers\Login->__construct()
+#10 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+#11 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\kasugaikyudo\production\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: 対象のコンピューターによって拒否されたため、接続できませんでした。 in C:\xampp\htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('\n\t\t\tSELECT\n\t\t\t\t...', Array)
+#3 C:\xampp\htdocs\kasugaikyudo\production\app\Models\CommonModel.php(32): App\Models\BaseQueryModel->get_first_row('\n\t\t\tSELECT\n\t\t\t\t...', Array)
+#4 C:\xampp\htdocs\kasugaikyudo\production\app\Libraries\CommonLibrarie.php(20): App\Models\CommonModel->get_setting_data()
+#5 C:\xampp\htdocs\kasugaikyudo\production\app\Controllers\CommonController.php(54): App\Libraries\CommonLibrarie->get_setting_data()
+#6 C:\xampp\htdocs\kasugaikyudo\production\app\Controllers\CommonController.php(31): App\Controllers\CommonController->get_setting()
+#7 C:\xampp\htdocs\kasugaikyudo\production\app\Controllers\Login.php(10): App\Controllers\CommonController->__construct()
+#8 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(903): App\Controllers\Login->__construct()
+#9 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+#10 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\kasugaikyudo\production\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-01-19 22:01:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: 対象のコンピューターによって拒否されたため、接続できませんでした。
+[Method: GET, Route: login/change]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				mse.fiscal_year_id
+				,mfy.year
+				,mfy.wareki
+			FROM m_setting mse
+				INNER JOIN m_fiscal_year mfy
+					ON mfy.fiscal_year_id = mse.fiscal_year_id
+		', [])
+ 3 APPPATH\Models\CommonModel.php(32): App\Models\BaseQueryModel->get_first_row('
+			SELECT
+				mse.fiscal_year_id
+				,mfy.year
+				,mfy.wareki
+			FROM m_setting mse
+				INNER JOIN m_fiscal_year mfy
+					ON mfy.fiscal_year_id = mse.fiscal_year_id
+		', [])
+ 4 APPPATH\Libraries\CommonLibrarie.php(20): App\Models\CommonModel->get_setting_data()
+ 5 APPPATH\Controllers\CommonController.php(54): App\Libraries\CommonLibrarie->get_setting_data()
+ 6 APPPATH\Controllers\CommonController.php(31): App\Controllers\CommonController->get_setting()
+ 7 APPPATH\Controllers\Login.php(10): App\Controllers\CommonController->__construct()
+ 8 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Login->__construct()
+ 9 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

@@ -1,0 +1,162 @@
+CRITICAL - 2026-03-20 23:34:37 --> ErrorException: Undefined variable $classMain
+[Method: POST, Route: admin/shinsa_revision]
+in APPPATH\Helpers\Admin\shinsa_helper.php on line 67.
+ 1 APPPATH\Helpers\Admin\shinsa_helper.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $classMain', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\Admin\\shinsa_helper.php', 67)
+ 2 APPPATH\Views\admin\shinsa\shinsa_regist.php(7): form_shinsa_detail([...], [...], [...], [...], 10)
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\admin\\shinsa\\shinsa_regist.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/shinsa/shinsa_regist', [], true)
+ 6 APPPATH\Controllers\Admin\AdminShinsa.php(87): view('admin/shinsa/shinsa_regist')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-20 23:34:59 --> ErrorException: Undefined variable $classMain
+[Method: POST, Route: admin/shinsa_revision]
+in APPPATH\Helpers\Admin\shinsa_helper.php on line 67.
+ 1 APPPATH\Helpers\Admin\shinsa_helper.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $classMain', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\Admin\\shinsa_helper.php', 67)
+ 2 APPPATH\Views\admin\shinsa\shinsa_regist.php(7): form_shinsa_detail([...], [...], [...], [...], 10)
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\admin\\shinsa\\shinsa_regist.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/shinsa/shinsa_regist', [], true)
+ 6 APPPATH\Controllers\Admin\AdminShinsa.php(87): view('admin/shinsa/shinsa_regist')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-20 23:38:56 --> Error: Call to undefined method App\Validation\MyRules::date_time_check()
+[Method: POST, Route: admin/shinsa_regist_conf]
+in APPPATH\Controllers\Admin\AdminShinsa.php on line 148.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_shinsa_regist_conf()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-20 23:39:44 --> Error: Call to undefined method App\Validation\MyRules::date_time_check()
+[Method: POST, Route: admin/shinsa_regist_conf]
+in APPPATH\Controllers\Admin\AdminShinsa.php on line 148.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_shinsa_regist_conf()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-20 23:46:21 --> TypeError: App\Validation\MyRules::valid_date(): Argument #1 ($value) must be of type string, null given, called in C:\xampp_htdocs\kasugaikyudo\production\system\Validation\Validation.php on line 339
+[Method: POST, Route: admin/shinsa_regist_conf]
+in APPPATH\Validation\MyRules.php on line 59.
+ 1 SYSTEMPATH\Validation\Validation.php(339): App\Validation\MyRules->valid_date(null, 'Y-m-d', [...], null, 'shinsa_date_2')
+ 2 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('shinsa_date_2', '審査日2', null, [...], [...], 'shinsa_date_2')
+ 3 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Admin\AdminShinsa.php(137): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_shinsa_regist_conf()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-20 23:47:18 --> TypeError: App\Validation\MyRules::valid_date(): Argument #1 ($value) must be of type string, null given, called in C:\xampp_htdocs\kasugaikyudo\production\system\Validation\Validation.php on line 339
+[Method: POST, Route: admin/shinsa_regist_conf]
+in APPPATH\Validation\MyRules.php on line 59.
+ 1 SYSTEMPATH\Validation\Validation.php(339): App\Validation\MyRules->valid_date(null, 'Y-m-d', [...], null, 'shinsa_date_2')
+ 2 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('shinsa_date_2', '審査日2', null, [...], [...], 'shinsa_date_2')
+ 3 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Admin\AdminShinsa.php(137): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_shinsa_regist_conf()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-20 23:47:28 --> TypeError: App\Validation\MyRules::valid_date(): Argument #1 ($value) must be of type string, null given, called in C:\xampp_htdocs\kasugaikyudo\production\system\Validation\Validation.php on line 339
+[Method: POST, Route: admin/shinsa_regist_conf]
+in APPPATH\Validation\MyRules.php on line 59.
+ 1 SYSTEMPATH\Validation\Validation.php(339): App\Validation\MyRules->valid_date(null, 'Y-m-d', [...], null, 'shinsa_date_2')
+ 2 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('shinsa_date_2', '審査日2', null, [...], [...], 'shinsa_date_2')
+ 3 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Admin\AdminShinsa.php(137): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_shinsa_regist_conf()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-20 23:47:36 --> TypeError: App\Validation\MyRules::valid_date(): Argument #1 ($value) must be of type string, null given, called in C:\xampp_htdocs\kasugaikyudo\production\system\Validation\Validation.php on line 339
+[Method: POST, Route: admin/shinsa_regist_conf]
+in APPPATH\Validation\MyRules.php on line 59.
+ 1 SYSTEMPATH\Validation\Validation.php(339): App\Validation\MyRules->valid_date(null, 'Y-m-d', [...], null, 'shinsa_date_2')
+ 2 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('shinsa_date_2', '審査日2', null, [...], [...], 'shinsa_date_2')
+ 3 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Admin\AdminShinsa.php(137): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_shinsa_regist_conf()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-20 23:49:22 --> TypeError: App\Validation\MyRules::valid_date(): Argument #1 ($value) must be of type string, null given, called in C:\xampp_htdocs\kasugaikyudo\production\system\Validation\Validation.php on line 339
+[Method: POST, Route: admin/shinsa_regist_conf]
+in APPPATH\Validation\MyRules.php on line 59.
+ 1 SYSTEMPATH\Validation\Validation.php(339): App\Validation\MyRules->valid_date(null, 'Y-m-d', [...], null, 'shinsa_date_2')
+ 2 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('shinsa_date_2', '審査日2', null, [...], [...], 'shinsa_date_2')
+ 3 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Admin\AdminShinsa.php(137): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_shinsa_regist_conf()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-20 23:51:24 --> TypeError: App\Validation\MyRules::valid_date(): Argument #1 ($value) must be of type string, null given, called in C:\xampp_htdocs\kasugaikyudo\production\system\Validation\Validation.php on line 339
+[Method: POST, Route: admin/shinsa_regist_conf]
+in APPPATH\Validation\MyRules.php on line 59.
+ 1 SYSTEMPATH\Validation\Validation.php(339): App\Validation\MyRules->valid_date(null, 'Y-m-d', [...], null, 'shinsa_date_2')
+ 2 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('shinsa_date_2', '審査日2', null, [...], [...], 'shinsa_date_2')
+ 3 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Admin\AdminShinsa.php(137): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_shinsa_regist_conf()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-20 23:53:00 --> TypeError: App\Validation\MyRules::valid_date(): Argument #1 ($value) must be of type string, null given, called in C:\xampp_htdocs\kasugaikyudo\production\system\Validation\Validation.php on line 339
+[Method: POST, Route: admin/shinsa_regist_conf]
+in APPPATH\Validation\MyRules.php on line 59.
+ 1 SYSTEMPATH\Validation\Validation.php(339): App\Validation\MyRules->valid_date(null, 'Y-m-d', [...], null, 'shinsa_date_2')
+ 2 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('shinsa_date_2', '審査日2', null, [...], [...], 'shinsa_date_2')
+ 3 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Admin\AdminShinsa.php(137): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_shinsa_regist_conf()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-20 23:53:01 --> TypeError: App\Validation\MyRules::valid_date(): Argument #1 ($value) must be of type string, null given, called in C:\xampp_htdocs\kasugaikyudo\production\system\Validation\Validation.php on line 339
+[Method: POST, Route: admin/shinsa_regist_conf]
+in APPPATH\Validation\MyRules.php on line 59.
+ 1 SYSTEMPATH\Validation\Validation.php(339): App\Validation\MyRules->valid_date(null, 'Y-m-d', [...], null, 'shinsa_date_2')
+ 2 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('shinsa_date_2', '審査日2', null, [...], [...], 'shinsa_date_2')
+ 3 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Admin\AdminShinsa.php(137): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_shinsa_regist_conf()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-20 23:53:22 --> ErrorException: Undefined array key "shinsa_class_id"
+[Method: POST, Route: admin/shinsa_regist_conf]
+in APPPATH\Controllers\Admin\AdminShinsa.php on line 143.
+ 1 APPPATH\Controllers\Admin\AdminShinsa.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "shinsa_class_id"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Controllers\\Admin\\AdminShinsa.php', 143)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_shinsa_regist_conf()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

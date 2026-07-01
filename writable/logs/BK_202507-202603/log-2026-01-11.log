@@ -1,0 +1,184 @@
+CRITICAL - 2026-01-11 00:03:59 --> TypeError: App\Models\SeminarModel::insert_notice_rerlation_document_seminar(): Argument #1 ($seminarId) must be of type int, string given, called in C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php on line 208
+[Method: POST, Route: admin/notice_regist_proc]
+in APPPATH\Models\SeminarModel.php on line 236.
+ 1 APPPATH\Libraries\AdminLibrarie.php(208): App\Models\SeminarModel->insert_notice_rerlation_document_seminar('', 124)
+ 2 APPPATH\Controllers\Admin.php(255): App\Libraries\AdminLibrarie->notice_files_proc(124, [...], [])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-11 00:06:16 --> TypeError: App\Models\TaikaiModel::insert_notice_rerlation_document_taikai(): Argument #1 ($taikaiId) must be of type int, string given, called in C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php on line 205
+[Method: POST, Route: admin/notice_regist_proc]
+in APPPATH\Models\TaikaiModel.php on line 361.
+ 1 APPPATH\Libraries\AdminLibrarie.php(205): App\Models\TaikaiModel->insert_notice_rerlation_document_taikai('', 122)
+ 2 APPPATH\Controllers\Admin.php(255): App\Libraries\AdminLibrarie->notice_files_proc(122, [...], [])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-11 00:07:40 --> TypeError: App\Models\TaikaiModel::insert_notice_rerlation_document_taikai(): Argument #1 ($taikaiId) must be of type int, string given, called in C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php on line 205
+[Method: POST, Route: admin/notice_regist_proc]
+in APPPATH\Models\TaikaiModel.php on line 361.
+ 1 APPPATH\Libraries\AdminLibrarie.php(205): App\Models\TaikaiModel->insert_notice_rerlation_document_taikai('', 122)
+ 2 APPPATH\Controllers\Admin.php(255): App\Libraries\AdminLibrarie->notice_files_proc(122, [...], [])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-11 00:09:36 --> TypeError: App\Models\TaikaiModel::insert_notice_rerlation_document_taikai(): Argument #1 ($taikaiId) must be of type int, string given, called in C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php on line 205
+[Method: POST, Route: admin/notice_regist_proc]
+in APPPATH\Models\TaikaiModel.php on line 361.
+ 1 APPPATH\Libraries\AdminLibrarie.php(205): App\Models\TaikaiModel->insert_notice_rerlation_document_taikai('', 122)
+ 2 APPPATH\Controllers\Admin.php(255): App\Libraries\AdminLibrarie->notice_files_proc(122, [...], [])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-11 00:10:00 --> TypeError: App\Models\TaikaiModel::insert_notice_rerlation_document_taikai(): Argument #1 ($taikaiId) must be of type int, string given, called in C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php on line 205
+[Method: POST, Route: admin/notice_regist_proc]
+in APPPATH\Models\TaikaiModel.php on line 361.
+ 1 APPPATH\Libraries\AdminLibrarie.php(205): App\Models\TaikaiModel->insert_notice_rerlation_document_taikai('', 122)
+ 2 APPPATH\Controllers\Admin.php(255): App\Libraries\AdminLibrarie->notice_files_proc(122, [...], [])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-11 23:02:11 --> CodeIgniter\Router\Exceptions\RouterException: The namespace delimiter is a backslash (\), not a slash (/). Route handler: "\App\Controllers\admin/AdminTaikai::taikai_revision"
+[Method: POST, Route: admin/taikai_revision]
+in SYSTEMPATH\Router\Router.php on line 492.
+ 1 SYSTEMPATH\Router\Router.php(492): CodeIgniter\Router\Exceptions\RouterException::forInvalidControllerName('\\App\\Controllers\\admin/AdminTaikai::taikai_revision')
+ 2 SYSTEMPATH\Router\Router.php(210): CodeIgniter\Router\Router->checkRoutes('admin/taikai_revision')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('admin/taikai_revision')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-11 23:03:24 --> CodeIgniter\Router\Exceptions\RouterException: The namespace delimiter is a backslash (\), not a slash (/). Route handler: "\App\Controllers\admin/AdminTaikai::taikai_revision"
+[Method: POST, Route: admin/taikai_revision]
+in SYSTEMPATH\Router\Router.php on line 492.
+ 1 SYSTEMPATH\Router\Router.php(492): CodeIgniter\Router\Exceptions\RouterException::forInvalidControllerName('\\App\\Controllers\\admin/AdminTaikai::taikai_revision')
+ 2 SYSTEMPATH\Router\Router.php(210): CodeIgniter\Router\Router->checkRoutes('admin/taikai_revision')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('admin/taikai_revision')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-11 23:03:53 --> CodeIgniter\Router\Exceptions\RouterException: The namespace delimiter is a backslash (\), not a slash (/). Route handler: "\App\Controllers\admin/AdminTaikai::taikai_revision"
+[Method: POST, Route: admin/taikai_revision]
+in SYSTEMPATH\Router\Router.php on line 492.
+ 1 SYSTEMPATH\Router\Router.php(492): CodeIgniter\Router\Exceptions\RouterException::forInvalidControllerName('\\App\\Controllers\\admin/AdminTaikai::taikai_revision')
+ 2 SYSTEMPATH\Router\Router.php(210): CodeIgniter\Router\Router->checkRoutes('admin/taikai_revision')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('admin/taikai_revision')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-11 23:04:27 --> CodeIgniter\Router\Exceptions\RouterException: The namespace delimiter is a backslash (\), not a slash (/). Route handler: "\App\Controllers\admin/AdminTaikai::taikai_revision"
+[Method: POST, Route: admin/taikai_revision]
+in SYSTEMPATH\Router\Router.php on line 492.
+ 1 SYSTEMPATH\Router\Router.php(492): CodeIgniter\Router\Exceptions\RouterException::forInvalidControllerName('\\App\\Controllers\\admin/AdminTaikai::taikai_revision')
+ 2 SYSTEMPATH\Router\Router.php(210): CodeIgniter\Router\Router->checkRoutes('admin/taikai_revision')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('admin/taikai_revision')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-11 23:06:34 --> Error: Class "App\Controllers\admin\CommonController" not found
+[Method: POST, Route: admin/taikai_revision]
+in APPPATH\Controllers\Admin\AdminTaikai.php on line 7.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Controllers\\Admin\\AdminTaikai.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\AdminTaikai')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\AdminTaikai')
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Admin\\AdminTaikai', true)
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-11 23:34:14 --> Error: Call to undefined function form_taikai_detail()
+[Method: POST, Route: admin/taikai_revision]
+in APPPATH\Views\admin\taikai\taikai_regist.php on line 7.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/taikai/taikai_regist', [], true)
+ 4 APPPATH\Controllers\Admin\AdminTaikai.php(80): view('admin/taikai/taikai_regist')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminTaikai->taikai_revision()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminTaikai))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-11 23:34:42 --> CodeIgniter\Files\Exceptions\FileNotFoundException: File not found: "Admin\taikai_helper"
+[Method: POST, Route: admin/taikai_revision]
+in SYSTEMPATH\Common.php on line 602.
+ 1 SYSTEMPATH\Common.php(602): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('Admin\\taikai_helper')
+ 2 APPPATH\Controllers\Admin\AdminTaikai.php(20): helper([...])
+ 3 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin\AdminTaikai->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-11 23:35:10 --> CodeIgniter\Files\Exceptions\FileNotFoundException: File not found: "Admin\taikai_helper"
+[Method: POST, Route: admin/taikai_revision]
+in SYSTEMPATH\Common.php on line 602.
+ 1 SYSTEMPATH\Common.php(602): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('Admin\\taikai_helper')
+ 2 APPPATH\Controllers\Admin\AdminTaikai.php(20): helper([...])
+ 3 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin\AdminTaikai->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-11 23:38:52 --> Error: Call to undefined function App\Controllers\Admin\member_regist_confirm()
+[Method: POST, Route: admin/member_regist_conf]
+in APPPATH\Controllers\Admin\AdminMember.php on line 283.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminMember->ajax_member_regist_conf()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminMember))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-11 23:45:21 --> Error: Call to undefined function admin_form_file_multiple()
+[Method: POST, Route: admin/taikai_revision]
+in APPPATH\Helpers\Admin\taikai_helper.php on line 173.
+ 1 APPPATH\Views\admin\taikai\taikai_regist.php(7): form_taikai_detail([...], [...], [...])
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\admin\\taikai\\taikai_regist.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/taikai/taikai_regist', [], true)
+ 5 APPPATH\Controllers\Admin\AdminTaikai.php(81): view('admin/taikai/taikai_regist')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminTaikai->taikai_revision()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminTaikai))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-11 23:45:30 --> Error: Call to undefined function admin_form_file_multiple()
+[Method: POST, Route: admin/taikai_revision]
+in APPPATH\Helpers\Admin\taikai_helper.php on line 173.
+ 1 APPPATH\Views\admin\taikai\taikai_regist.php(7): form_taikai_detail([...], [...], [...])
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\admin\\taikai\\taikai_regist.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/taikai/taikai_regist', [], true)
+ 5 APPPATH\Controllers\Admin\AdminTaikai.php(81): view('admin/taikai/taikai_regist')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminTaikai->taikai_revision()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminTaikai))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

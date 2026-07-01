@@ -1,0 +1,153 @@
+input[type=text]{
+	position: relative;
+	width: 96%;
+	padding: 4px 0 4px 0.4em;
+	font-size: 16px;
+	}
+input[type=checkbox]{
+	 position: relative;
+	 top: 3px;
+	 width: 24px;
+	 height: 24px;
+	}
+input::placeholder {
+	color: #E8C79B;
+	}
+p#non_mail,
+#mail_setting {
+	display: none;
+	}
+p#mail_confrim {
+	margin-bottom: 1em;
+	}
+#mail_setting #mail_confrim,
+#dialog_complete {
+	display: none;
+	}
+p#error,
+p#error_conf {
+	margin-bottom: 0;
+	color: #f00;
+	font-weight: bold;
+	font-size: 1.2em;
+	}
+#mail_set_area {
+	}
+	#mail_set_area .title {
+		display: table-cell;
+		width: 4em;
+		}
+	#mail_set_area .item {
+		display: table-cell;
+		width: 84%;
+		}
+	.mail_search {
+		position: relative;
+		margin-top: 1em;
+		text-align: center;
+		}
+	.mail_search button {
+		padding: 4px 1em;
+		}
+		.mail_search button#btn_mail_redo {
+			display: none;
+			}
+		.mail_search button#btn_mail_change,
+		.mail_search button#btn_mail_non_change {
+			position: absolute;
+			right: 1em;
+			top: 0;
+			display: none;
+			}
+	#mail_set_area #mail_change_area {
+		display: none;
+		margin-top: 10px;
+		}
+	#mail_set_area #mail_change_area input#mail_change {
+		width: 95%;
+		}
+#mail_search,
+#user_names {
+	margin: 0 0 1em 10px;
+	text-align: left;
+	}
+#user_names {
+	position: relative;
+	}
+	#user_names input.names {
+		width: 6em;
+		}
+	#user_names #user_name {
+		position: absolute;
+		top: 0;
+		display: none;
+		font-weight: bold;
+		color: #04C;
+		}
+ table#mail_set_calendar {
+	margin: 0 4px;
+	width: -webkit-fill-available;
+	}
+	table#mail_set_calendar th {
+		background-color: #04C;
+		color: #FFF;
+		text-align: center;
+		}
+	table#mail_set_calendar th.title {
+		width: 10em;
+		}
+	table#mail_set_calendar th.set_week {
+		width: 5em;
+		}
+	table#mail_set_calendar td.no_line {
+		border: none;
+		}
+	table#mail_set_calendar td {
+		text-align: center;
+		vertical-align: middle;
+		}
+		table#mail_set_calendar tr:nth-child(8) {
+			background-color: #DEF1FF;
+			}
+		table#mail_set_calendar tr:nth-child(9) {
+			background-color: #FFF0F0;
+			}
+		table#mail_set_calendar tr:last-child {
+			background-color: #FFF0F0;
+			}
+		table#mail_set_calendar tr.week td:first-child {
+			width: 4em;
+			font-size: 120%;
+			}
+
+#set_mail_area {
+	position: relative;
+	display: none;
+	margin-top: 30px;
+	}
+	#set_mail_area button#btn_mail_delete {
+		position: absolute;
+		right: 1em;
+		top: 0;
+		background-color: #FF8584;
+		}
+#widow_close_area {
+	margin-top: 20px;
+	padding-top: 20px;
+	border-top: 1px solid #000;
+	}
+
+/* 確認画面 */
+/*#mail_set_conmplete #mail_setting {*/
+	/*display: block;*/
+	/*}*/
+/*#mail_set_conmplete .item ,*/
+/*#mail_set_conmplete table#mail_set_calendar td span {*/
+	/*font-size: 120%;*/
+	/*font-weight: bold;*/
+	/*color: #04C;*/
+	/*}*/
+
+@media screen and (max-width: 600px){
+
+}

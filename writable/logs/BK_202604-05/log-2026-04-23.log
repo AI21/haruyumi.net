@@ -1,0 +1,115 @@
+CRITICAL - 2026-04-23 00:00:58 --> Exception: Failed to parse time string (undefined) at position 0 (u): The timezone could not be found in the database
+[Method: POST, Route: admin/shinsa_regist_conf]
+in APPPATH\Helpers\datetime_helper.php on line 28.
+ 1 APPPATH\Helpers\datetime_helper.php(28): DateTime->__construct('undefined')
+ 2 APPPATH\Helpers\Admin\shinsa_helper.php(428): date_format_jp('undefined', true, 'ymd')
+ 3 APPPATH\Controllers\Admin\AdminShinsa.php(304): form_shinsa_regist_confirm([...], [...], [])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_shinsa_regist_conf()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-23 00:01:17 --> Exception: Failed to parse time string (undefined) at position 0 (u): The timezone could not be found in the database
+[Method: POST, Route: admin/shinsa_regist_conf]
+in APPPATH\Helpers\datetime_helper.php on line 28.
+ 1 APPPATH\Helpers\datetime_helper.php(28): DateTime->__construct('undefined')
+ 2 APPPATH\Helpers\Admin\shinsa_helper.php(428): date_format_jp('undefined', true, 'ymd')
+ 3 APPPATH\Controllers\Admin\AdminShinsa.php(304): form_shinsa_regist_confirm([...], [...], [])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_shinsa_regist_conf()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-23 00:02:22 --> Exception: Failed to parse time string (undefined) at position 0 (u): The timezone could not be found in the database
+[Method: POST, Route: admin/shinsa_regist_conf]
+in APPPATH\Helpers\datetime_helper.php on line 28.
+ 1 APPPATH\Helpers\datetime_helper.php(28): DateTime->__construct('undefined')
+ 2 APPPATH\Helpers\Admin\shinsa_helper.php(428): date_format_jp('undefined', true, 'ymd')
+ 3 APPPATH\Controllers\Admin\AdminShinsa.php(304): form_shinsa_regist_confirm([...], [...], [])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_shinsa_regist_conf()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-23 20:54:57 --> Exception: Failed to parse time string (undefined) at position 0 (u): The timezone could not be found in the database
+[Method: POST, Route: admin/shinsa_regist_conf]
+in APPPATH\Helpers\datetime_helper.php on line 28.
+ 1 APPPATH\Helpers\datetime_helper.php(28): DateTime->__construct('undefined')
+ 2 APPPATH\Helpers\Admin\shinsa_helper.php(428): date_format_jp('undefined', true, 'ymd')
+ 3 APPPATH\Controllers\Admin\AdminShinsa.php(304): form_shinsa_regist_confirm([...], [...], [])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_shinsa_regist_conf()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-23 20:55:59 --> Exception: Failed to parse time string (undefined) at position 0 (u): The timezone could not be found in the database
+[Method: POST, Route: admin/shinsa_regist_conf]
+in APPPATH\Helpers\datetime_helper.php on line 28.
+ 1 APPPATH\Helpers\datetime_helper.php(28): DateTime->__construct('undefined')
+ 2 APPPATH\Helpers\Admin\shinsa_helper.php(428): date_format_jp('undefined', true, 'ymd')
+ 3 APPPATH\Controllers\Admin\AdminShinsa.php(304): form_shinsa_regist_confirm([...], [...], [])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_shinsa_regist_conf()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-23 20:57:22 --> Exception: Failed to parse time string (undefined) at position 0 (u): The timezone could not be found in the database
+[Method: POST, Route: admin/shinsa_regist_conf]
+in APPPATH\Helpers\datetime_helper.php on line 28.
+ 1 APPPATH\Helpers\datetime_helper.php(28): DateTime->__construct('undefined')
+ 2 APPPATH\Helpers\Admin\shinsa_helper.php(428): date_format_jp('undefined', true, 'ymd')
+ 3 APPPATH\Controllers\Admin\AdminShinsa.php(304): form_shinsa_regist_confirm([...], [...], [])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_shinsa_regist_conf()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-23 21:24:18 --> ErrorException: Undefined array key "fiscal_year_id"
+[Method: GET, Route: shinsa/detail/0]
+in APPPATH\Controllers\Shinsa.php on line 88.
+ 1 APPPATH\Controllers\Shinsa.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fiscal_year_id"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Controllers\\Shinsa.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('0')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-23 22:05:16 --> TypeError: App\Models\Admin\AdminShinsaModel::get_shinsa_kaijo_list(): Argument #1 ($shinsaClassId) must be of type int, null given, called in C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\Admin\AdminShinsaLibrarie.php on line 50
+[Method: POST, Route: admin/get_shinsa_kaijo_list]
+in APPPATH\Models\Admin\AdminShinsaModel.php on line 22.
+ 1 APPPATH\Libraries\Admin\AdminShinsaLibrarie.php(50): App\Models\Admin\AdminShinsaModel->get_shinsa_kaijo_list(null, '12')
+ 2 APPPATH\Controllers\Admin\AdminShinsa.php(569): App\Libraries\Admin\AdminShinsaLibrarie->get_shinsa_kaijo_list(null, '12')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_get_shinsa_kaijo_list()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-23 22:06:49 --> TypeError: App\Models\Admin\AdminShinsaModel::get_shinsa_kaijo_list(): Argument #1 ($shinsaClassId) must be of type int, null given, called in C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\Admin\AdminShinsaLibrarie.php on line 50
+[Method: POST, Route: admin/get_shinsa_kaijo_list]
+in APPPATH\Models\Admin\AdminShinsaModel.php on line 22.
+ 1 APPPATH\Libraries\Admin\AdminShinsaLibrarie.php(50): App\Models\Admin\AdminShinsaModel->get_shinsa_kaijo_list(null, '5')
+ 2 APPPATH\Controllers\Admin\AdminShinsa.php(569): App\Libraries\Admin\AdminShinsaLibrarie->get_shinsa_kaijo_list(null, '5')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_get_shinsa_kaijo_list()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-23 22:07:18 --> TypeError: App\Models\Admin\AdminShinsaModel::get_shinsa_kaijo_list(): Argument #1 ($shinsaClassId) must be of type int, null given, called in C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\Admin\AdminShinsaLibrarie.php on line 50
+[Method: POST, Route: admin/get_shinsa_kaijo_list]
+in APPPATH\Models\Admin\AdminShinsaModel.php on line 22.
+ 1 APPPATH\Libraries\Admin\AdminShinsaLibrarie.php(50): App\Models\Admin\AdminShinsaModel->get_shinsa_kaijo_list(null, '12')
+ 2 APPPATH\Controllers\Admin\AdminShinsa.php(569): App\Libraries\Admin\AdminShinsaLibrarie->get_shinsa_kaijo_list(null, '12')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_get_shinsa_kaijo_list()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

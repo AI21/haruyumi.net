@@ -1,0 +1,48 @@
+CRITICAL - 2025-03-09 19:21:14 --> ErrorException: Undefined variable $filesList
+[Method: POST, Route: admin/notice_regist_conf]
+in APPPATH\Controllers\Admin.php on line 84.
+ 1 APPPATH\Controllers\Admin.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $filesList', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Controllers\\Admin.php', 84)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_conf()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-09 19:21:45 --> ErrorException: Undefined variable $filesList
+[Method: POST, Route: admin/notice_regist_conf]
+in APPPATH\Controllers\Admin.php on line 84.
+ 1 APPPATH\Controllers\Admin.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $filesList', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Controllers\\Admin.php', 84)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_conf()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-09 19:22:21 --> ErrorException: Undefined variable $filesList
+[Method: POST, Route: admin/notice_regist_conf]
+in APPPATH\Controllers\Admin.php on line 84.
+ 1 APPPATH\Controllers\Admin.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $filesList', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Controllers\\Admin.php', 84)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_conf()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-09 19:26:18 --> Error: Cannot use object of type CodeIgniter\HTTP\Files\UploadedFile as array
+[Method: POST, Route: admin/notice_regist_conf]
+in APPPATH\Controllers\Admin.php on line 86.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_conf()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-09 19:50:42 --> Error: Cannot use object of type CodeIgniter\HTTP\Files\UploadedFile as array
+[Method: POST, Route: admin/notice_regist_conf]
+in APPPATH\Controllers\Admin.php on line 86.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_conf()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

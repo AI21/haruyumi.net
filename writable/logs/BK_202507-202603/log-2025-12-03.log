@@ -1,0 +1,50 @@
+CRITICAL - 2025-12-03 23:45:04 --> TypeError: model(): Argument #1 ($name) must be of type string, CodeIgniter\Database\MySQLi\Connection given, called in C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\OujiLibrarie.php on line 13
+[Method: GET, Route: ouji]
+in SYSTEMPATH\Common.php on line 800.
+ 1 APPPATH\Libraries\OujiLibrarie.php(13): model(Object(CodeIgniter\Database\MySQLi\Connection), 'App\\Models\\OujiModel')
+ 2 APPPATH\Controllers\Ouji.php(12): App\Libraries\OujiLibrarie->__construct(Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Ouji->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-03 23:45:14 --> TypeError: model(): Argument #1 ($name) must be of type string, CodeIgniter\Database\MySQLi\Connection given, called in C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\OujiLibrarie.php on line 13
+[Method: GET, Route: ouji]
+in SYSTEMPATH\Common.php on line 800.
+ 1 APPPATH\Libraries\OujiLibrarie.php(13): model(Object(CodeIgniter\Database\MySQLi\Connection))
+ 2 APPPATH\Controllers\Ouji.php(12): App\Libraries\OujiLibrarie->__construct(Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Ouji->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-03 23:56:22 --> ErrorException: Undefined variable $oujiShejule
+[Method: GET, Route: ouji]
+in APPPATH\Views\ouji\index.php on line 21.
+ 1 APPPATH\Views\ouji\index.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $oujiShejule', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\ouji\\index.php', 21)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\ouji\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('ouji/index', [], true)
+ 5 APPPATH\Controllers\Ouji.php(33): view('ouji/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ouji->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ouji))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-03 23:56:41 --> ErrorException: Undefined array key 20251203
+[Method: GET, Route: ouji]
+in APPPATH\Views\ouji\index.php on line 21.
+ 1 APPPATH\Views\ouji\index.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 20251203', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\ouji\\index.php', 21)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\ouji\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('ouji/index', [], true)
+ 5 APPPATH\Controllers\Ouji.php(33): view('ouji/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ouji->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ouji))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

@@ -1,0 +1,64 @@
+input[type=checkbox]{
+	position: relative;
+	top: 3px;
+	width: 16px;
+	height: 16px;
+	}
+select {
+	min-width: 6em;
+	}
+textarea {
+	width: 80%;
+	height: 4.5em;
+	resize: vertical;
+	}
+textarea::placeholder {
+	color: #999;
+	font-weight: normal;
+	font-size: 0.9em;
+	}
+
+#password_set {
+	}
+	#password_set table#admin {
+		margin: 0 auto;
+		width: auto;
+		}
+	#password_set table#admin th,
+	#password_set table#admin td {
+		text-align: left;
+		padding-left: 1em;
+		}
+	#password_set table#admin th {
+		min-width: 7em;
+		background-color: #97DFFC;
+		}
+	#password_set table#admin td {
+		min-width: 280px;
+		}
+	#password_set input[type=password] {
+		width: 15em;
+		}
+	#password_set input[type=text] {
+		width: 15em;
+		/*height: 23px;*/
+		}
+
+#change_pw_area {
+	margin-top: 20px;
+	width: 100%;
+	text-align: center;
+	}
+#change_pw_area button {
+	margin: 0 20px;
+	padding: 4px 10px;
+	}
+#widow_close_area {
+	margin-top: 20px;
+	padding-top: 20px;
+	border-top: 1px solid #000;
+	}
+
+@media screen and (max-width: 600px){
+
+}

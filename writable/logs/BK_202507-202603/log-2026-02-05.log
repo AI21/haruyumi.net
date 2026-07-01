@@ -1,0 +1,64 @@
+CRITICAL - 2026-02-05 23:41:50 --> ErrorException: Undefined array key "result"
+[Method: POST, Route: admin/taikai_revision]
+in APPPATH\Helpers\admin_helper.php on line 148.
+ 1 APPPATH\Helpers\admin_helper.php(148): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "result"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\admin_helper.php', 148)
+ 2 APPPATH\Helpers\Admin\taikai_helper.php(28): admin_form_dropdown('taikai-no', [...], 'taikai_no', 'taikai_no', '50', true)
+ 3 APPPATH\Views\admin\taikai\taikai_regist.php(7): form_taikai_detail([...], [...], [...], 10)
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\admin\\taikai\\taikai_regist.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/taikai/taikai_regist', [], true)
+ 7 APPPATH\Controllers\Admin\AdminTaikai.php(82): view('admin/taikai/taikai_regist')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminTaikai->taikai_revision()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminTaikai))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-05 23:42:43 --> ErrorException: Undefined array key "result"
+[Method: POST, Route: admin/taikai_revision]
+in APPPATH\Helpers\admin_helper.php on line 148.
+ 1 APPPATH\Helpers\admin_helper.php(148): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "result"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\admin_helper.php', 148)
+ 2 APPPATH\Helpers\Admin\taikai_helper.php(28): admin_form_dropdown('taikai-no', [...], 'taikai_no', 'taikai_no', '50', true)
+ 3 APPPATH\Views\admin\taikai\taikai_regist.php(7): form_taikai_detail([...], [...], [...], 10)
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\admin\\taikai\\taikai_regist.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/taikai/taikai_regist', [], true)
+ 7 APPPATH\Controllers\Admin\AdminTaikai.php(82): view('admin/taikai/taikai_regist')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminTaikai->taikai_revision()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminTaikai))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-05 23:44:26 --> ErrorException: Trying to access array offset on value of type int
+[Method: POST, Route: admin/taikai_revision]
+in APPPATH\Helpers\admin_helper.php on line 150.
+ 1 APPPATH\Helpers\admin_helper.php(150): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\admin_helper.php', 150)
+ 2 APPPATH\Helpers\Admin\taikai_helper.php(28): admin_form_dropdown('taikai-no', [...], 'taikai_no', 'taikai_no', '50', true)
+ 3 APPPATH\Views\admin\taikai\taikai_regist.php(7): form_taikai_detail([...], [...], [...], 10)
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\admin\\taikai\\taikai_regist.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/taikai/taikai_regist', [], true)
+ 7 APPPATH\Controllers\Admin\AdminTaikai.php(82): view('admin/taikai/taikai_regist')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminTaikai->taikai_revision()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminTaikai))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-05 23:45:29 --> ErrorException: Trying to access array offset on value of type int
+[Method: POST, Route: admin/taikai_revision]
+in APPPATH\Helpers\admin_helper.php on line 150.
+ 1 APPPATH\Helpers\admin_helper.php(150): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\admin_helper.php', 150)
+ 2 APPPATH\Helpers\Admin\taikai_helper.php(28): admin_form_dropdown('taikai-no', [...], 'taikai_no', 'taikai_no', '50', true)
+ 3 APPPATH\Views\admin\taikai\taikai_regist.php(7): form_taikai_detail([...], [...], [...], 10)
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\admin\\taikai\\taikai_regist.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/taikai/taikai_regist', [], true)
+ 7 APPPATH\Controllers\Admin\AdminTaikai.php(82): view('admin/taikai/taikai_regist')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminTaikai->taikai_revision()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminTaikai))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

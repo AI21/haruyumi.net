@@ -1,0 +1,44 @@
+CRITICAL - 2026-02-02 23:05:48 --> ErrorException: Undefined array key "kaijo_name"
+[Method: POST, Route: admin/taikai_regist_conf]
+in APPPATH\Helpers\Admin\taikai_helper.php on line 240.
+ 1 APPPATH\Helpers\Admin\taikai_helper.php(240): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kaijo_name"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\Admin\\taikai_helper.php', 240)
+ 2 APPPATH\Controllers\Admin\AdminTaikai.php(215): form_taikai_regist_confrim([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminTaikai->ajax_taikai_regist_conf()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminTaikai))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-02 23:06:12 --> ErrorException: Undefined array key "kaijo_name"
+[Method: POST, Route: admin/taikai_regist_conf]
+in APPPATH\Helpers\Admin\taikai_helper.php on line 240.
+ 1 APPPATH\Helpers\Admin\taikai_helper.php(240): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kaijo_name"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\Admin\\taikai_helper.php', 240)
+ 2 APPPATH\Controllers\Admin\AdminTaikai.php(215): form_taikai_regist_confrim([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminTaikai->ajax_taikai_regist_conf()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminTaikai))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-02 23:07:06 --> ErrorException: Undefined array key "taikai_document_list"
+[Method: POST, Route: admin/taikai_regist_conf]
+in APPPATH\Helpers\Admin\taikai_helper.php on line 354.
+ 1 APPPATH\Helpers\Admin\taikai_helper.php(354): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "taikai_document_list"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\Admin\\taikai_helper.php', 354)
+ 2 APPPATH\Controllers\Admin\AdminTaikai.php(215): form_taikai_regist_confrim([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminTaikai->ajax_taikai_regist_conf()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminTaikai))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-02 23:54:11 --> ErrorException: Undefined array key "relation_event_id"
+[Method: POST, Route: admin/notice_regist_proc]
+in APPPATH\Libraries\Admin\AdminNoticeLibrarie.php on line 47.
+ 1 APPPATH\Libraries\Admin\AdminNoticeLibrarie.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "relation_event_id"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\Admin\\AdminNoticeLibrarie.php', 47)
+ 2 APPPATH\Controllers\Admin\AdminNotice.php(246): App\Libraries\Admin\AdminNoticeLibrarie->notice_info_proc([...], 65, 'undefined')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminNotice->ajax_notice_regist_proc()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminNotice))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

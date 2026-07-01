@@ -1,0 +1,13 @@
+table.shisa-list td {
+	padding: 0.5rem 0.2rem;
+}
+table#offer-ilst tr {
+	vertical-align: middle;
+}
+table#offer-ilst td {
+	padding: 0.3rem;
+}
+.shinsa-regist-btn {
+	position: absolute;
+	right: 10px;;
+}

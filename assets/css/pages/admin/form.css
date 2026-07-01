@@ -1,0 +1,100 @@
+dl {
+    margin-top: 10px;
+}
+dd {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+input[type=file] {
+    display: block;
+}
+input[type=file]:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.alert {
+    font-size: 85%;
+    color: #0004ff;
+}
+
+.regist-area {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #999999;
+    width: min(100%, 480px);
+    text-align: center;
+}
+
+.regist-files {
+    margin: 20px 0;
+    }
+    .regist-files img {
+        margin: 0 10px;
+    }
+
+.form-w-100 {
+    width: 100%;
+    min-width: 100%;
+}
+.form-w-2e {
+    width: 2em;
+    min-width: 2em;
+}
+.form-w-3e {
+    width: 3em;
+    min-width: 3em;
+}
+.form-w-4e {
+    width: 4em;
+    min-width: 4em;
+}
+.form-w-5e {
+    width: 5em;
+    min-width: 5em;
+}
+.form-w-6e {
+    width: 6em;
+    min-width: 6em;
+}
+.form-w-7e {
+    width: 7em;
+    min-width: 7em;
+}
+.form-w-8e {
+    width: 8em;
+    min-width: 8em;
+}
+.form-w-9e {
+    width: 9em;
+    min-width: 9em;
+}
+.form-w-10e {
+    width: 10em;
+    min-width: 10em;
+}
+.form-w-20e {
+    width: 20em;
+    min-width: 20em;
+}
+.form-w-30e {
+    width: 30em;
+    min-width: 30em;
+}
+.form-w-mail {
+    width: 30em;
+    min-width: 30em;
+}
+
+.btn-area-officer {
+    position: absolute;
+    right: 0;
+    top: 8px;
+}
+
+@media screen and (max-width: 575.99px) {
+    .form-w-mail {
+        width: 100%;
+        min-width: 100;
+    }
+}

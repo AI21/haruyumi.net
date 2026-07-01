@@ -1,0 +1,13 @@
+ERROR - 2025-08-12 22:31:16 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2025-08-12 22:31:16 --> 
+CRITICAL - 2025-08-12 23:44:10 --> TypeError: App\Models\ShinsaModel::get_grade_group(): Argument #1 ($gradeGroupId) must be of type array, string given, called in C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\ShinsaLibrarie.php on line 93
+[Method: GET, Route: shinsa/detail/4]
+in APPPATH\Models\ShinsaModel.php on line 408.
+ 1 APPPATH\Libraries\ShinsaLibrarie.php(93): App\Models\ShinsaModel->get_grade_group('37')
+ 2 APPPATH\Controllers\Shinsa.php(70): App\Libraries\ShinsaLibrarie->get_shinsa_detail(4, 65)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('4')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

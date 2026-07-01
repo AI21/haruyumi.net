@@ -1,0 +1,88 @@
+CRITICAL - 2026-02-09 23:46:04 --> ErrorException: Undefined array key "indi_apply_flg"
+[Method: POST, Route: admin/taikai_regist_conf]
+in APPPATH\Helpers\Admin\taikai_helper.php on line 333.
+ 1 APPPATH\Helpers\Admin\taikai_helper.php(333): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "indi_apply_flg"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\Admin\\taikai_helper.php', 333)
+ 2 APPPATH\Controllers\Admin\AdminTaikai.php(263): form_taikai_regist_confrim([...], [...], [])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminTaikai->ajax_taikai_regist_conf()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminTaikai))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-09 23:47:58 --> ErrorException: Undefined array key "indi_apply_flg"
+[Method: POST, Route: admin/taikai_regist_conf]
+in APPPATH\Helpers\Admin\taikai_helper.php on line 333.
+ 1 APPPATH\Helpers\Admin\taikai_helper.php(333): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "indi_apply_flg"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\Admin\\taikai_helper.php', 333)
+ 2 APPPATH\Controllers\Admin\AdminTaikai.php(263): form_taikai_regist_confrim([...], [...], [])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminTaikai->ajax_taikai_regist_conf()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminTaikai))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-09 23:49:03 --> ErrorException: Undefined array key "indi_apply_flg"
+[Method: POST, Route: admin/taikai_regist_conf]
+in APPPATH\Helpers\Admin\taikai_helper.php on line 333.
+ 1 APPPATH\Helpers\Admin\taikai_helper.php(333): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "indi_apply_flg"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\Admin\\taikai_helper.php', 333)
+ 2 APPPATH\Controllers\Admin\AdminTaikai.php(263): form_taikai_regist_confrim([...], [...], [])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminTaikai->ajax_taikai_regist_conf()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminTaikai))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-09 23:53:10 --> ErrorException: Undefined array key "gender_cd"
+[Method: POST, Route: admin/taikai_regist_conf]
+in APPPATH\Helpers\Admin\taikai_helper.php on line 350.
+ 1 APPPATH\Helpers\Admin\taikai_helper.php(350): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "gender_cd"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\Admin\\taikai_helper.php', 350)
+ 2 APPPATH\Controllers\Admin\AdminTaikai.php(263): form_taikai_regist_confrim([...], [...], [])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminTaikai->ajax_taikai_regist_conf()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminTaikai))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-09 23:53:16 --> ErrorException: Undefined array key "gender_cd"
+[Method: POST, Route: admin/taikai_regist_conf]
+in APPPATH\Helpers\Admin\taikai_helper.php on line 350.
+ 1 APPPATH\Helpers\Admin\taikai_helper.php(350): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "gender_cd"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\Admin\\taikai_helper.php', 350)
+ 2 APPPATH\Controllers\Admin\AdminTaikai.php(263): form_taikai_regist_confrim([...], [...], [])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminTaikai->ajax_taikai_regist_conf()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminTaikai))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-09 23:53:47 --> ErrorException: Undefined array key "gender_cd"
+[Method: POST, Route: admin/taikai_regist_conf]
+in APPPATH\Helpers\Admin\taikai_helper.php on line 350.
+ 1 APPPATH\Helpers\Admin\taikai_helper.php(350): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "gender_cd"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\Admin\\taikai_helper.php', 350)
+ 2 APPPATH\Controllers\Admin\AdminTaikai.php(263): form_taikai_regist_confrim([...], [...], [])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminTaikai->ajax_taikai_regist_conf()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminTaikai))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-09 23:54:31 --> ErrorException: Undefined array key "gender_cd"
+[Method: POST, Route: admin/taikai_regist_conf]
+in APPPATH\Helpers\Admin\taikai_helper.php on line 350.
+ 1 APPPATH\Helpers\Admin\taikai_helper.php(350): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "gender_cd"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\Admin\\taikai_helper.php', 350)
+ 2 APPPATH\Controllers\Admin\AdminTaikai.php(263): form_taikai_regist_confrim([...], [...], [])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminTaikai->ajax_taikai_regist_conf()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminTaikai))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-09 23:57:11 --> ErrorException: Undefined array key "gender_cd"
+[Method: POST, Route: admin/taikai_regist_conf]
+in APPPATH\Helpers\Admin\taikai_helper.php on line 350.
+ 1 APPPATH\Helpers\Admin\taikai_helper.php(350): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "gender_cd"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\Admin\\taikai_helper.php', 350)
+ 2 APPPATH\Controllers\Admin\AdminTaikai.php(263): form_taikai_regist_confrim([...], [...], [])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminTaikai->ajax_taikai_regist_conf()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminTaikai))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

@@ -1,0 +1,132 @@
+html,
+body {
+	overflow-x: hidden; /* 狭いデバイスでのスクロールを防止 */
+	}
+
+body {
+	padding-top: 56px;
+	}
+
+.navbar-brand {
+	padding-top: 0.6125rem;
+	/*font-size: 0.9rem;*/
+	}
+
+.nav-scroller {
+	position: relative;
+	z-index: 2;
+	height: 2.75rem;
+	overflow-y: hidden;
+	}
+
+.nav-scroller .nav {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	padding-bottom: 1rem;
+	margin-top: -1px;
+	overflow-x: auto;
+	color: rgba(255, 255, 255, .75);
+	text-align: center;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+	}
+
+.nav-underline .nav-link {
+	padding-top: .75rem;
+	padding-bottom: .75rem;
+	font-size: .875rem;
+	color: #6c757d;
+	}
+
+.nav-underline .nav-link:hover {
+	color: #007bff;
+	}
+
+.nav-underline .active {
+	font-weight: 510;
+	color: #343a40;
+	}
+
+.bg-purple {
+	background-color: #6f42c1;
+	}
+
+.navbar-expand-sm,
+.navbar-expand-md {
+	flex-wrap: wrap;
+	}
+
+.navbar {
+	margin: 4px 1em;
+	border-radius: 10px;
+	}
+	#header-nav h1 {
+		position: relative;
+		top: 0.3em;
+		}
+	/*#header-nav h1,*/
+	/*#header-nav .nav-link,*/
+	/*#header-nav .navbar-toggler-icon{*/
+		/*color: #fff;*/
+		/*}*/
+
+@media (max-width: 767.98px) {
+	.offcanvas-collapse {
+		position: fixed;
+		top: 54px; /* ナビバーの高さ */
+		bottom: 0;
+		left: 100%;
+		width: 100%;
+		padding-right: 1rem;
+		padding-left: 1rem;
+		overflow-y: auto;
+		background-color: #F8F9FA;
+		transition: visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+		transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+		transition: transform .3s ease-in-out, visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+		}
+
+	.offcanvas-collapse.open {
+		visibility: visible;
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+		}
+
+	.navbar-brand {
+		padding-top: 0.6125rem;
+		font-size: 0.9em;
+		}
+	#navbarsExampleDefault {
+		margin-top: 0.6em
+		}
+	}
+
+@media screen and (min-width: 767.99px) {
+	.navbar-brand {
+		font-size: 1.2em;
+		}
+	}
+
+/* ヘッダーナビの改行対策 */
+@media (max-width: 767.99px) {
+	header {
+		margin-bottom: 0.8rem!important;
+		}
+	}
+	@media screen and (min-width: 767.99px) and (max-width: 991.98px) {
+	header {
+		margin-bottom: 5.3rem!important;
+		}
+	}
+@media (min-width: 991.99px) {
+	header {
+		margin-bottom: 4rem!important;
+	}
+}
+/*@media (min-width: 1199.99px) {*/
+	/*header {*/
+		/*margin-bottom: 2.5rem!important;*/
+		/*}*/
+	/*}*/

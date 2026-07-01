@@ -1,0 +1,356 @@
+ERROR - 2026-02-24 22:44:24 --> mysqli_sql_exception: MySQL server has gone away in C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n            SE...', 0)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n            SE...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n            SE...')
+#3 C:\xampp_htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(75): CodeIgniter\Database\BaseConnection->query('\n            SE...', Array)
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Models\ShinsaModel.php(489): App\Models\BaseQueryModel->get_result_array('\n            SE...', Array)
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\ShinsaLibrarie.php(144): App\Models\ShinsaModel->get_shinsa_document_list(39)
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Shinsa.php(77): App\Libraries\ShinsaLibrarie->get_shinsa_detail(39, 65)
+#7 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Shinsa->detail('39')
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-02-24 22:44:24 --> CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away
+[Method: GET, Route: shinsa/detail/39]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(75): CodeIgniter\Database\BaseConnection->query('
+            SELECT
+                tds.document_id,
+                tds.document_name,
+                tds.document_ext,
+                tds.document_path,
+                tds.created,
+                tds.modefied,
+                mdt.document_type_name
+            FROM 
+                t_document_shinsa tds
+                INNER JOIN m_document_type mdt ON
+                    mdt.document_type_id = tds.document_type_id
+			WHERE
+				tds.shinsa_id = :shinsaId:
+            ORDER BY
+                mdt.order_no,
+                tds.document_id
+		', [...])
+ 2 APPPATH\Models\ShinsaModel.php(489): App\Models\BaseQueryModel->get_result_array('
+            SELECT
+                tds.document_id,
+                tds.document_name,
+                tds.document_ext,
+                tds.document_path,
+                tds.created,
+                tds.modefied,
+                mdt.document_type_name
+            FROM 
+                t_document_shinsa tds
+                INNER JOIN m_document_type mdt ON
+                    mdt.document_type_id = tds.document_type_id
+			WHERE
+				tds.shinsa_id = :shinsaId:
+            ORDER BY
+                mdt.order_no,
+                tds.document_id
+		', [...])
+ 3 APPPATH\Libraries\ShinsaLibrarie.php(144): App\Models\ShinsaModel->get_shinsa_document_list(39)
+ 4 APPPATH\Controllers\Shinsa.php(77): App\Libraries\ShinsaLibrarie->get_shinsa_detail(39, 65)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('39')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-24 22:44:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT
+                tds.document_id,
+                tds.document_name,
+                tds.document_ext,
+                tds.document_path,
+                tds.created,
+                tds.modefied,
+                mdt.document_type_name
+            FROM 
+                t_document_shinsa tds
+                INNER JOIN m_document_type mdt ON
+                    mdt.document_type_id = tds.document_type_id
+			WHERE
+				tds.shinsa_id = 39
+            ORDER BY
+                mdt.order_no,
+                tds.document_id
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT
+                tds.document_id,
+                tds.document_name,
+                tds.document_ext,
+                tds.document_path,
+                tds.created,
+                tds.modefied,
+                mdt.document_type_name
+            FROM 
+                t_document_shinsa tds
+                INNER JOIN m_document_type mdt ON
+                    mdt.document_type_id = tds.document_type_id
+			WHERE
+				tds.shinsa_id = 39
+            ORDER BY
+                mdt.order_no,
+                tds.document_id
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(75): CodeIgniter\Database\BaseConnection->query('
+            SELECT
+                tds.document_id,
+                tds.document_name,
+                tds.document_ext,
+                tds.document_path,
+                tds.created,
+                tds.modefied,
+                mdt.document_type_name
+            FROM 
+                t_document_shinsa tds
+                INNER JOIN m_document_type mdt ON
+                    mdt.document_type_id = tds.document_type_id
+			WHERE
+				tds.shinsa_id = :shinsaId:
+            ORDER BY
+                mdt.order_no,
+                tds.document_id
+		', [...])
+ 4 APPPATH\Models\ShinsaModel.php(489): App\Models\BaseQueryModel->get_result_array('
+            SELECT
+                tds.document_id,
+                tds.document_name,
+                tds.document_ext,
+                tds.document_path,
+                tds.created,
+                tds.modefied,
+                mdt.document_type_name
+            FROM 
+                t_document_shinsa tds
+                INNER JOIN m_document_type mdt ON
+                    mdt.document_type_id = tds.document_type_id
+			WHERE
+				tds.shinsa_id = :shinsaId:
+            ORDER BY
+                mdt.order_no,
+                tds.document_id
+		', [...])
+ 5 APPPATH\Libraries\ShinsaLibrarie.php(144): App\Models\ShinsaModel->get_shinsa_document_list(39)
+ 6 APPPATH\Controllers\Shinsa.php(77): App\Libraries\ShinsaLibrarie->get_shinsa_detail(39, 65)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('39')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-24 22:44:25 --> [Caused by] mysqli_sql_exception: MySQL server has gone away
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+            SELECT
+                tds.document_id,
+                tds.document_name,
+                tds.document_ext,
+                tds.document_path,
+                tds.created,
+                tds.modefied,
+                mdt.document_type_name
+            FROM 
+                t_document_shinsa tds
+                INNER JOIN m_document_type mdt ON
+                    mdt.document_type_id = tds.document_type_id
+			WHERE
+				tds.shinsa_id = 39
+            ORDER BY
+                mdt.order_no,
+                tds.document_id
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT
+                tds.document_id,
+                tds.document_name,
+                tds.document_ext,
+                tds.document_path,
+                tds.created,
+                tds.modefied,
+                mdt.document_type_name
+            FROM 
+                t_document_shinsa tds
+                INNER JOIN m_document_type mdt ON
+                    mdt.document_type_id = tds.document_type_id
+			WHERE
+				tds.shinsa_id = 39
+            ORDER BY
+                mdt.order_no,
+                tds.document_id
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT
+                tds.document_id,
+                tds.document_name,
+                tds.document_ext,
+                tds.document_path,
+                tds.created,
+                tds.modefied,
+                mdt.document_type_name
+            FROM 
+                t_document_shinsa tds
+                INNER JOIN m_document_type mdt ON
+                    mdt.document_type_id = tds.document_type_id
+			WHERE
+				tds.shinsa_id = 39
+            ORDER BY
+                mdt.order_no,
+                tds.document_id
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(75): CodeIgniter\Database\BaseConnection->query('
+            SELECT
+                tds.document_id,
+                tds.document_name,
+                tds.document_ext,
+                tds.document_path,
+                tds.created,
+                tds.modefied,
+                mdt.document_type_name
+            FROM 
+                t_document_shinsa tds
+                INNER JOIN m_document_type mdt ON
+                    mdt.document_type_id = tds.document_type_id
+			WHERE
+				tds.shinsa_id = :shinsaId:
+            ORDER BY
+                mdt.order_no,
+                tds.document_id
+		', [...])
+ 5 APPPATH\Models\ShinsaModel.php(489): App\Models\BaseQueryModel->get_result_array('
+            SELECT
+                tds.document_id,
+                tds.document_name,
+                tds.document_ext,
+                tds.document_path,
+                tds.created,
+                tds.modefied,
+                mdt.document_type_name
+            FROM 
+                t_document_shinsa tds
+                INNER JOIN m_document_type mdt ON
+                    mdt.document_type_id = tds.document_type_id
+			WHERE
+				tds.shinsa_id = :shinsaId:
+            ORDER BY
+                mdt.order_no,
+                tds.document_id
+		', [...])
+ 6 APPPATH\Libraries\ShinsaLibrarie.php(144): App\Models\ShinsaModel->get_shinsa_document_list(39)
+ 7 APPPATH\Controllers\Shinsa.php(77): App\Libraries\ShinsaLibrarie->get_shinsa_detail(39, 65)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('39')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-24 23:02:03 --> ErrorException: Undefined array key "shinsa_date_st"
+[Method: GET, Route: shinsa/detail/12]
+in APPPATH\Helpers\shinsa_helper.php on line 551.
+ 1 APPPATH\Helpers\shinsa_helper.php(551): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "shinsa_date_st"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\shinsa_helper.php', 551)
+ 2 APPPATH\Helpers\shinsa_helper.php(387): get_shinsa_edit_html([...], [...], true, '2026-03-08')
+ 3 APPPATH\Views\shinsa\detail_chiho.php(4): get_shinsa_chiho_detail_html([...], [...], [...], true)
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\detail_chiho.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shinsa/detail_chiho', [], true)
+ 7 APPPATH\Controllers\Shinsa.php(147): view('shinsa/detail_chiho')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('12')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-24 23:02:50 --> ErrorException: Undefined array key "shinsa_date_st"
+[Method: GET, Route: shinsa/detail/12]
+in APPPATH\Helpers\shinsa_helper.php on line 551.
+ 1 APPPATH\Helpers\shinsa_helper.php(551): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "shinsa_date_st"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\shinsa_helper.php', 551)
+ 2 APPPATH\Helpers\shinsa_helper.php(387): get_shinsa_edit_html([...], [...], true, '2026-03-08')
+ 3 APPPATH\Views\shinsa\detail_chiho.php(4): get_shinsa_chiho_detail_html([...], [...], [...], true)
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\detail_chiho.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shinsa/detail_chiho', [], true)
+ 7 APPPATH\Controllers\Shinsa.php(147): view('shinsa/detail_chiho')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('12')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-24 23:04:11 --> ErrorException: Undefined array key "shinsa_date_st"
+[Method: GET, Route: shinsa/detail/12]
+in APPPATH\Helpers\shinsa_helper.php on line 551.
+ 1 APPPATH\Helpers\shinsa_helper.php(551): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "shinsa_date_st"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\shinsa_helper.php', 551)
+ 2 APPPATH\Helpers\shinsa_helper.php(387): get_shinsa_edit_html([...], [...], true, '2026-03-08')
+ 3 APPPATH\Views\shinsa\detail_chiho.php(4): get_shinsa_chiho_detail_html([...], [...], [...], true)
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\detail_chiho.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shinsa/detail_chiho', [], true)
+ 7 APPPATH\Controllers\Shinsa.php(147): view('shinsa/detail_chiho')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('12')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-24 23:12:12 --> ErrorException: Undefined array key "shinsa_date_st"
+[Method: GET, Route: shinsa/detail/12]
+in APPPATH\Helpers\shinsa_helper.php on line 551.
+ 1 APPPATH\Helpers\shinsa_helper.php(551): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "shinsa_date_st"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\shinsa_helper.php', 551)
+ 2 APPPATH\Helpers\shinsa_helper.php(387): get_shinsa_edit_html([...], [...], true, '2026-03-08')
+ 3 APPPATH\Views\shinsa\detail_chiho.php(4): get_shinsa_chiho_detail_html([...], [...], [...], true)
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\detail_chiho.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shinsa/detail_chiho', [], true)
+ 7 APPPATH\Controllers\Shinsa.php(147): view('shinsa/detail_chiho')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('12')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-24 23:17:32 --> ErrorException: Undefined array key "officer_level"
+[Method: GET, Route: shinsa/detail/12]
+in APPPATH\Helpers\shinsa_helper.php on line 552.
+ 1 APPPATH\Helpers\shinsa_helper.php(552): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "officer_level"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\shinsa_helper.php', 552)
+ 2 APPPATH\Helpers\shinsa_helper.php(387): get_shinsa_edit_html([...], [...], true, '2026-03-08')
+ 3 APPPATH\Views\shinsa\detail_chiho.php(4): get_shinsa_chiho_detail_html([...], [...], [...], true)
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\detail_chiho.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shinsa/detail_chiho', [], true)
+ 7 APPPATH\Controllers\Shinsa.php(147): view('shinsa/detail_chiho')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('12')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-24 23:39:53 --> ErrorException: Undefined array key "kyokai_officer_id"
+[Method: GET, Route: shinsa/detail/12]
+in APPPATH\Controllers\Shinsa.php on line 101.
+ 1 APPPATH\Controllers\Shinsa.php(101): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kyokai_officer_id"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Controllers\\Shinsa.php', 101)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('12')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-24 23:49:48 --> ErrorException: Undefined array key "kyokai_officer_id"
+[Method: GET, Route: shinsa/detail/12]
+in APPPATH\Controllers\Shinsa.php on line 101.
+ 1 APPPATH\Controllers\Shinsa.php(101): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kyokai_officer_id"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Controllers\\Shinsa.php', 101)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('12')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

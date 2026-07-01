@@ -1,0 +1,801 @@
+CRITICAL - 2025-08-29 22:09:12 --> ErrorException: Undefined array key "numRows"
+[Method: GET, Route: taikai/detail/9]
+in APPPATH\Helpers\taikai_helper.php on line 202.
+ 1 APPPATH\Helpers\taikai_helper.php(202): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "numRows"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\taikai_helper.php', 202)
+ 2 APPPATH\Views\taikai\detail_kasugai.php(10): taikai_offer_member_list_html([])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\taikai\\detail_kasugai.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('taikai/detail_kasugai', [], true)
+ 6 APPPATH\Controllers\Taikai.php(96): view('taikai/detail_kasugai')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->detail('9')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-29 22:09:34 --> ErrorException: Undefined array key "numRows"
+[Method: GET, Route: taikai/detail/9]
+in APPPATH\Helpers\taikai_helper.php on line 202.
+ 1 APPPATH\Helpers\taikai_helper.php(202): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "numRows"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\taikai_helper.php', 202)
+ 2 APPPATH\Views\taikai\detail_kasugai.php(10): taikai_offer_member_list_html([])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\taikai\\detail_kasugai.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('taikai/detail_kasugai', [], true)
+ 6 APPPATH\Controllers\Taikai.php(96): view('taikai/detail_kasugai')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->detail('9')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-29 22:10:36 --> ErrorException: Undefined array key "numRows"
+[Method: GET, Route: taikai/detail/9]
+in APPPATH\Helpers\taikai_helper.php on line 202.
+ 1 APPPATH\Helpers\taikai_helper.php(202): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "numRows"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\taikai_helper.php', 202)
+ 2 APPPATH\Views\taikai\detail_kasugai.php(10): taikai_offer_member_list_html([])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\taikai\\detail_kasugai.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('taikai/detail_kasugai', [], true)
+ 6 APPPATH\Controllers\Taikai.php(96): view('taikai/detail_kasugai')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->detail('9')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-29 22:10:39 --> Error: Call to undefined method App\Libraries\TaikaiLibrarie::get_shinsa_offer_member_list()
+[Method: GET, Route: taikai/detail/9]
+in APPPATH\Controllers\Taikai.php on line 79.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->detail('9')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-29 22:10:41 --> Error: Call to undefined method App\Libraries\TaikaiLibrarie::get_shinsa_offer_member_list()
+[Method: GET, Route: taikai/detail/9]
+in APPPATH\Controllers\Taikai.php on line 79.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->detail('9')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-29 22:11:07 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+   ...' at line 11 in C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n           \tSE...', 0)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n           \tSE...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n           \tSE...')
+#3 C:\xampp_htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('\n           \tSE...', Array)
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Models\TaikaiModel.php(228): App\Models\BaseQueryModel->get_result_array('\n           \tSE...', Array)
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\TaikaiLibrarie.php(94): App\Models\TaikaiModel->get_taikai_offer_member_list(9)
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Taikai.php(79): App\Libraries\TaikaiLibrarie->get_taikai_offer_member_list(9)
+#7 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Taikai->detail('9')
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-08-29 22:11:07 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+   ...' at line 11
+[Method: GET, Route: taikai/detail/9]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+           	SELECT
+		   		tom.created,
+				tom.result_flg,
+                mem.member_id,
+                mem.name_f,
+                mem.name_s,
+                mgh.holder_id,
+                mgh.grade_id,
+                hol.holder_name,
+                gra.grade_name,
+            FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+                    mem.member_id = tom.member_id
+                INNER JOIN t_member_grade_holder mgh ON
+                    mgh.member_id = mem.member_id
+                INNER JOIN m_holder hol ON
+                    hol.holder_id = mgh.holder_id
+                INNER JOIN m_grade gra ON
+                    gra.grade_id = mgh.grade_id
+            WHERE
+                tom.taikai_id = :taikaiId:
+		', [...])
+ 2 APPPATH\Models\TaikaiModel.php(228): App\Models\BaseQueryModel->get_result_array('
+           	SELECT
+		   		tom.created,
+				tom.result_flg,
+                mem.member_id,
+                mem.name_f,
+                mem.name_s,
+                mgh.holder_id,
+                mgh.grade_id,
+                hol.holder_name,
+                gra.grade_name,
+            FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+                    mem.member_id = tom.member_id
+                INNER JOIN t_member_grade_holder mgh ON
+                    mgh.member_id = mem.member_id
+                INNER JOIN m_holder hol ON
+                    hol.holder_id = mgh.holder_id
+                INNER JOIN m_grade gra ON
+                    gra.grade_id = mgh.grade_id
+            WHERE
+                tom.taikai_id = :taikaiId:
+		', [...])
+ 3 APPPATH\Libraries\TaikaiLibrarie.php(94): App\Models\TaikaiModel->get_taikai_offer_member_list(9)
+ 4 APPPATH\Controllers\Taikai.php(79): App\Libraries\TaikaiLibrarie->get_taikai_offer_member_list(9)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->detail('9')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-29 22:11:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+   ...' at line 11
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+           	SELECT
+		   		tom.created,
+				tom.result_flg,
+                mem.member_id,
+                mem.name_f,
+                mem.name_s,
+                mgh.holder_id,
+                mgh.grade_id,
+                hol.holder_name,
+                gra.grade_name,
+            FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+                    mem.member_id = tom.member_id
+                INNER JOIN t_member_grade_holder mgh ON
+                    mgh.member_id = mem.member_id
+                INNER JOIN m_holder hol ON
+                    hol.holder_id = mgh.holder_id
+                INNER JOIN m_grade gra ON
+                    gra.grade_id = mgh.grade_id
+            WHERE
+                tom.taikai_id = 9
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+           	SELECT
+		   		tom.created,
+				tom.result_flg,
+                mem.member_id,
+                mem.name_f,
+                mem.name_s,
+                mgh.holder_id,
+                mgh.grade_id,
+                hol.holder_name,
+                gra.grade_name,
+            FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+                    mem.member_id = tom.member_id
+                INNER JOIN t_member_grade_holder mgh ON
+                    mgh.member_id = mem.member_id
+                INNER JOIN m_holder hol ON
+                    hol.holder_id = mgh.holder_id
+                INNER JOIN m_grade gra ON
+                    gra.grade_id = mgh.grade_id
+            WHERE
+                tom.taikai_id = 9
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+           	SELECT
+		   		tom.created,
+				tom.result_flg,
+                mem.member_id,
+                mem.name_f,
+                mem.name_s,
+                mgh.holder_id,
+                mgh.grade_id,
+                hol.holder_name,
+                gra.grade_name,
+            FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+                    mem.member_id = tom.member_id
+                INNER JOIN t_member_grade_holder mgh ON
+                    mgh.member_id = mem.member_id
+                INNER JOIN m_holder hol ON
+                    hol.holder_id = mgh.holder_id
+                INNER JOIN m_grade gra ON
+                    gra.grade_id = mgh.grade_id
+            WHERE
+                tom.taikai_id = :taikaiId:
+		', [...])
+ 4 APPPATH\Models\TaikaiModel.php(228): App\Models\BaseQueryModel->get_result_array('
+           	SELECT
+		   		tom.created,
+				tom.result_flg,
+                mem.member_id,
+                mem.name_f,
+                mem.name_s,
+                mgh.holder_id,
+                mgh.grade_id,
+                hol.holder_name,
+                gra.grade_name,
+            FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+                    mem.member_id = tom.member_id
+                INNER JOIN t_member_grade_holder mgh ON
+                    mgh.member_id = mem.member_id
+                INNER JOIN m_holder hol ON
+                    hol.holder_id = mgh.holder_id
+                INNER JOIN m_grade gra ON
+                    gra.grade_id = mgh.grade_id
+            WHERE
+                tom.taikai_id = :taikaiId:
+		', [...])
+ 5 APPPATH\Libraries\TaikaiLibrarie.php(94): App\Models\TaikaiModel->get_taikai_offer_member_list(9)
+ 6 APPPATH\Controllers\Taikai.php(79): App\Libraries\TaikaiLibrarie->get_taikai_offer_member_list(9)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->detail('9')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-29 22:11:07 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+   ...' at line 11
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+           	SELECT
+		   		tom.created,
+				tom.result_flg,
+                mem.member_id,
+                mem.name_f,
+                mem.name_s,
+                mgh.holder_id,
+                mgh.grade_id,
+                hol.holder_name,
+                gra.grade_name,
+            FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+                    mem.member_id = tom.member_id
+                INNER JOIN t_member_grade_holder mgh ON
+                    mgh.member_id = mem.member_id
+                INNER JOIN m_holder hol ON
+                    hol.holder_id = mgh.holder_id
+                INNER JOIN m_grade gra ON
+                    gra.grade_id = mgh.grade_id
+            WHERE
+                tom.taikai_id = 9
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+           	SELECT
+		   		tom.created,
+				tom.result_flg,
+                mem.member_id,
+                mem.name_f,
+                mem.name_s,
+                mgh.holder_id,
+                mgh.grade_id,
+                hol.holder_name,
+                gra.grade_name,
+            FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+                    mem.member_id = tom.member_id
+                INNER JOIN t_member_grade_holder mgh ON
+                    mgh.member_id = mem.member_id
+                INNER JOIN m_holder hol ON
+                    hol.holder_id = mgh.holder_id
+                INNER JOIN m_grade gra ON
+                    gra.grade_id = mgh.grade_id
+            WHERE
+                tom.taikai_id = 9
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+           	SELECT
+		   		tom.created,
+				tom.result_flg,
+                mem.member_id,
+                mem.name_f,
+                mem.name_s,
+                mgh.holder_id,
+                mgh.grade_id,
+                hol.holder_name,
+                gra.grade_name,
+            FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+                    mem.member_id = tom.member_id
+                INNER JOIN t_member_grade_holder mgh ON
+                    mgh.member_id = mem.member_id
+                INNER JOIN m_holder hol ON
+                    hol.holder_id = mgh.holder_id
+                INNER JOIN m_grade gra ON
+                    gra.grade_id = mgh.grade_id
+            WHERE
+                tom.taikai_id = 9
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+           	SELECT
+		   		tom.created,
+				tom.result_flg,
+                mem.member_id,
+                mem.name_f,
+                mem.name_s,
+                mgh.holder_id,
+                mgh.grade_id,
+                hol.holder_name,
+                gra.grade_name,
+            FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+                    mem.member_id = tom.member_id
+                INNER JOIN t_member_grade_holder mgh ON
+                    mgh.member_id = mem.member_id
+                INNER JOIN m_holder hol ON
+                    hol.holder_id = mgh.holder_id
+                INNER JOIN m_grade gra ON
+                    gra.grade_id = mgh.grade_id
+            WHERE
+                tom.taikai_id = :taikaiId:
+		', [...])
+ 5 APPPATH\Models\TaikaiModel.php(228): App\Models\BaseQueryModel->get_result_array('
+           	SELECT
+		   		tom.created,
+				tom.result_flg,
+                mem.member_id,
+                mem.name_f,
+                mem.name_s,
+                mgh.holder_id,
+                mgh.grade_id,
+                hol.holder_name,
+                gra.grade_name,
+            FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+                    mem.member_id = tom.member_id
+                INNER JOIN t_member_grade_holder mgh ON
+                    mgh.member_id = mem.member_id
+                INNER JOIN m_holder hol ON
+                    hol.holder_id = mgh.holder_id
+                INNER JOIN m_grade gra ON
+                    gra.grade_id = mgh.grade_id
+            WHERE
+                tom.taikai_id = :taikaiId:
+		', [...])
+ 6 APPPATH\Libraries\TaikaiLibrarie.php(94): App\Models\TaikaiModel->get_taikai_offer_member_list(9)
+ 7 APPPATH\Controllers\Taikai.php(79): App\Libraries\TaikaiLibrarie->get_taikai_offer_member_list(9)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->detail('9')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-29 22:22:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+   ...' at line 10 in C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n           \tSE...', 0)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n           \tSE...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n           \tSE...')
+#3 C:\xampp_htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('\n           \tSE...', Array)
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Models\TaikaiModel.php(227): App\Models\BaseQueryModel->get_result_array('\n           \tSE...', Array)
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\TaikaiLibrarie.php(94): App\Models\TaikaiModel->get_taikai_offer_member_list(9)
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Taikai.php(79): App\Libraries\TaikaiLibrarie->get_taikai_offer_member_list(9)
+#7 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Taikai->detail('9')
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-08-29 22:22:25 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+   ...' at line 10
+[Method: GET, Route: taikai/detail/9]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+           	SELECT
+		   		tom.created,
+                mem.member_id,
+                mem.name_f,
+                mem.name_s,
+                mgh.holder_id,
+                mgh.grade_id,
+                hol.holder_name,
+                gra.grade_name,
+            FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+                    mem.member_id = tom.member_id
+                INNER JOIN t_member_grade_holder mgh ON
+                    mgh.member_id = mem.member_id
+                INNER JOIN m_holder hol ON
+                    hol.holder_id = mgh.holder_id
+                INNER JOIN m_grade gra ON
+                    gra.grade_id = mgh.grade_id
+            WHERE
+                tom.taikai_id = :taikaiId:
+		', [...])
+ 2 APPPATH\Models\TaikaiModel.php(227): App\Models\BaseQueryModel->get_result_array('
+           	SELECT
+		   		tom.created,
+                mem.member_id,
+                mem.name_f,
+                mem.name_s,
+                mgh.holder_id,
+                mgh.grade_id,
+                hol.holder_name,
+                gra.grade_name,
+            FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+                    mem.member_id = tom.member_id
+                INNER JOIN t_member_grade_holder mgh ON
+                    mgh.member_id = mem.member_id
+                INNER JOIN m_holder hol ON
+                    hol.holder_id = mgh.holder_id
+                INNER JOIN m_grade gra ON
+                    gra.grade_id = mgh.grade_id
+            WHERE
+                tom.taikai_id = :taikaiId:
+		', [...])
+ 3 APPPATH\Libraries\TaikaiLibrarie.php(94): App\Models\TaikaiModel->get_taikai_offer_member_list(9)
+ 4 APPPATH\Controllers\Taikai.php(79): App\Libraries\TaikaiLibrarie->get_taikai_offer_member_list(9)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->detail('9')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-29 22:22:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+   ...' at line 10
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+           	SELECT
+		   		tom.created,
+                mem.member_id,
+                mem.name_f,
+                mem.name_s,
+                mgh.holder_id,
+                mgh.grade_id,
+                hol.holder_name,
+                gra.grade_name,
+            FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+                    mem.member_id = tom.member_id
+                INNER JOIN t_member_grade_holder mgh ON
+                    mgh.member_id = mem.member_id
+                INNER JOIN m_holder hol ON
+                    hol.holder_id = mgh.holder_id
+                INNER JOIN m_grade gra ON
+                    gra.grade_id = mgh.grade_id
+            WHERE
+                tom.taikai_id = 9
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+           	SELECT
+		   		tom.created,
+                mem.member_id,
+                mem.name_f,
+                mem.name_s,
+                mgh.holder_id,
+                mgh.grade_id,
+                hol.holder_name,
+                gra.grade_name,
+            FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+                    mem.member_id = tom.member_id
+                INNER JOIN t_member_grade_holder mgh ON
+                    mgh.member_id = mem.member_id
+                INNER JOIN m_holder hol ON
+                    hol.holder_id = mgh.holder_id
+                INNER JOIN m_grade gra ON
+                    gra.grade_id = mgh.grade_id
+            WHERE
+                tom.taikai_id = 9
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+           	SELECT
+		   		tom.created,
+                mem.member_id,
+                mem.name_f,
+                mem.name_s,
+                mgh.holder_id,
+                mgh.grade_id,
+                hol.holder_name,
+                gra.grade_name,
+            FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+                    mem.member_id = tom.member_id
+                INNER JOIN t_member_grade_holder mgh ON
+                    mgh.member_id = mem.member_id
+                INNER JOIN m_holder hol ON
+                    hol.holder_id = mgh.holder_id
+                INNER JOIN m_grade gra ON
+                    gra.grade_id = mgh.grade_id
+            WHERE
+                tom.taikai_id = :taikaiId:
+		', [...])
+ 4 APPPATH\Models\TaikaiModel.php(227): App\Models\BaseQueryModel->get_result_array('
+           	SELECT
+		   		tom.created,
+                mem.member_id,
+                mem.name_f,
+                mem.name_s,
+                mgh.holder_id,
+                mgh.grade_id,
+                hol.holder_name,
+                gra.grade_name,
+            FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+                    mem.member_id = tom.member_id
+                INNER JOIN t_member_grade_holder mgh ON
+                    mgh.member_id = mem.member_id
+                INNER JOIN m_holder hol ON
+                    hol.holder_id = mgh.holder_id
+                INNER JOIN m_grade gra ON
+                    gra.grade_id = mgh.grade_id
+            WHERE
+                tom.taikai_id = :taikaiId:
+		', [...])
+ 5 APPPATH\Libraries\TaikaiLibrarie.php(94): App\Models\TaikaiModel->get_taikai_offer_member_list(9)
+ 6 APPPATH\Controllers\Taikai.php(79): App\Libraries\TaikaiLibrarie->get_taikai_offer_member_list(9)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->detail('9')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-29 22:22:25 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+   ...' at line 10
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+           	SELECT
+		   		tom.created,
+                mem.member_id,
+                mem.name_f,
+                mem.name_s,
+                mgh.holder_id,
+                mgh.grade_id,
+                hol.holder_name,
+                gra.grade_name,
+            FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+                    mem.member_id = tom.member_id
+                INNER JOIN t_member_grade_holder mgh ON
+                    mgh.member_id = mem.member_id
+                INNER JOIN m_holder hol ON
+                    hol.holder_id = mgh.holder_id
+                INNER JOIN m_grade gra ON
+                    gra.grade_id = mgh.grade_id
+            WHERE
+                tom.taikai_id = 9
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+           	SELECT
+		   		tom.created,
+                mem.member_id,
+                mem.name_f,
+                mem.name_s,
+                mgh.holder_id,
+                mgh.grade_id,
+                hol.holder_name,
+                gra.grade_name,
+            FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+                    mem.member_id = tom.member_id
+                INNER JOIN t_member_grade_holder mgh ON
+                    mgh.member_id = mem.member_id
+                INNER JOIN m_holder hol ON
+                    hol.holder_id = mgh.holder_id
+                INNER JOIN m_grade gra ON
+                    gra.grade_id = mgh.grade_id
+            WHERE
+                tom.taikai_id = 9
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+           	SELECT
+		   		tom.created,
+                mem.member_id,
+                mem.name_f,
+                mem.name_s,
+                mgh.holder_id,
+                mgh.grade_id,
+                hol.holder_name,
+                gra.grade_name,
+            FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+                    mem.member_id = tom.member_id
+                INNER JOIN t_member_grade_holder mgh ON
+                    mgh.member_id = mem.member_id
+                INNER JOIN m_holder hol ON
+                    hol.holder_id = mgh.holder_id
+                INNER JOIN m_grade gra ON
+                    gra.grade_id = mgh.grade_id
+            WHERE
+                tom.taikai_id = 9
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+           	SELECT
+		   		tom.created,
+                mem.member_id,
+                mem.name_f,
+                mem.name_s,
+                mgh.holder_id,
+                mgh.grade_id,
+                hol.holder_name,
+                gra.grade_name,
+            FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+                    mem.member_id = tom.member_id
+                INNER JOIN t_member_grade_holder mgh ON
+                    mgh.member_id = mem.member_id
+                INNER JOIN m_holder hol ON
+                    hol.holder_id = mgh.holder_id
+                INNER JOIN m_grade gra ON
+                    gra.grade_id = mgh.grade_id
+            WHERE
+                tom.taikai_id = :taikaiId:
+		', [...])
+ 5 APPPATH\Models\TaikaiModel.php(227): App\Models\BaseQueryModel->get_result_array('
+           	SELECT
+		   		tom.created,
+                mem.member_id,
+                mem.name_f,
+                mem.name_s,
+                mgh.holder_id,
+                mgh.grade_id,
+                hol.holder_name,
+                gra.grade_name,
+            FROM t_taikai_offer_member tom
+                INNER JOIN m_member mem ON
+                    mem.member_id = tom.member_id
+                INNER JOIN t_member_grade_holder mgh ON
+                    mgh.member_id = mem.member_id
+                INNER JOIN m_holder hol ON
+                    hol.holder_id = mgh.holder_id
+                INNER JOIN m_grade gra ON
+                    gra.grade_id = mgh.grade_id
+            WHERE
+                tom.taikai_id = :taikaiId:
+		', [...])
+ 6 APPPATH\Libraries\TaikaiLibrarie.php(94): App\Models\TaikaiModel->get_taikai_offer_member_list(9)
+ 7 APPPATH\Controllers\Taikai.php(79): App\Libraries\TaikaiLibrarie->get_taikai_offer_member_list(9)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->detail('9')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-29 22:22:57 --> ErrorException: Undefined array key "result_flg"
+[Method: GET, Route: taikai/detail/9]
+in APPPATH\Helpers\taikai_helper.php on line 224.
+ 1 APPPATH\Helpers\taikai_helper.php(224): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "result_flg"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\taikai_helper.php', 224)
+ 2 APPPATH\Views\taikai\detail_kasugai.php(10): taikai_offer_member_list_html([...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\taikai\\detail_kasugai.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('taikai/detail_kasugai', [], true)
+ 6 APPPATH\Controllers\Taikai.php(96): view('taikai/detail_kasugai')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->detail('9')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-29 22:24:11 --> ErrorException: Undefined array key "result_flg"
+[Method: GET, Route: taikai/detail/9]
+in APPPATH\Helpers\taikai_helper.php on line 224.
+ 1 APPPATH\Helpers\taikai_helper.php(224): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "result_flg"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\taikai_helper.php', 224)
+ 2 APPPATH\Views\taikai\detail_kasugai.php(10): taikai_offer_member_list_html([...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\taikai\\detail_kasugai.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('taikai/detail_kasugai', [], true)
+ 6 APPPATH\Controllers\Taikai.php(96): view('taikai/detail_kasugai')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->detail('9')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-29 22:24:16 --> ErrorException: Undefined array key "shinsa_target_name"
+[Method: GET, Route: taikai/detail/9]
+in APPPATH\Helpers\taikai_helper.php on line 246.
+ 1 APPPATH\Helpers\taikai_helper.php(246): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "shinsa_target_name"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\taikai_helper.php', 246)
+ 2 APPPATH\Views\taikai\detail_kasugai.php(10): taikai_offer_member_list_html([...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\taikai\\detail_kasugai.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('taikai/detail_kasugai', [], true)
+ 6 APPPATH\Controllers\Taikai.php(96): view('taikai/detail_kasugai')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->detail('9')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-29 22:24:51 --> ErrorException: Undefined array key "shinsa_target_name"
+[Method: GET, Route: taikai/detail/9]
+in APPPATH\Helpers\taikai_helper.php on line 246.
+ 1 APPPATH\Helpers\taikai_helper.php(246): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "shinsa_target_name"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\taikai_helper.php', 246)
+ 2 APPPATH\Views\taikai\detail_kasugai.php(10): taikai_offer_member_list_html([...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\taikai\\detail_kasugai.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('taikai/detail_kasugai', [], true)
+ 6 APPPATH\Controllers\Taikai.php(96): view('taikai/detail_kasugai')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->detail('9')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-29 22:57:33 --> ErrorException: Undefined property: App\Libraries\TaikaiLibrarie::$memberLibrarie
+[Method: POST, Route: taikai/taikai_request]
+in APPPATH\Libraries\TaikaiLibrarie.php on line 93.
+ 1 APPPATH\Libraries\TaikaiLibrarie.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Libraries\\TaikaiLibrarie::$memberLibrarie', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\TaikaiLibrarie.php', 93)
+ 2 APPPATH\Controllers\Taikai.php(120): App\Libraries\TaikaiLibrarie->taikai_request_member(9, 65, 'cancel')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->ajax_taikai_request()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-29 22:58:42 --> ErrorException: Undefined property: App\Libraries\TaikaiLibrarie::$memberLibrarie
+[Method: POST, Route: taikai/taikai_request]
+in APPPATH\Libraries\TaikaiLibrarie.php on line 93.
+ 1 APPPATH\Libraries\TaikaiLibrarie.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Libraries\\TaikaiLibrarie::$memberLibrarie', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\TaikaiLibrarie.php', 93)
+ 2 APPPATH\Controllers\Taikai.php(120): App\Libraries\TaikaiLibrarie->taikai_request_member(9, 65, 'cancel')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->ajax_taikai_request()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-29 23:12:56 --> ErrorException: Undefined property: App\Libraries\TaikaiLibrarie::$commonLibrarie
+[Method: POST, Route: taikai/taikai_request]
+in APPPATH\Libraries\TaikaiLibrarie.php on line 121.
+ 1 APPPATH\Libraries\TaikaiLibrarie.php(121): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Libraries\\TaikaiLibrarie::$commonLibrarie', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\TaikaiLibrarie.php', 121)
+ 2 APPPATH\Controllers\Taikai.php(119): App\Libraries\TaikaiLibrarie->taikai_request_member(9, [...], 'join')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->ajax_taikai_request()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-29 23:15:29 --> ErrorException: Undefined property: App\Libraries\TaikaiLibrarie::$commonLibrarie
+[Method: POST, Route: taikai/taikai_request]
+in APPPATH\Libraries\TaikaiLibrarie.php on line 121.
+ 1 APPPATH\Libraries\TaikaiLibrarie.php(121): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Libraries\\TaikaiLibrarie::$commonLibrarie', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\TaikaiLibrarie.php', 121)
+ 2 APPPATH\Controllers\Taikai.php(119): App\Libraries\TaikaiLibrarie->taikai_request_member(9, [...], 'join')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->ajax_taikai_request()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-29 23:16:00 --> ErrorException: Undefined property: App\Libraries\TaikaiLibrarie::$commonLibrarie
+[Method: POST, Route: taikai/taikai_request]
+in APPPATH\Libraries\TaikaiLibrarie.php on line 121.
+ 1 APPPATH\Libraries\TaikaiLibrarie.php(121): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Libraries\\TaikaiLibrarie::$commonLibrarie', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\TaikaiLibrarie.php', 121)
+ 2 APPPATH\Controllers\Taikai.php(119): App\Libraries\TaikaiLibrarie->taikai_request_member(9, [...], 'join')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->ajax_taikai_request()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-29 23:16:47 --> Email: sendWithMail throwed ErrorException: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php:1762
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed ...', 'C:\\xampp_htdocs...', 1762)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1762): mail('', '=?UTF-8?Q?=E3=8...', '\xE5\xA4\xA7\xE4\xBC\x9A\xE3\x81\xAE\xE5\x8F\x82\xE5\x8A\xA0...', 'Date: Fri, 29 A...', '-f k.kyudo.xamp...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1694): CodeIgniter\Email\Email->sendWithMail()
+#3 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1589): CodeIgniter\Email\Email->spoolEmail()
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\CommonLibrarie.php(49): CodeIgniter\Email\Email->send()
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\TaikaiLibrarie.php(123): App\Libraries\CommonLibrarie->send_mail_proc(Array, Array, Array, '\xE3\x80\x90\xE5\xA4\xA7\xE4\xBC\x9A \xEF\xBC\x9A \xE7...', '\xE5\xA4\xA7\xE4\xBC\x9A\xE3\x81\xAE\xE5\x8F\x82\xE5\x8A\xA0...')
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Taikai.php(119): App\Libraries\TaikaiLibrarie->taikai_request_member(9, Array, 'join')
+#7 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Taikai->ajax_taikai_request()
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-08-29 23:16:47 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2025-08-29 23:16:47 --> 

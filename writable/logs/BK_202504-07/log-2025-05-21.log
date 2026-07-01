@@ -1,0 +1,148 @@
+ERROR - 2025-05-21 20:28:52 --> Email: sendWithMail throwed ErrorException: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php:1762
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed ...', 'C:\\xampp_htdocs...', 1762)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1762): mail('imai.0221@gmail...', '=?UTF-8?Q?=E3=8...', '\xE5\xAF\xA9\xE6\x9F\xBB\xE7\x94\xB3\xE8\xBE\xBC\xE3\x82\xAD...', 'Date: Wed, 21 M...', '-f k.kyudo.xamp...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1694): CodeIgniter\Email\Email->sendWithMail()
+#3 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1589): CodeIgniter\Email\Email->spoolEmail()
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\ShinsaLibrarie.php(155): CodeIgniter\Email\Email->send()
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Shinsa.php(134): App\Libraries\ShinsaLibrarie->shinsa_request_member(3, 7, Array, 'cancel')
+#6 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+#7 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2025-05-21 20:28:52 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2025-05-21 20:28:52 --> 
+ERROR - 2025-05-21 20:34:13 --> Email: sendWithMail throwed ErrorException: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php:1762
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed ...', 'C:\\xampp_htdocs...', 1762)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1762): mail('imai.0221@gmail...', '=?UTF-8?Q?=E3=8...', '\xE5\xAF\xA9\xE6\x9F\xBB\xE7\x94\xB3\xE8\xBE\xBC\xE3\x81\x8C...', 'Date: Wed, 21 M...', '-f k.kyudo.xamp...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1694): CodeIgniter\Email\Email->sendWithMail()
+#3 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1589): CodeIgniter\Email\Email->spoolEmail()
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\ShinsaLibrarie.php(155): CodeIgniter\Email\Email->send()
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Shinsa.php(134): App\Libraries\ShinsaLibrarie->shinsa_request_member(3, 7, Array, 'join')
+#6 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+#7 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2025-05-21 20:34:13 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2025-05-21 20:34:13 --> 
+ERROR - 2025-05-21 20:47:18 --> Email: sendWithMail throwed ErrorException: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php:1762
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed ...', 'C:\\xampp_htdocs...', 1762)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1762): mail('imai.0221@gmail...', '=?UTF-8?Q?=E3=8...', '\xE5\xAF\xA9\xE6\x9F\xBB\xE7\x94\xB3\xE8\xBE\xBC\xE3\x82\xAD...', 'Date: Wed, 21 M...', '-f k.kyudo.xamp...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1694): CodeIgniter\Email\Email->sendWithMail()
+#3 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1589): CodeIgniter\Email\Email->spoolEmail()
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\ShinsaLibrarie.php(157): CodeIgniter\Email\Email->send()
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Shinsa.php(134): App\Libraries\ShinsaLibrarie->shinsa_request_member(3, 7, Array, 'cancel')
+#6 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+#7 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2025-05-21 20:47:18 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2025-05-21 20:47:18 --> 
+CRITICAL - 2025-05-21 20:48:20 --> ArgumentCountError: Too few arguments to function get_shinsa_offer_html(), 3 passed in C:\xampp_htdocs\kasugaikyudo\production\app\Helpers\shinsa_helper.php on line 139 and exactly 5 expected
+[Method: GET, Route: shinsa/detail/25]
+in APPPATH\Helpers\shinsa_helper.php on line 383.
+ 1 APPPATH\Helpers\shinsa_helper.php(139): get_shinsa_offer_html([...], [...], true)
+ 2 APPPATH\Views\shinsa\detail_chuou.php(4): get_shinsa_chuou_detail_html([...], [...], [...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\detail_chuou.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shinsa/detail_chuou', [], true)
+ 6 APPPATH\Controllers\Shinsa.php(109): view('shinsa/detail_chuou')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('25')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-21 23:00:49 --> Error: Call to undefined method App\Libraries\MemberLibrarie::get_kyokai_officer_list()
+[Method: GET, Route: shinsa/detail/20]
+in APPPATH\Controllers\CommonController.php on line 127.
+ 1 APPPATH\Controllers\CommonController.php(37): App\Controllers\CommonController->get_kyokai_officer_list()
+ 2 APPPATH\Controllers\Shinsa.php(15): App\Controllers\CommonController->__construct('shinsa')
+ 3 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Shinsa->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-21 23:21:59 --> Error: Call to undefined method App\Controllers\Shinsa::get_kyokai_officer_list()
+[Method: GET, Route: shinsa/detail/25]
+in APPPATH\Controllers\CommonController.php on line 36.
+ 1 APPPATH\Controllers\Shinsa.php(15): App\Controllers\CommonController->__construct('shinsa')
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Shinsa->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-21 23:22:04 --> Error: Call to undefined method App\Controllers\Shinsa::get_kyokai_officer_list()
+[Method: GET, Route: shinsa/detail/25]
+in APPPATH\Controllers\CommonController.php on line 36.
+ 1 APPPATH\Controllers\Shinsa.php(15): App\Controllers\CommonController->__construct('shinsa')
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Shinsa->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-21 23:53:34 --> ErrorException: Undefined variable $noticeTitle
+[Method: POST, Route: shinsa/shinsa_request]
+in APPPATH\Libraries\ShinsaLibrarie.php on line 189.
+ 1 APPPATH\Libraries\ShinsaLibrarie.php(189): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $noticeTitle', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\ShinsaLibrarie.php', 189)
+ 2 APPPATH\Controllers\Shinsa.php(134): App\Libraries\ShinsaLibrarie->shinsa_request_member(25, 2, [...], 'cancel')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-21 23:55:51 --> ErrorException: Undefined variable $noticeTitle
+[Method: POST, Route: shinsa/shinsa_request]
+in APPPATH\Libraries\ShinsaLibrarie.php on line 189.
+ 1 APPPATH\Libraries\ShinsaLibrarie.php(189): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $noticeTitle', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\ShinsaLibrarie.php', 189)
+ 2 APPPATH\Controllers\Shinsa.php(134): App\Libraries\ShinsaLibrarie->shinsa_request_member(25, 2, [...], 'cancel')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-21 23:59:02 --> ErrorException: Undefined variable $adminMailTitle
+[Method: POST, Route: shinsa/shinsa_request]
+in APPPATH\Libraries\ShinsaLibrarie.php on line 192.
+ 1 APPPATH\Libraries\ShinsaLibrarie.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $adminMailTitle', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\ShinsaLibrarie.php', 192)
+ 2 APPPATH\Controllers\Shinsa.php(134): App\Libraries\ShinsaLibrarie->shinsa_request_member(25, 2, [...], 'cancel')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-05-21 23:59:24 --> Email: sendWithMail throwed ErrorException: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php:1762
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed ...', 'C:\\xampp_htdocs...', 1762)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1762): mail('imai.0221@gmail...', '=?UTF-8?Q?=E3=8...', '\xE5\xAF\xA9\xE6\x9F\xBB\xE7\x94\xB3\xE8\xBE\xBC\xE3\x82\xAD...', 'Date: Wed, 21 M...', '-f k.kyudo.xamp...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1694): CodeIgniter\Email\Email->sendWithMail()
+#3 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1589): CodeIgniter\Email\Email->spoolEmail()
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\CommonLibrarie.php(49): CodeIgniter\Email\Email->send()
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\ShinsaLibrarie.php(192): App\Libraries\CommonLibrarie->send_mail_proc(Array, Array, Array, '\xE3\x80\x90\xE5\xAF\xA9\xE6\x9F\xBB \xEF\xBC\x9A \xE3...', '\xE5\xAF\xA9\xE6\x9F\xBB\xE7\x94\xB3\xE8\xBE\xBC\xE3\x82\xAD...')
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Shinsa.php(134): App\Libraries\ShinsaLibrarie->shinsa_request_member(25, 2, Array, 'cancel')
+#7 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-05-21 23:59:24 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2025-05-21 23:59:24 --> 

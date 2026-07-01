@@ -1,0 +1,43 @@
+CRITICAL - 2025-03-16 23:14:51 --> ErrorException: Undefined variable $selected
+[Method: GET, Route: admin/notice_regist/2]
+in APPPATH\Helpers\admin_helper.php on line 23.
+ 1 APPPATH\Helpers\admin_helper.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $selected', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Helpers\\admin_helper.php', 23)
+ 2 APPPATH\Views\admin\notice\notice_regist.php(10): form_dropdown_category_notice('notice-category', [...], '2')
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\admin\\notice\\notice_regist.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/notice/notice_regist', [], true)
+ 6 APPPATH\Controllers\Admin.php(49): view('admin/notice/notice_regist')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->notice_regist('2')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-16 23:19:55 --> ErrorException: Undefined variable $memberData
+[Method: GET, Route: seminar]
+in APPPATH\Views\seminar\index.php on line 7.
+ 1 APPPATH\Views\seminar\index.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $memberData', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\seminar\\index.php', 7)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\seminar\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('seminar/index', [], true)
+ 5 APPPATH\Controllers\Seminar.php(44): view('seminar/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Seminar->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Seminar))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-16 23:20:48 --> ErrorException: Undefined variable $memberData
+[Method: GET, Route: seminar]
+in APPPATH\Views\seminar\index.php on line 7.
+ 1 APPPATH\Views\seminar\index.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $memberData', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\seminar\\index.php', 7)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\seminar\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('seminar/index', [], true)
+ 5 APPPATH\Controllers\Seminar.php(44): view('seminar/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Seminar->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Seminar))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

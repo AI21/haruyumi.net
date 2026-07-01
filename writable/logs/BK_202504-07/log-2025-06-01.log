@@ -1,0 +1,586 @@
+ERROR - 2025-06-01 22:30:58 --> mysqli_sql_exception: Table 'z0e6f_haruyumi.t_kyokai_officer' doesn't exist in C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n\t\t\tSELECT\n\t\t\t\t...', 0)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t\tSELECT\n\t\t\t\t...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t\tSELECT\n\t\t\t\t...')
+#3 C:\xampp_htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('\n\t\t\tSELECT\n\t\t\t\t...', Array)
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Models\LoginModel.php(111): App\Models\BaseQueryModel->get_result_array('\n\t\t\tSELECT\n\t\t\t\t...', Array)
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\LoginLibrarie.php(114): App\Models\LoginModel->get_notice_admin_id_list(65)
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\CommonController.php(81): App\Libraries\LoginLibrarie->get_notice_admin_id_list(65)
+#7 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\CommonController.php(36): App\Controllers\CommonController->get_member_data()
+#8 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Shinsa.php(15): App\Controllers\CommonController->__construct('shinsa')
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(903): App\Controllers\Shinsa->__construct()
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-06-01 22:30:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'z0e6f_haruyumi.t_kyokai_officer' doesn't exist
+[Method: GET, Route: shinsa/detail/4]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				mkon.notice_id
+			FROM
+				t_kyokai_officer tko 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = tko.kyokai_officer_id
+			WHERE
+				tko.use_flg = :useFlg:
+				AND tko.member_id = :memberId:
+			GROUP BY
+				mkon.notice_id
+		', [...])
+ 2 APPPATH\Models\LoginModel.php(111): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				mkon.notice_id
+			FROM
+				t_kyokai_officer tko 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = tko.kyokai_officer_id
+			WHERE
+				tko.use_flg = :useFlg:
+				AND tko.member_id = :memberId:
+			GROUP BY
+				mkon.notice_id
+		', [...])
+ 3 APPPATH\Libraries\LoginLibrarie.php(114): App\Models\LoginModel->get_notice_admin_id_list(65)
+ 4 APPPATH\Controllers\CommonController.php(81): App\Libraries\LoginLibrarie->get_notice_admin_id_list(65)
+ 5 APPPATH\Controllers\CommonController.php(36): App\Controllers\CommonController->get_member_data()
+ 6 APPPATH\Controllers\Shinsa.php(15): App\Controllers\CommonController->__construct('shinsa')
+ 7 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Shinsa->__construct()
+ 8 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-01 22:30:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'z0e6f_haruyumi.t_kyokai_officer' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT
+				mkon.notice_id
+			FROM
+				t_kyokai_officer tko 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = tko.kyokai_officer_id
+			WHERE
+				tko.use_flg = \'1\'
+				AND tko.member_id = 65
+			GROUP BY
+				mkon.notice_id
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT
+				mkon.notice_id
+			FROM
+				t_kyokai_officer tko 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = tko.kyokai_officer_id
+			WHERE
+				tko.use_flg = \'1\'
+				AND tko.member_id = 65
+			GROUP BY
+				mkon.notice_id
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				mkon.notice_id
+			FROM
+				t_kyokai_officer tko 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = tko.kyokai_officer_id
+			WHERE
+				tko.use_flg = :useFlg:
+				AND tko.member_id = :memberId:
+			GROUP BY
+				mkon.notice_id
+		', [...])
+ 4 APPPATH\Models\LoginModel.php(111): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				mkon.notice_id
+			FROM
+				t_kyokai_officer tko 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = tko.kyokai_officer_id
+			WHERE
+				tko.use_flg = :useFlg:
+				AND tko.member_id = :memberId:
+			GROUP BY
+				mkon.notice_id
+		', [...])
+ 5 APPPATH\Libraries\LoginLibrarie.php(114): App\Models\LoginModel->get_notice_admin_id_list(65)
+ 6 APPPATH\Controllers\CommonController.php(81): App\Libraries\LoginLibrarie->get_notice_admin_id_list(65)
+ 7 APPPATH\Controllers\CommonController.php(36): App\Controllers\CommonController->get_member_data()
+ 8 APPPATH\Controllers\Shinsa.php(15): App\Controllers\CommonController->__construct('shinsa')
+ 9 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Shinsa->__construct()
+10 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-01 22:30:58 --> [Caused by] mysqli_sql_exception: Table 'z0e6f_haruyumi.t_kyokai_officer' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+			SELECT
+				mkon.notice_id
+			FROM
+				t_kyokai_officer tko 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = tko.kyokai_officer_id
+			WHERE
+				tko.use_flg = \'1\'
+				AND tko.member_id = 65
+			GROUP BY
+				mkon.notice_id
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT
+				mkon.notice_id
+			FROM
+				t_kyokai_officer tko 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = tko.kyokai_officer_id
+			WHERE
+				tko.use_flg = \'1\'
+				AND tko.member_id = 65
+			GROUP BY
+				mkon.notice_id
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT
+				mkon.notice_id
+			FROM
+				t_kyokai_officer tko 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = tko.kyokai_officer_id
+			WHERE
+				tko.use_flg = \'1\'
+				AND tko.member_id = 65
+			GROUP BY
+				mkon.notice_id
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				mkon.notice_id
+			FROM
+				t_kyokai_officer tko 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = tko.kyokai_officer_id
+			WHERE
+				tko.use_flg = :useFlg:
+				AND tko.member_id = :memberId:
+			GROUP BY
+				mkon.notice_id
+		', [...])
+ 5 APPPATH\Models\LoginModel.php(111): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				mkon.notice_id
+			FROM
+				t_kyokai_officer tko 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = tko.kyokai_officer_id
+			WHERE
+				tko.use_flg = :useFlg:
+				AND tko.member_id = :memberId:
+			GROUP BY
+				mkon.notice_id
+		', [...])
+ 6 APPPATH\Libraries\LoginLibrarie.php(114): App\Models\LoginModel->get_notice_admin_id_list(65)
+ 7 APPPATH\Controllers\CommonController.php(81): App\Libraries\LoginLibrarie->get_notice_admin_id_list(65)
+ 8 APPPATH\Controllers\CommonController.php(36): App\Controllers\CommonController->get_member_data()
+ 9 APPPATH\Controllers\Shinsa.php(15): App\Controllers\CommonController->__construct('shinsa')
+10 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Shinsa->__construct()
+11 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-06-01 22:31:32 --> mysqli_sql_exception: Table 'z0e6f_haruyumi.t_kyokai_officer' doesn't exist in C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n\t\t\tSELECT\n\t\t\t\t...', 0)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t\tSELECT\n\t\t\t\t...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t\tSELECT\n\t\t\t\t...')
+#3 C:\xampp_htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('\n\t\t\tSELECT\n\t\t\t\t...', Array)
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Models\LoginModel.php(111): App\Models\BaseQueryModel->get_result_array('\n\t\t\tSELECT\n\t\t\t\t...', Array)
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\LoginLibrarie.php(114): App\Models\LoginModel->get_notice_admin_id_list(65)
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\CommonController.php(81): App\Libraries\LoginLibrarie->get_notice_admin_id_list(65)
+#7 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\CommonController.php(36): App\Controllers\CommonController->get_member_data()
+#8 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Shinsa.php(15): App\Controllers\CommonController->__construct('shinsa')
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(903): App\Controllers\Shinsa->__construct()
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-06-01 22:31:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'z0e6f_haruyumi.t_kyokai_officer' doesn't exist
+[Method: GET, Route: shinsa/detail/4]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				mkon.notice_id
+			FROM
+				t_kyokai_officer tko 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = tko.kyokai_officer_id
+			WHERE
+				tko.use_flg = :useFlg:
+				AND tko.member_id = :memberId:
+			GROUP BY
+				mkon.notice_id
+		', [...])
+ 2 APPPATH\Models\LoginModel.php(111): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				mkon.notice_id
+			FROM
+				t_kyokai_officer tko 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = tko.kyokai_officer_id
+			WHERE
+				tko.use_flg = :useFlg:
+				AND tko.member_id = :memberId:
+			GROUP BY
+				mkon.notice_id
+		', [...])
+ 3 APPPATH\Libraries\LoginLibrarie.php(114): App\Models\LoginModel->get_notice_admin_id_list(65)
+ 4 APPPATH\Controllers\CommonController.php(81): App\Libraries\LoginLibrarie->get_notice_admin_id_list(65)
+ 5 APPPATH\Controllers\CommonController.php(36): App\Controllers\CommonController->get_member_data()
+ 6 APPPATH\Controllers\Shinsa.php(15): App\Controllers\CommonController->__construct('shinsa')
+ 7 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Shinsa->__construct()
+ 8 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-01 22:31:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'z0e6f_haruyumi.t_kyokai_officer' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT
+				mkon.notice_id
+			FROM
+				t_kyokai_officer tko 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = tko.kyokai_officer_id
+			WHERE
+				tko.use_flg = \'1\'
+				AND tko.member_id = 65
+			GROUP BY
+				mkon.notice_id
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT
+				mkon.notice_id
+			FROM
+				t_kyokai_officer tko 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = tko.kyokai_officer_id
+			WHERE
+				tko.use_flg = \'1\'
+				AND tko.member_id = 65
+			GROUP BY
+				mkon.notice_id
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				mkon.notice_id
+			FROM
+				t_kyokai_officer tko 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = tko.kyokai_officer_id
+			WHERE
+				tko.use_flg = :useFlg:
+				AND tko.member_id = :memberId:
+			GROUP BY
+				mkon.notice_id
+		', [...])
+ 4 APPPATH\Models\LoginModel.php(111): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				mkon.notice_id
+			FROM
+				t_kyokai_officer tko 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = tko.kyokai_officer_id
+			WHERE
+				tko.use_flg = :useFlg:
+				AND tko.member_id = :memberId:
+			GROUP BY
+				mkon.notice_id
+		', [...])
+ 5 APPPATH\Libraries\LoginLibrarie.php(114): App\Models\LoginModel->get_notice_admin_id_list(65)
+ 6 APPPATH\Controllers\CommonController.php(81): App\Libraries\LoginLibrarie->get_notice_admin_id_list(65)
+ 7 APPPATH\Controllers\CommonController.php(36): App\Controllers\CommonController->get_member_data()
+ 8 APPPATH\Controllers\Shinsa.php(15): App\Controllers\CommonController->__construct('shinsa')
+ 9 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Shinsa->__construct()
+10 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-01 22:31:32 --> [Caused by] mysqli_sql_exception: Table 'z0e6f_haruyumi.t_kyokai_officer' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+			SELECT
+				mkon.notice_id
+			FROM
+				t_kyokai_officer tko 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = tko.kyokai_officer_id
+			WHERE
+				tko.use_flg = \'1\'
+				AND tko.member_id = 65
+			GROUP BY
+				mkon.notice_id
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT
+				mkon.notice_id
+			FROM
+				t_kyokai_officer tko 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = tko.kyokai_officer_id
+			WHERE
+				tko.use_flg = \'1\'
+				AND tko.member_id = 65
+			GROUP BY
+				mkon.notice_id
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT
+				mkon.notice_id
+			FROM
+				t_kyokai_officer tko 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = tko.kyokai_officer_id
+			WHERE
+				tko.use_flg = \'1\'
+				AND tko.member_id = 65
+			GROUP BY
+				mkon.notice_id
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				mkon.notice_id
+			FROM
+				t_kyokai_officer tko 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = tko.kyokai_officer_id
+			WHERE
+				tko.use_flg = :useFlg:
+				AND tko.member_id = :memberId:
+			GROUP BY
+				mkon.notice_id
+		', [...])
+ 5 APPPATH\Models\LoginModel.php(111): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				mkon.notice_id
+			FROM
+				t_kyokai_officer tko 
+				INNER JOIN m_kyokai_officer_notice mkon 
+					ON mkon.kyokai_officer_id = tko.kyokai_officer_id
+			WHERE
+				tko.use_flg = :useFlg:
+				AND tko.member_id = :memberId:
+			GROUP BY
+				mkon.notice_id
+		', [...])
+ 6 APPPATH\Libraries\LoginLibrarie.php(114): App\Models\LoginModel->get_notice_admin_id_list(65)
+ 7 APPPATH\Controllers\CommonController.php(81): App\Libraries\LoginLibrarie->get_notice_admin_id_list(65)
+ 8 APPPATH\Controllers\CommonController.php(36): App\Controllers\CommonController->get_member_data()
+ 9 APPPATH\Controllers\Shinsa.php(15): App\Controllers\CommonController->__construct('shinsa')
+10 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Shinsa->__construct()
+11 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-06-01 22:40:32 --> mysqli_sql_exception: Table 'z0e6f_haruyumi.v_calender' doesn't exist in C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n\t\t\tSELECT\n\t\t\t\t...', 0)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t\tSELECT\n\t\t\t\t...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t\tSELECT\n\t\t\t\t...')
+#3 C:\xampp_htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('\n\t\t\tSELECT\n\t\t\t\t...', Array)
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Models\CalenderModel.php(39): App\Models\BaseQueryModel->get_result_array('\n\t\t\tSELECT\n\t\t\t\t...', Array)
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\CalenderLibrarie.php(21): App\Models\CalenderModel->get_event_list()
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Calender.php(35): App\Libraries\CalenderLibrarie->get_event_list()
+#7 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Calender->index()
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Calender))
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-06-01 22:40:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'z0e6f_haruyumi.v_calender' doesn't exist
+[Method: GET, Route: calender]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				fiscal_year_id,
+				date_st,
+				date_ed,
+				event_name,
+				kaijo_name,
+				created
+			FROM
+				v_calender
+			WHERE
+				date_st >= CURDATE()
+		', [])
+ 2 APPPATH\Models\CalenderModel.php(39): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				fiscal_year_id,
+				date_st,
+				date_ed,
+				event_name,
+				kaijo_name,
+				created
+			FROM
+				v_calender
+			WHERE
+				date_st >= CURDATE()
+		', [])
+ 3 APPPATH\Libraries\CalenderLibrarie.php(21): App\Models\CalenderModel->get_event_list()
+ 4 APPPATH\Controllers\Calender.php(35): App\Libraries\CalenderLibrarie->get_event_list()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Calender->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Calender))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-01 22:40:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'z0e6f_haruyumi.v_calender' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT
+				fiscal_year_id,
+				date_st,
+				date_ed,
+				event_name,
+				kaijo_name,
+				created
+			FROM
+				v_calender
+			WHERE
+				date_st >= CURDATE()
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT
+				fiscal_year_id,
+				date_st,
+				date_ed,
+				event_name,
+				kaijo_name,
+				created
+			FROM
+				v_calender
+			WHERE
+				date_st >= CURDATE()
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				fiscal_year_id,
+				date_st,
+				date_ed,
+				event_name,
+				kaijo_name,
+				created
+			FROM
+				v_calender
+			WHERE
+				date_st >= CURDATE()
+		', [])
+ 4 APPPATH\Models\CalenderModel.php(39): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				fiscal_year_id,
+				date_st,
+				date_ed,
+				event_name,
+				kaijo_name,
+				created
+			FROM
+				v_calender
+			WHERE
+				date_st >= CURDATE()
+		', [])
+ 5 APPPATH\Libraries\CalenderLibrarie.php(21): App\Models\CalenderModel->get_event_list()
+ 6 APPPATH\Controllers\Calender.php(35): App\Libraries\CalenderLibrarie->get_event_list()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Calender->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Calender))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-01 22:40:32 --> [Caused by] mysqli_sql_exception: Table 'z0e6f_haruyumi.v_calender' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+			SELECT
+				fiscal_year_id,
+				date_st,
+				date_ed,
+				event_name,
+				kaijo_name,
+				created
+			FROM
+				v_calender
+			WHERE
+				date_st >= CURDATE()
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT
+				fiscal_year_id,
+				date_st,
+				date_ed,
+				event_name,
+				kaijo_name,
+				created
+			FROM
+				v_calender
+			WHERE
+				date_st >= CURDATE()
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT
+				fiscal_year_id,
+				date_st,
+				date_ed,
+				event_name,
+				kaijo_name,
+				created
+			FROM
+				v_calender
+			WHERE
+				date_st >= CURDATE()
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				fiscal_year_id,
+				date_st,
+				date_ed,
+				event_name,
+				kaijo_name,
+				created
+			FROM
+				v_calender
+			WHERE
+				date_st >= CURDATE()
+		', [])
+ 5 APPPATH\Models\CalenderModel.php(39): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				fiscal_year_id,
+				date_st,
+				date_ed,
+				event_name,
+				kaijo_name,
+				created
+			FROM
+				v_calender
+			WHERE
+				date_st >= CURDATE()
+		', [])
+ 6 APPPATH\Libraries\CalenderLibrarie.php(21): App\Models\CalenderModel->get_event_list()
+ 7 APPPATH\Controllers\Calender.php(35): App\Libraries\CalenderLibrarie->get_event_list()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Calender->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Calender))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

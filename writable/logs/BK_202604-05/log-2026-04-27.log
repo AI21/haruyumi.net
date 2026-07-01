@@ -1,0 +1,30 @@
+CRITICAL - 2026-04-27 23:40:56 --> ErrorException: Undefined array key "fiscal_year_id"
+[Method: GET, Route: shinsa/detail/0]
+in APPPATH\Controllers\Shinsa.php on line 88.
+ 1 APPPATH\Controllers\Shinsa.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fiscal_year_id"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Controllers\\Shinsa.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('0')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-27 23:41:15 --> ErrorException: Undefined array key "fiscal_year_id"
+[Method: GET, Route: shinsa/detail/0]
+in APPPATH\Controllers\Shinsa.php on line 88.
+ 1 APPPATH\Controllers\Shinsa.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fiscal_year_id"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Controllers\\Shinsa.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('0')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-27 23:43:07 --> ErrorException: Undefined array key "fiscal_year_id"
+[Method: GET, Route: shinsa/detail/0]
+in APPPATH\Controllers\Shinsa.php on line 88.
+ 1 APPPATH\Controllers\Shinsa.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fiscal_year_id"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Controllers\\Shinsa.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('0')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

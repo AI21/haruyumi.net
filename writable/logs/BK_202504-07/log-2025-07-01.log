@@ -1,0 +1,784 @@
+ERROR - 2025-07-01 22:16:55 --> mysqli_sql_exception: Unknown column 'kom.use_flg' in 'where clause' in C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n\t\t\tSELECT\n\t\t\t\t...', 0)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t\tSELECT\n\t\t\t\t...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t\tSELECT\n\t\t\t\t...')
+#3 C:\xampp_htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('\n\t\t\tSELECT\n\t\t\t\t...', Array)
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Models\MemberModel.php(45): App\Models\BaseQueryModel->get_result_array('\n\t\t\tSELECT\n\t\t\t\t...', Array)
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\MemberLibrarie.php(22): App\Models\MemberModel->get_kyokai_officer_member_list()
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\ShinsaLibrarie.php(170): App\Libraries\MemberLibrarie->get_kyokai_officer_member_list(13)
+#7 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Shinsa.php(148): App\Libraries\ShinsaLibrarie->shinsa_request_member(4, 7, Array, 'cancel')
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-07-01 22:16:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kom.use_flg' in 'where clause'
+[Method: POST, Route: shinsa/shinsa_request]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = :useFlg: 
+		', [...])
+ 2 APPPATH\Models\MemberModel.php(45): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = :useFlg: 
+		', [...])
+ 3 APPPATH\Libraries\MemberLibrarie.php(22): App\Models\MemberModel->get_kyokai_officer_member_list()
+ 4 APPPATH\Libraries\ShinsaLibrarie.php(170): App\Libraries\MemberLibrarie->get_kyokai_officer_member_list(13)
+ 5 APPPATH\Controllers\Shinsa.php(148): App\Libraries\ShinsaLibrarie->shinsa_request_member(4, 7, [...], 'cancel')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-01 22:16:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kom.use_flg' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = \'1\' 
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = \'1\' 
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = :useFlg: 
+		', [...])
+ 4 APPPATH\Models\MemberModel.php(45): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = :useFlg: 
+		', [...])
+ 5 APPPATH\Libraries\MemberLibrarie.php(22): App\Models\MemberModel->get_kyokai_officer_member_list()
+ 6 APPPATH\Libraries\ShinsaLibrarie.php(170): App\Libraries\MemberLibrarie->get_kyokai_officer_member_list(13)
+ 7 APPPATH\Controllers\Shinsa.php(148): App\Libraries\ShinsaLibrarie->shinsa_request_member(4, 7, [...], 'cancel')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-01 22:16:56 --> [Caused by] mysqli_sql_exception: Unknown column 'kom.use_flg' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = \'1\' 
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = \'1\' 
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = \'1\' 
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = :useFlg: 
+		', [...])
+ 5 APPPATH\Models\MemberModel.php(45): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = :useFlg: 
+		', [...])
+ 6 APPPATH\Libraries\MemberLibrarie.php(22): App\Models\MemberModel->get_kyokai_officer_member_list()
+ 7 APPPATH\Libraries\ShinsaLibrarie.php(170): App\Libraries\MemberLibrarie->get_kyokai_officer_member_list(13)
+ 8 APPPATH\Controllers\Shinsa.php(148): App\Libraries\ShinsaLibrarie->shinsa_request_member(4, 7, [...], 'cancel')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-07-01 22:17:58 --> mysqli_sql_exception: Unknown column 'kom.use_flg' in 'where clause' in C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n\t\t\tSELECT\n\t\t\t\t...', 0)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t\tSELECT\n\t\t\t\t...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t\tSELECT\n\t\t\t\t...')
+#3 C:\xampp_htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('\n\t\t\tSELECT\n\t\t\t\t...', Array)
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Models\MemberModel.php(45): App\Models\BaseQueryModel->get_result_array('\n\t\t\tSELECT\n\t\t\t\t...', Array)
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\MemberLibrarie.php(22): App\Models\MemberModel->get_kyokai_officer_member_list()
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\ShinsaLibrarie.php(170): App\Libraries\MemberLibrarie->get_kyokai_officer_member_list(13)
+#7 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Shinsa.php(148): App\Libraries\ShinsaLibrarie->shinsa_request_member(4, 7, Array, 'cancel')
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-07-01 22:17:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kom.use_flg' in 'where clause'
+[Method: POST, Route: shinsa/shinsa_request]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = :useFlg: 
+		', [...])
+ 2 APPPATH\Models\MemberModel.php(45): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = :useFlg: 
+		', [...])
+ 3 APPPATH\Libraries\MemberLibrarie.php(22): App\Models\MemberModel->get_kyokai_officer_member_list()
+ 4 APPPATH\Libraries\ShinsaLibrarie.php(170): App\Libraries\MemberLibrarie->get_kyokai_officer_member_list(13)
+ 5 APPPATH\Controllers\Shinsa.php(148): App\Libraries\ShinsaLibrarie->shinsa_request_member(4, 7, [...], 'cancel')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-01 22:17:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kom.use_flg' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = \'1\' 
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = \'1\' 
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = :useFlg: 
+		', [...])
+ 4 APPPATH\Models\MemberModel.php(45): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = :useFlg: 
+		', [...])
+ 5 APPPATH\Libraries\MemberLibrarie.php(22): App\Models\MemberModel->get_kyokai_officer_member_list()
+ 6 APPPATH\Libraries\ShinsaLibrarie.php(170): App\Libraries\MemberLibrarie->get_kyokai_officer_member_list(13)
+ 7 APPPATH\Controllers\Shinsa.php(148): App\Libraries\ShinsaLibrarie->shinsa_request_member(4, 7, [...], 'cancel')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-01 22:17:58 --> [Caused by] mysqli_sql_exception: Unknown column 'kom.use_flg' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = \'1\' 
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = \'1\' 
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = \'1\' 
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = :useFlg: 
+		', [...])
+ 5 APPPATH\Models\MemberModel.php(45): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = :useFlg: 
+		', [...])
+ 6 APPPATH\Libraries\MemberLibrarie.php(22): App\Models\MemberModel->get_kyokai_officer_member_list()
+ 7 APPPATH\Libraries\ShinsaLibrarie.php(170): App\Libraries\MemberLibrarie->get_kyokai_officer_member_list(13)
+ 8 APPPATH\Controllers\Shinsa.php(148): App\Libraries\ShinsaLibrarie->shinsa_request_member(4, 7, [...], 'cancel')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-07-01 22:18:44 --> mysqli_sql_exception: Unknown column 'kom.use_flg' in 'where clause' in C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n\t\t\tSELECT\n\t\t\t\t...', 0)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t\tSELECT\n\t\t\t\t...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t\tSELECT\n\t\t\t\t...')
+#3 C:\xampp_htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('\n\t\t\tSELECT\n\t\t\t\t...', Array)
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Models\MemberModel.php(45): App\Models\BaseQueryModel->get_result_array('\n\t\t\tSELECT\n\t\t\t\t...', Array)
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\MemberLibrarie.php(22): App\Models\MemberModel->get_kyokai_officer_member_list()
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\ShinsaLibrarie.php(170): App\Libraries\MemberLibrarie->get_kyokai_officer_member_list(13)
+#7 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Shinsa.php(148): App\Libraries\ShinsaLibrarie->shinsa_request_member(4, 7, Array, 'cancel')
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-07-01 22:18:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kom.use_flg' in 'where clause'
+[Method: POST, Route: shinsa/shinsa_request]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = :useFlg: 
+		', [...])
+ 2 APPPATH\Models\MemberModel.php(45): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = :useFlg: 
+		', [...])
+ 3 APPPATH\Libraries\MemberLibrarie.php(22): App\Models\MemberModel->get_kyokai_officer_member_list()
+ 4 APPPATH\Libraries\ShinsaLibrarie.php(170): App\Libraries\MemberLibrarie->get_kyokai_officer_member_list(13)
+ 5 APPPATH\Controllers\Shinsa.php(148): App\Libraries\ShinsaLibrarie->shinsa_request_member(4, 7, [...], 'cancel')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-01 22:18:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kom.use_flg' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = \'1\' 
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = \'1\' 
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = :useFlg: 
+		', [...])
+ 4 APPPATH\Models\MemberModel.php(45): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = :useFlg: 
+		', [...])
+ 5 APPPATH\Libraries\MemberLibrarie.php(22): App\Models\MemberModel->get_kyokai_officer_member_list()
+ 6 APPPATH\Libraries\ShinsaLibrarie.php(170): App\Libraries\MemberLibrarie->get_kyokai_officer_member_list(13)
+ 7 APPPATH\Controllers\Shinsa.php(148): App\Libraries\ShinsaLibrarie->shinsa_request_member(4, 7, [...], 'cancel')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-01 22:18:44 --> [Caused by] mysqli_sql_exception: Unknown column 'kom.use_flg' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = \'1\' 
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = \'1\' 
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = \'1\' 
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = :useFlg: 
+		', [...])
+ 5 APPPATH\Models\MemberModel.php(45): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				mko.kyokai_officer_id
+				,mko.kyokai_officer_name
+				,kom.member_id
+				,kom.officer_level
+				,kom.mail_cc_flg
+                ,mem.name_f
+                ,mem.name_s
+                ,mem.mail_address
+			FROM
+				m_kyokai_officer_member kom
+			INNER JOIN m_kyokai_officer mko ON
+				mko.kyokai_officer_id = kom.kyokai_officer_id
+			INNER JOIN m_member mem ON
+				mem.member_id = kom.member_id
+			WHERE
+				kom.use_flg = :useFlg: 
+		', [...])
+ 6 APPPATH\Libraries\MemberLibrarie.php(22): App\Models\MemberModel->get_kyokai_officer_member_list()
+ 7 APPPATH\Libraries\ShinsaLibrarie.php(170): App\Libraries\MemberLibrarie->get_kyokai_officer_member_list(13)
+ 8 APPPATH\Controllers\Shinsa.php(148): App\Libraries\ShinsaLibrarie->shinsa_request_member(4, 7, [...], 'cancel')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-07-01 22:24:14 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2025-07-01 22:24:14 --> 
+ERROR - 2025-07-01 22:24:33 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2025-07-01 22:24:33 --> 

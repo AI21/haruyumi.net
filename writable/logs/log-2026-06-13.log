@@ -1,0 +1,75 @@
+CRITICAL - 2026-06-13 12:45:39 --> ErrorException: Undefined variable $fileCnt
+[Method: POST, Route: admin/notice_regist_conf]
+in APPPATH\Controllers\Admin\AdminNotice.php on line 169.
+ 1 APPPATH\Controllers\Admin\AdminNotice.php(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fileCnt', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Controllers\\Admin\\AdminNotice.php', 169)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminNotice->ajax_notice_regist_conf()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminNotice))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-06-13 12:45:52 --> ErrorException: Undefined variable $fileCnt
+[Method: POST, Route: admin/notice_regist_conf]
+in APPPATH\Controllers\Admin\AdminNotice.php on line 169.
+ 1 APPPATH\Controllers\Admin\AdminNotice.php(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fileCnt', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Controllers\\Admin\\AdminNotice.php', 169)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminNotice->ajax_notice_regist_conf()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminNotice))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-06-13 13:15:24 --> ErrorException: Undefined array key "notice_category"
+[Method: POST, Route: admin/notice_regist_conf]
+in APPPATH\Helpers\Admin\notice_helper.php on line 21.
+ 1 APPPATH\Helpers\Admin\notice_helper.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "notice_category"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\Admin\\notice_helper.php', 21)
+ 2 APPPATH\Controllers\Admin\AdminNotice.php(204): notice_regist_confirm([...], [], [])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminNotice->ajax_notice_regist_conf()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminNotice))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-06-13 13:15:41 --> ErrorException: Undefined array key "notice_category"
+[Method: POST, Route: admin/notice_regist_conf]
+in APPPATH\Helpers\Admin\notice_helper.php on line 21.
+ 1 APPPATH\Helpers\Admin\notice_helper.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "notice_category"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\Admin\\notice_helper.php', 21)
+ 2 APPPATH\Controllers\Admin\AdminNotice.php(204): notice_regist_confirm([...], [], [])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminNotice->ajax_notice_regist_conf()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminNotice))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-06-13 13:20:41 --> ErrorException: Undefined array key "name"
+[Method: POST, Route: admin/notice_regist_conf]
+in APPPATH\Helpers\Admin\notice_helper.php on line 49.
+ 1 APPPATH\Helpers\Admin\notice_helper.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\Admin\\notice_helper.php', 49)
+ 2 APPPATH\Controllers\Admin\AdminNotice.php(204): notice_regist_confirm([...], [], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminNotice->ajax_notice_regist_conf()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminNotice))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-06-13 13:21:20 --> ErrorException: Undefined array key "name"
+[Method: POST, Route: admin/notice_regist_conf]
+in APPPATH\Helpers\Admin\notice_helper.php on line 49.
+ 1 APPPATH\Helpers\Admin\notice_helper.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\Admin\\notice_helper.php', 49)
+ 2 APPPATH\Controllers\Admin\AdminNotice.php(204): notice_regist_confirm([...], [], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminNotice->ajax_notice_regist_conf()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminNotice))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-06-13 13:22:24 --> ErrorException: Undefined array key "name"
+[Method: POST, Route: admin/notice_regist_conf]
+in APPPATH\Helpers\Admin\notice_helper.php on line 49.
+ 1 APPPATH\Helpers\Admin\notice_helper.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\Admin\\notice_helper.php', 49)
+ 2 APPPATH\Controllers\Admin\AdminNotice.php(204): notice_regist_confirm([...], [], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminNotice->ajax_notice_regist_conf()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminNotice))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

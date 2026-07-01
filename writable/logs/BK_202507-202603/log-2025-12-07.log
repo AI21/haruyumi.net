@@ -1,0 +1,27 @@
+CRITICAL - 2025-12-07 19:51:08 --> ErrorException: file_get_contents(): php_network_getaddresses: getaddrinfo for www.googleapis.com failed: ���̂悤�ȃz�X�g�͕s���ł��B 
+[Method: GET, Route: ouji]
+in APPPATH\Helpers\calender_helper.php on line 100.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(): php_network_getaddresses: getaddrinfo for www.googleapis.com failed: ���̂悤�ȃz�X�g�͕s���ł��B ', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\calender_helper.php', 100)
+ 2 APPPATH\Helpers\calender_helper.php(100): file_get_contents('https://www.googleapis.com/calendar/v3/calendars/ja.japanese.official%23holiday%40group.v.calendar.google.com/events?key=AIzaSyDXR_EQikaIYu-Pg-0YlQxLVMPN6aQTYlQ&timeMin=2025-01-01T00%3A00%3A00Z&timeMax=2026-12-31T00%3A00%3A00Z&maxResults=50&orderBy=startTime&singleEvents=true', true)
+ 3 APPPATH\Controllers\Ouji.php(22): getArrayHolidays('2025')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ouji->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ouji))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-07 20:28:04 --> ErrorException: Undefined array key 20251207
+[Method: GET, Route: ouji]
+in APPPATH\Helpers\ouji_helper.php on line 22.
+ 1 APPPATH\Helpers\ouji_helper.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 20251207', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\ouji_helper.php', 22)
+ 2 APPPATH\Views\ouji\index.php(8): get_ouji_calender_html([], [])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\ouji\\index.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('ouji/index', [], true)
+ 6 APPPATH\Controllers\Ouji.php(33): view('ouji/index')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ouji->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ouji))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

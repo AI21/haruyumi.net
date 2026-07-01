@@ -1,0 +1,12 @@
+CRITICAL - 2026-06-04 00:00:46 --> ErrorException: Undefined variable $categoryId
+[Method: GET, Route: calendar]
+in APPPATH\Models\CalendarModel.php on line 38.
+ 1 APPPATH\Models\CalendarModel.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categoryId', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Models\\CalendarModel.php', 38)
+ 2 APPPATH\Libraries\CalendarLibrarie.php(21): App\Models\CalendarModel->get_document_list()
+ 3 APPPATH\Controllers\Calendar.php(33): App\Libraries\CalendarLibrarie->get_document_list()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Calendar->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Calendar))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

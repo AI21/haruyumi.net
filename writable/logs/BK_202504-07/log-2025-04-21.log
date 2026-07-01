@@ -1,0 +1,35 @@
+CRITICAL - 2025-04-21 21:54:22 --> ErrorException: Undefined variable $files
+[Method: POST, Route: admin/member_list_file_proc]
+in APPPATH\Libraries\AdminLibrarie.php on line 93.
+ 1 APPPATH\Libraries\AdminLibrarie.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $files', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\AdminLibrarie.php', 93)
+ 2 APPPATH\Controllers\Admin.php(318): App\Libraries\AdminLibrarie->member_list_files_proc(Object(CodeIgniter\HTTP\Files\UploadedFile))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_member_list_file_proc()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-21 22:04:05 --> ErrorException: rename(C:\xampp_htdocs\kasugaikyudo\production\assets/document/kasugai/member/member_list.pdf,C:\xampp_htdocs\kasugaikyudo\production\assets/document/kasugai/member/member_list_20250421.pdf): プロセスはファイルにアクセスできません。別のプロセスが使用中です。 (code: 32)
+[Method: POST, Route: admin/member_list_file_proc]
+in APPPATH\Libraries\AdminLibrarie.php on line 94.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'rename(C:\\xampp_htdocs\\kasugaikyudo\\production\\assets/document/kasugai/member/member_list.pdf,C:\\xampp_htdocs\\kasugaikyudo\\production\\assets/document/kasugai/member/member_list_20250421.pdf): プロセスはファイルにアクセスできません。別のプロセスが使用中です。 (code: 32)', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\AdminLibrarie.php', 94)
+ 2 APPPATH\Libraries\AdminLibrarie.php(94): rename('C:\\xampp_htdocs\\kasugaikyudo\\production\\assets/document/kasugai/member/member_list.pdf', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\assets/document/kasugai/member/member_list_20250421.pdf')
+ 3 APPPATH\Controllers\Admin.php(318): App\Libraries\AdminLibrarie->member_list_files_proc(Object(CodeIgniter\HTTP\Files\UploadedFile))
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_member_list_file_proc()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-21 22:06:56 --> ErrorException: rename(C:\xampp_htdocs\kasugaikyudo\production\assets/document/kasugai/member/member.pdf,C:\xampp_htdocs\kasugaikyudo\production\assets/document/kasugai/member/backup/member_20250421.pdf): 指定されたパスが見つかりません。 (code: 3)
+[Method: POST, Route: admin/member_list_file_proc]
+in APPPATH\Libraries\AdminLibrarie.php on line 94.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'rename(C:\\xampp_htdocs\\kasugaikyudo\\production\\assets/document/kasugai/member/member.pdf,C:\\xampp_htdocs\\kasugaikyudo\\production\\assets/document/kasugai/member/backup/member_20250421.pdf): 指定されたパスが見つかりません。 (code: 3)', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\AdminLibrarie.php', 94)
+ 2 APPPATH\Libraries\AdminLibrarie.php(94): rename('C:\\xampp_htdocs\\kasugaikyudo\\production\\assets/document/kasugai/member/member.pdf', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\assets/document/kasugai/member/backup/member_20250421.pdf')
+ 3 APPPATH\Controllers\Admin.php(318): App\Libraries\AdminLibrarie->member_list_files_proc(Object(CodeIgniter\HTTP\Files\UploadedFile))
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_member_list_file_proc()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

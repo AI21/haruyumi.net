@@ -1,0 +1,83 @@
+CRITICAL - 2026-06-30 23:22:52 --> Error: Call to undefined function form_event_revision()
+[Method: POST, Route: admin/event_revision]
+in APPPATH/Views/admin/kyokai/event_regist.php on line 10.
+ 1 SYSTEMPATH/View/View.php(234): include()
+ 2 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('admin/kyokai/event_regist', [], true)
+ 4 APPPATH/Controllers/Admin/AdminEvent.php(75): view('admin/kyokai/event_regist')
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\AdminEvent->event_revision()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminEvent))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-06-30 23:23:50 --> Error: Call to undefined function form_event_revision()
+[Method: POST, Route: admin/event_revision]
+in APPPATH/Views/admin/kyokai/event_regist.php on line 10.
+ 1 SYSTEMPATH/View/View.php(234): include()
+ 2 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('admin/kyokai/event_regist', [], true)
+ 4 APPPATH/Controllers/Admin/AdminEvent.php(75): view('admin/kyokai/event_regist')
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\AdminEvent->event_revision()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminEvent))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-06-30 23:24:31 --> Error: Call to undefined function form_event_revision()
+[Method: POST, Route: admin/event_revision]
+in APPPATH/Views/admin/kyokai/event_regist.php on line 10.
+ 1 SYSTEMPATH/View/View.php(234): include()
+ 2 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('admin/kyokai/event_regist', [], true)
+ 4 APPPATH/Controllers/Admin/AdminEvent.php(76): view('admin/kyokai/event_regist')
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\AdminEvent->event_revision()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminEvent))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-06-30 23:25:50 --> ErrorException: Undefined variable $uploadFileNum
+[Method: POST, Route: admin/event_revision]
+in APPPATH/Views/admin/kyokai/event_regist.php on line 10.
+ 1 APPPATH/Views/admin/kyokai/event_regist.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $uploadFileNum', '/var/www/ci4/haruyumi.net/app/Views/admin/kyokai/event_regist.php', 10)
+ 2 SYSTEMPATH/View/View.php(234): include('/var/www/ci4/haruyumi.net/app/Views/admin/kyokai/event_regist.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('admin/kyokai/event_regist', [], true)
+ 5 APPPATH/Controllers/Admin/AdminEvent.php(76): view('admin/kyokai/event_regist')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\AdminEvent->event_revision()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminEvent))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-06-30 23:26:44 --> ErrorException: Undefined array key "event_class_id"
+[Method: POST, Route: admin/event_revision]
+in APPPATH/Helpers/Admin/event_helper.php on line 215.
+ 1 APPPATH/Helpers/Admin/event_helper.php(215): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "event_class_id"', '/var/www/ci4/haruyumi.net/app/Helpers/Admin/event_helper.php', 215)
+ 2 APPPATH/Views/admin/kyokai/event_regist.php(10): form_event_revision([...], 10)
+ 3 SYSTEMPATH/View/View.php(234): include('/var/www/ci4/haruyumi.net/app/Views/admin/kyokai/event_regist.php')
+ 4 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('admin/kyokai/event_regist', [], true)
+ 6 APPPATH/Controllers/Admin/AdminEvent.php(77): view('admin/kyokai/event_regist')
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\AdminEvent->event_revision()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminEvent))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-06-30 23:27:17 --> ErrorException: Undefined array key "event_class_id"
+[Method: POST, Route: admin/event_revision]
+in APPPATH/Helpers/Admin/event_helper.php on line 215.
+ 1 APPPATH/Helpers/Admin/event_helper.php(215): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "event_class_id"', '/var/www/ci4/haruyumi.net/app/Helpers/Admin/event_helper.php', 215)
+ 2 APPPATH/Views/admin/kyokai/event_regist.php(10): form_event_revision([...], 10)
+ 3 SYSTEMPATH/View/View.php(234): include('/var/www/ci4/haruyumi.net/app/Views/admin/kyokai/event_regist.php')
+ 4 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('admin/kyokai/event_regist', [], true)
+ 6 APPPATH/Controllers/Admin/AdminEvent.php(77): view('admin/kyokai/event_regist')
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\AdminEvent->event_revision()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminEvent))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

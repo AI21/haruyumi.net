@@ -1,0 +1,267 @@
+@charset "utf-8";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-style:normal;
+	font-weight: normal;
+	vertical-align: baseline;
+	font-family: "メイリオ",Meiryo,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Arial,Verdana,"ＭＳ Ｐゴシック",sans-serif;
+	color: #666;
+	}
+html{
+	overflow-y: scroll;
+	font-size: 62.5%;
+	}
+
+body {
+	text-align:center;
+	-webkit-text-size-adjust: 100%;
+	font-size: 1.4em;
+	font-size: 1.4rem;
+	overflow-x: hidden;
+	}
+main {
+	margin: 0 auto;
+	text-align: center;
+	width: 600px;
+	}
+header {
+	padding: 16px 0;
+	}
+footer {
+	padding-top: 20px;
+	}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+	}
+
+blockquote, q {
+	quotes: none;
+	}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+	}
+
+input, textarea {
+	margin: 0;
+	padding: 0;
+	width: 98%;
+	font-size: 1.6em;
+	font-size: 1.6rem;
+	}
+
+ol, ul{
+	list-style:none;
+	}
+li {
+	font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Arial,Verdana,"ＭＳ Ｐゴシック",sans-serif;
+	}
+dt, dd {
+	float: left;
+	}
+dt {
+	clear: both;
+	}
+
+p {
+	box-sizing: border-box;
+	margin-bottom: 2em;
+	letter-spacing: 0.08em;
+	font-size: 1.4em;
+	font-size: 1.4rem;
+	line-height: 1.6em;
+	}
+
+table{
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing:0;
+	}
+th, td {
+	padding: 0.5em 0;
+	border: 1px solid #000;
+	}
+th {
+	background-color: #FFD5EC;
+	color: #333;
+	white-space: nowrap;
+	}
+td {
+	vertical-align: top;
+	}
+
+caption, th{
+	text-align: left;
+	}
+
+img {
+	max-width: 100%;
+	}
+object {
+	margin: 0;
+	padding: 0;
+	}
+
+a {
+	display: block;
+	color: #DF0174;
+	text-decoration: none;
+	}
+a:hover { color: #f00; }
+
+h1,h2,h3,h4,h5,h6 {
+	width: 100%;
+	}
+h1 {
+	font-family: "ヒラギノ角ゴ Std W8","ヒラギノ角ゴ ProN","Hiragino Kaku Gothic ProN",helvetica,Arial,Verdana,"ＭＳ Ｐゴシック",sans-serif;
+	font-size: 3.4em;
+	font-size: 3.4rem;
+	}
+h2 {
+	font-family: helvetica,"ヒラギノ角ゴ ProN","Hiragino Kaku Gothic ProN",Arial,Verdana,"ＭＳ Ｐゴシック",sans-serif;
+	font-size: 2.2em;
+	font-size: 2.2rem;
+	}
+h3 {
+	font-family: helvetica,"ヒラギノ角ゴ ProN","Hiragino Kaku Gothic ProN",Arial,Verdana,"ＭＳ Ｐゴシック",sans-serif;
+	font-size: 2em;
+	font-size: 2rem;
+	}
+h4 {
+	font-size: 1.8em;
+	font-size: 1.8rem;
+	}
+h5 {
+	line-height: 2em;
+	font-size: 1.6em;
+	font-size: 1.6rem;
+	}
+h6 {
+	font-size: 1.4em;
+	font-size: 1.4rem;
+	}
+
+input[type=text]{
+	padding: 4px 0 4px 0.4em;
+	font-size: 16px;
+	width: -webkit-fill-available;
+	}
+button {
+	padding: 4px 0.6em;
+	-webkit-appearance: none;
+	border-radius: 0;
+	font-size: 14px;
+	}
+button#btn_change_view {
+	margin-right: 5em;
+	}
+button.cng_sc {
+	padding: 0 0.6em;
+	}
+
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/
+*/
+img, object, embed, video {
+	max-width: 100%;
+	}
+
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+	}
+
+/* よく使うCSS start
+
+a,a:hover {
+	-webkit-transition: 0.7s;
+	-moz-transition: 0.7s;
+	-o-transition: 0.7s;
+	transition: 0.7s;
+}
+
+a img:hover {
+	filter: alpha(opacity=75);
+	-moz-opacity:0.75;
+	opacity:0.75;
+}
+
+よく使うCSS end -----
+時々使うCSS3 start ---
+
+テキストシャドウ {
+	text-shadow: 1px 1px 3px #000;
+}
+
+テキストシャドウ {
+	text-shadow: 1px 1px 3px #000;
+}
+
+ボックスシャドウ {
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+ボックスシャドウ内側 {
+	-moz-box-shadow: inset 1px 1px 3px #000;
+	-webkit-box-shadow: inset 1px 1px 3px #000;
+	box-shadow: inset 1px 1px 3px #000;
+}
+
+角丸 {
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
+トランジション {
+	-webkit-transition: 1.5s;
+	-moz-transition: 1.5s;
+	-o-transition: 1.5s;
+	transition: 1.5s;
+}
+
+透明 {
+	filter: alpha(opacity=25);
+	-moz-opacity:0.25;
+	opacity:0.25;
+}
+
+背景のみ透明 {
+	background-color:rgba(255,255,255,0.2);
+}
+
+グラデーション {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#000000');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#000000')";
+	background-image: -moz-linear-gradient(top, #ffffff, #000000);
+	background-image: -ms-linear-gradient(top, #ffffff, #000000);
+	background-image: -o-linear-gradient(top, #ffffff, #000000);
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#ffffff), to(#000000));
+	background-image: -webkit-linear-gradient(top, #ffffff, #000000);
+	background-image: linear-gradient(top, #ffffff, #000000);
+}
+
+
+時々使うCSS3 end */

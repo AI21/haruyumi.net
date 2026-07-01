@@ -1,0 +1,586 @@
+ERROR - 2025-02-08 10:09:54 --> mysqli_sql_exception: Unknown column 'mta.gender_cd' in 'field list' in C:\xampp\htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n\t\t\tSELECT\n\t\t\t\t...', 0)
+#1 C:\xampp\htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t\tSELECT\n\t\t\t\t...')
+#2 C:\xampp\htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t\tSELECT\n\t\t\t\t...')
+#3 C:\xampp\htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('\n\t\t\tSELECT\n\t\t\t\t...', Array)
+#4 C:\xampp\htdocs\kasugaikyudo\production\app\Models\TaikaiModel.php(131): App\Models\BaseQueryModel->get_first_row('\n\t\t\tSELECT\n\t\t\t\t...', Array, 'array')
+#5 C:\xampp\htdocs\kasugaikyudo\production\app\Libraries\TaikaiLibrarie.php(48): App\Models\TaikaiModel->get_taikai_detail(5, 65)
+#6 C:\xampp\htdocs\kasugaikyudo\production\app\Controllers\Taikai.php(64): App\Libraries\TaikaiLibrarie->get_taikai_detail(5, 65)
+#7 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Taikai->detail('5')
+#8 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+#9 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\kasugaikyudo\production\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-02-08 10:09:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'mta.gender_cd' in 'field list'
+[Method: GET, Route: taikai/detail/5]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				mta.taikai_name,
+				mta.taikai_name_short,
+                mta.near_far_flg,
+                mta.kasugai_flg,
+                mta.gender_cd,
+                mta.age_limit_min,
+                mta.age_limit_max,
+                mka.kaijo_name,
+				tti.taikai_id,
+				tti.category_id,
+				tti.fiscal_year_id,
+				tti.taikai_id,
+				tti.taikai_no,
+				tti.taikai_sub_name,
+				tti.taikai_date_st,
+				tti.taikai_date_ed,
+				tti.taikai_open_time,
+				tti.taikai_uketuke_time,
+				tti.taikai_time_st,
+				tti.taikai_time_ed,
+				tti.taikai_uketuke_st,
+				tti.taikai_uketuke_ed,
+				tti.kasugai_uketuke_st,
+				tti.kasugai_uketuke_ed,
+				tti.indi_apply_flg,
+				tti.kaijo_id,
+				tti.kaijo_other_name,
+				tti.eligibility,
+				tti.competition_rules,
+				tti.awards,
+				tti.entry_fee,
+				tti.contact_info,
+				tti.created,
+				tti.modefied,
+				CASE WHEN tof.modefied IS NOT NULL THEN :flgOn: ELSE :flgOff: END sanka_flg
+			FROM
+				t_taikai_info tti
+			INNER JOIN m_taikai mta ON
+				mta.taikai_m_id = tti.taikai_m_id
+			LEFT JOIN m_kaijo mka ON
+				mka.kaijo_id = tti.kaijo_id
+            LEFT JOIN t_taikai_offer_member tof ON
+            	tof.taikai_id = tti.taikai_id
+                AND tof.member_id = :memberId:
+			WHERE
+				tti.taikai_id = :taikaiId: 
+		', [...])
+ 2 APPPATH\Models\TaikaiModel.php(131): App\Models\BaseQueryModel->get_first_row('
+			SELECT
+				mta.taikai_name,
+				mta.taikai_name_short,
+                mta.near_far_flg,
+                mta.kasugai_flg,
+                mta.gender_cd,
+                mta.age_limit_min,
+                mta.age_limit_max,
+                mka.kaijo_name,
+				tti.taikai_id,
+				tti.category_id,
+				tti.fiscal_year_id,
+				tti.taikai_id,
+				tti.taikai_no,
+				tti.taikai_sub_name,
+				tti.taikai_date_st,
+				tti.taikai_date_ed,
+				tti.taikai_open_time,
+				tti.taikai_uketuke_time,
+				tti.taikai_time_st,
+				tti.taikai_time_ed,
+				tti.taikai_uketuke_st,
+				tti.taikai_uketuke_ed,
+				tti.kasugai_uketuke_st,
+				tti.kasugai_uketuke_ed,
+				tti.indi_apply_flg,
+				tti.kaijo_id,
+				tti.kaijo_other_name,
+				tti.eligibility,
+				tti.competition_rules,
+				tti.awards,
+				tti.entry_fee,
+				tti.contact_info,
+				tti.created,
+				tti.modefied,
+				CASE WHEN tof.modefied IS NOT NULL THEN :flgOn: ELSE :flgOff: END sanka_flg
+			FROM
+				t_taikai_info tti
+			INNER JOIN m_taikai mta ON
+				mta.taikai_m_id = tti.taikai_m_id
+			LEFT JOIN m_kaijo mka ON
+				mka.kaijo_id = tti.kaijo_id
+            LEFT JOIN t_taikai_offer_member tof ON
+            	tof.taikai_id = tti.taikai_id
+                AND tof.member_id = :memberId:
+			WHERE
+				tti.taikai_id = :taikaiId: 
+		', [...], 'array')
+ 3 APPPATH\Libraries\TaikaiLibrarie.php(48): App\Models\TaikaiModel->get_taikai_detail(5, 65)
+ 4 APPPATH\Controllers\Taikai.php(64): App\Libraries\TaikaiLibrarie->get_taikai_detail(5, 65)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->detail('5')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-08 10:09:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'mta.gender_cd' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT
+				mta.taikai_name,
+				mta.taikai_name_short,
+                mta.near_far_flg,
+                mta.kasugai_flg,
+                mta.gender_cd,
+                mta.age_limit_min,
+                mta.age_limit_max,
+                mka.kaijo_name,
+				tti.taikai_id,
+				tti.category_id,
+				tti.fiscal_year_id,
+				tti.taikai_id,
+				tti.taikai_no,
+				tti.taikai_sub_name,
+				tti.taikai_date_st,
+				tti.taikai_date_ed,
+				tti.taikai_open_time,
+				tti.taikai_uketuke_time,
+				tti.taikai_time_st,
+				tti.taikai_time_ed,
+				tti.taikai_uketuke_st,
+				tti.taikai_uketuke_ed,
+				tti.kasugai_uketuke_st,
+				tti.kasugai_uketuke_ed,
+				tti.indi_apply_flg,
+				tti.kaijo_id,
+				tti.kaijo_other_name,
+				tti.eligibility,
+				tti.competition_rules,
+				tti.awards,
+				tti.entry_fee,
+				tti.contact_info,
+				tti.created,
+				tti.modefied,
+				CASE WHEN tof.modefied IS NOT NULL THEN \'1\' ELSE \'0\' END sanka_flg
+			FROM
+				t_taikai_info tti
+			INNER JOIN m_taikai mta ON
+				mta.taikai_m_id = tti.taikai_m_id
+			LEFT JOIN m_kaijo mka ON
+				mka.kaijo_id = tti.kaijo_id
+            LEFT JOIN t_taikai_offer_member tof ON
+            	tof.taikai_id = tti.taikai_id
+                AND tof.member_id = 65
+			WHERE
+				tti.taikai_id = 5 
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT
+				mta.taikai_name,
+				mta.taikai_name_short,
+                mta.near_far_flg,
+                mta.kasugai_flg,
+                mta.gender_cd,
+                mta.age_limit_min,
+                mta.age_limit_max,
+                mka.kaijo_name,
+				tti.taikai_id,
+				tti.category_id,
+				tti.fiscal_year_id,
+				tti.taikai_id,
+				tti.taikai_no,
+				tti.taikai_sub_name,
+				tti.taikai_date_st,
+				tti.taikai_date_ed,
+				tti.taikai_open_time,
+				tti.taikai_uketuke_time,
+				tti.taikai_time_st,
+				tti.taikai_time_ed,
+				tti.taikai_uketuke_st,
+				tti.taikai_uketuke_ed,
+				tti.kasugai_uketuke_st,
+				tti.kasugai_uketuke_ed,
+				tti.indi_apply_flg,
+				tti.kaijo_id,
+				tti.kaijo_other_name,
+				tti.eligibility,
+				tti.competition_rules,
+				tti.awards,
+				tti.entry_fee,
+				tti.contact_info,
+				tti.created,
+				tti.modefied,
+				CASE WHEN tof.modefied IS NOT NULL THEN \'1\' ELSE \'0\' END sanka_flg
+			FROM
+				t_taikai_info tti
+			INNER JOIN m_taikai mta ON
+				mta.taikai_m_id = tti.taikai_m_id
+			LEFT JOIN m_kaijo mka ON
+				mka.kaijo_id = tti.kaijo_id
+            LEFT JOIN t_taikai_offer_member tof ON
+            	tof.taikai_id = tti.taikai_id
+                AND tof.member_id = 65
+			WHERE
+				tti.taikai_id = 5 
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				mta.taikai_name,
+				mta.taikai_name_short,
+                mta.near_far_flg,
+                mta.kasugai_flg,
+                mta.gender_cd,
+                mta.age_limit_min,
+                mta.age_limit_max,
+                mka.kaijo_name,
+				tti.taikai_id,
+				tti.category_id,
+				tti.fiscal_year_id,
+				tti.taikai_id,
+				tti.taikai_no,
+				tti.taikai_sub_name,
+				tti.taikai_date_st,
+				tti.taikai_date_ed,
+				tti.taikai_open_time,
+				tti.taikai_uketuke_time,
+				tti.taikai_time_st,
+				tti.taikai_time_ed,
+				tti.taikai_uketuke_st,
+				tti.taikai_uketuke_ed,
+				tti.kasugai_uketuke_st,
+				tti.kasugai_uketuke_ed,
+				tti.indi_apply_flg,
+				tti.kaijo_id,
+				tti.kaijo_other_name,
+				tti.eligibility,
+				tti.competition_rules,
+				tti.awards,
+				tti.entry_fee,
+				tti.contact_info,
+				tti.created,
+				tti.modefied,
+				CASE WHEN tof.modefied IS NOT NULL THEN :flgOn: ELSE :flgOff: END sanka_flg
+			FROM
+				t_taikai_info tti
+			INNER JOIN m_taikai mta ON
+				mta.taikai_m_id = tti.taikai_m_id
+			LEFT JOIN m_kaijo mka ON
+				mka.kaijo_id = tti.kaijo_id
+            LEFT JOIN t_taikai_offer_member tof ON
+            	tof.taikai_id = tti.taikai_id
+                AND tof.member_id = :memberId:
+			WHERE
+				tti.taikai_id = :taikaiId: 
+		', [...])
+ 4 APPPATH\Models\TaikaiModel.php(131): App\Models\BaseQueryModel->get_first_row('
+			SELECT
+				mta.taikai_name,
+				mta.taikai_name_short,
+                mta.near_far_flg,
+                mta.kasugai_flg,
+                mta.gender_cd,
+                mta.age_limit_min,
+                mta.age_limit_max,
+                mka.kaijo_name,
+				tti.taikai_id,
+				tti.category_id,
+				tti.fiscal_year_id,
+				tti.taikai_id,
+				tti.taikai_no,
+				tti.taikai_sub_name,
+				tti.taikai_date_st,
+				tti.taikai_date_ed,
+				tti.taikai_open_time,
+				tti.taikai_uketuke_time,
+				tti.taikai_time_st,
+				tti.taikai_time_ed,
+				tti.taikai_uketuke_st,
+				tti.taikai_uketuke_ed,
+				tti.kasugai_uketuke_st,
+				tti.kasugai_uketuke_ed,
+				tti.indi_apply_flg,
+				tti.kaijo_id,
+				tti.kaijo_other_name,
+				tti.eligibility,
+				tti.competition_rules,
+				tti.awards,
+				tti.entry_fee,
+				tti.contact_info,
+				tti.created,
+				tti.modefied,
+				CASE WHEN tof.modefied IS NOT NULL THEN :flgOn: ELSE :flgOff: END sanka_flg
+			FROM
+				t_taikai_info tti
+			INNER JOIN m_taikai mta ON
+				mta.taikai_m_id = tti.taikai_m_id
+			LEFT JOIN m_kaijo mka ON
+				mka.kaijo_id = tti.kaijo_id
+            LEFT JOIN t_taikai_offer_member tof ON
+            	tof.taikai_id = tti.taikai_id
+                AND tof.member_id = :memberId:
+			WHERE
+				tti.taikai_id = :taikaiId: 
+		', [...], 'array')
+ 5 APPPATH\Libraries\TaikaiLibrarie.php(48): App\Models\TaikaiModel->get_taikai_detail(5, 65)
+ 6 APPPATH\Controllers\Taikai.php(64): App\Libraries\TaikaiLibrarie->get_taikai_detail(5, 65)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->detail('5')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-08 10:09:54 --> [Caused by] mysqli_sql_exception: Unknown column 'mta.gender_cd' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+			SELECT
+				mta.taikai_name,
+				mta.taikai_name_short,
+                mta.near_far_flg,
+                mta.kasugai_flg,
+                mta.gender_cd,
+                mta.age_limit_min,
+                mta.age_limit_max,
+                mka.kaijo_name,
+				tti.taikai_id,
+				tti.category_id,
+				tti.fiscal_year_id,
+				tti.taikai_id,
+				tti.taikai_no,
+				tti.taikai_sub_name,
+				tti.taikai_date_st,
+				tti.taikai_date_ed,
+				tti.taikai_open_time,
+				tti.taikai_uketuke_time,
+				tti.taikai_time_st,
+				tti.taikai_time_ed,
+				tti.taikai_uketuke_st,
+				tti.taikai_uketuke_ed,
+				tti.kasugai_uketuke_st,
+				tti.kasugai_uketuke_ed,
+				tti.indi_apply_flg,
+				tti.kaijo_id,
+				tti.kaijo_other_name,
+				tti.eligibility,
+				tti.competition_rules,
+				tti.awards,
+				tti.entry_fee,
+				tti.contact_info,
+				tti.created,
+				tti.modefied,
+				CASE WHEN tof.modefied IS NOT NULL THEN \'1\' ELSE \'0\' END sanka_flg
+			FROM
+				t_taikai_info tti
+			INNER JOIN m_taikai mta ON
+				mta.taikai_m_id = tti.taikai_m_id
+			LEFT JOIN m_kaijo mka ON
+				mka.kaijo_id = tti.kaijo_id
+            LEFT JOIN t_taikai_offer_member tof ON
+            	tof.taikai_id = tti.taikai_id
+                AND tof.member_id = 65
+			WHERE
+				tti.taikai_id = 5 
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT
+				mta.taikai_name,
+				mta.taikai_name_short,
+                mta.near_far_flg,
+                mta.kasugai_flg,
+                mta.gender_cd,
+                mta.age_limit_min,
+                mta.age_limit_max,
+                mka.kaijo_name,
+				tti.taikai_id,
+				tti.category_id,
+				tti.fiscal_year_id,
+				tti.taikai_id,
+				tti.taikai_no,
+				tti.taikai_sub_name,
+				tti.taikai_date_st,
+				tti.taikai_date_ed,
+				tti.taikai_open_time,
+				tti.taikai_uketuke_time,
+				tti.taikai_time_st,
+				tti.taikai_time_ed,
+				tti.taikai_uketuke_st,
+				tti.taikai_uketuke_ed,
+				tti.kasugai_uketuke_st,
+				tti.kasugai_uketuke_ed,
+				tti.indi_apply_flg,
+				tti.kaijo_id,
+				tti.kaijo_other_name,
+				tti.eligibility,
+				tti.competition_rules,
+				tti.awards,
+				tti.entry_fee,
+				tti.contact_info,
+				tti.created,
+				tti.modefied,
+				CASE WHEN tof.modefied IS NOT NULL THEN \'1\' ELSE \'0\' END sanka_flg
+			FROM
+				t_taikai_info tti
+			INNER JOIN m_taikai mta ON
+				mta.taikai_m_id = tti.taikai_m_id
+			LEFT JOIN m_kaijo mka ON
+				mka.kaijo_id = tti.kaijo_id
+            LEFT JOIN t_taikai_offer_member tof ON
+            	tof.taikai_id = tti.taikai_id
+                AND tof.member_id = 65
+			WHERE
+				tti.taikai_id = 5 
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT
+				mta.taikai_name,
+				mta.taikai_name_short,
+                mta.near_far_flg,
+                mta.kasugai_flg,
+                mta.gender_cd,
+                mta.age_limit_min,
+                mta.age_limit_max,
+                mka.kaijo_name,
+				tti.taikai_id,
+				tti.category_id,
+				tti.fiscal_year_id,
+				tti.taikai_id,
+				tti.taikai_no,
+				tti.taikai_sub_name,
+				tti.taikai_date_st,
+				tti.taikai_date_ed,
+				tti.taikai_open_time,
+				tti.taikai_uketuke_time,
+				tti.taikai_time_st,
+				tti.taikai_time_ed,
+				tti.taikai_uketuke_st,
+				tti.taikai_uketuke_ed,
+				tti.kasugai_uketuke_st,
+				tti.kasugai_uketuke_ed,
+				tti.indi_apply_flg,
+				tti.kaijo_id,
+				tti.kaijo_other_name,
+				tti.eligibility,
+				tti.competition_rules,
+				tti.awards,
+				tti.entry_fee,
+				tti.contact_info,
+				tti.created,
+				tti.modefied,
+				CASE WHEN tof.modefied IS NOT NULL THEN \'1\' ELSE \'0\' END sanka_flg
+			FROM
+				t_taikai_info tti
+			INNER JOIN m_taikai mta ON
+				mta.taikai_m_id = tti.taikai_m_id
+			LEFT JOIN m_kaijo mka ON
+				mka.kaijo_id = tti.kaijo_id
+            LEFT JOIN t_taikai_offer_member tof ON
+            	tof.taikai_id = tti.taikai_id
+                AND tof.member_id = 65
+			WHERE
+				tti.taikai_id = 5 
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				mta.taikai_name,
+				mta.taikai_name_short,
+                mta.near_far_flg,
+                mta.kasugai_flg,
+                mta.gender_cd,
+                mta.age_limit_min,
+                mta.age_limit_max,
+                mka.kaijo_name,
+				tti.taikai_id,
+				tti.category_id,
+				tti.fiscal_year_id,
+				tti.taikai_id,
+				tti.taikai_no,
+				tti.taikai_sub_name,
+				tti.taikai_date_st,
+				tti.taikai_date_ed,
+				tti.taikai_open_time,
+				tti.taikai_uketuke_time,
+				tti.taikai_time_st,
+				tti.taikai_time_ed,
+				tti.taikai_uketuke_st,
+				tti.taikai_uketuke_ed,
+				tti.kasugai_uketuke_st,
+				tti.kasugai_uketuke_ed,
+				tti.indi_apply_flg,
+				tti.kaijo_id,
+				tti.kaijo_other_name,
+				tti.eligibility,
+				tti.competition_rules,
+				tti.awards,
+				tti.entry_fee,
+				tti.contact_info,
+				tti.created,
+				tti.modefied,
+				CASE WHEN tof.modefied IS NOT NULL THEN :flgOn: ELSE :flgOff: END sanka_flg
+			FROM
+				t_taikai_info tti
+			INNER JOIN m_taikai mta ON
+				mta.taikai_m_id = tti.taikai_m_id
+			LEFT JOIN m_kaijo mka ON
+				mka.kaijo_id = tti.kaijo_id
+            LEFT JOIN t_taikai_offer_member tof ON
+            	tof.taikai_id = tti.taikai_id
+                AND tof.member_id = :memberId:
+			WHERE
+				tti.taikai_id = :taikaiId: 
+		', [...])
+ 5 APPPATH\Models\TaikaiModel.php(131): App\Models\BaseQueryModel->get_first_row('
+			SELECT
+				mta.taikai_name,
+				mta.taikai_name_short,
+                mta.near_far_flg,
+                mta.kasugai_flg,
+                mta.gender_cd,
+                mta.age_limit_min,
+                mta.age_limit_max,
+                mka.kaijo_name,
+				tti.taikai_id,
+				tti.category_id,
+				tti.fiscal_year_id,
+				tti.taikai_id,
+				tti.taikai_no,
+				tti.taikai_sub_name,
+				tti.taikai_date_st,
+				tti.taikai_date_ed,
+				tti.taikai_open_time,
+				tti.taikai_uketuke_time,
+				tti.taikai_time_st,
+				tti.taikai_time_ed,
+				tti.taikai_uketuke_st,
+				tti.taikai_uketuke_ed,
+				tti.kasugai_uketuke_st,
+				tti.kasugai_uketuke_ed,
+				tti.indi_apply_flg,
+				tti.kaijo_id,
+				tti.kaijo_other_name,
+				tti.eligibility,
+				tti.competition_rules,
+				tti.awards,
+				tti.entry_fee,
+				tti.contact_info,
+				tti.created,
+				tti.modefied,
+				CASE WHEN tof.modefied IS NOT NULL THEN :flgOn: ELSE :flgOff: END sanka_flg
+			FROM
+				t_taikai_info tti
+			INNER JOIN m_taikai mta ON
+				mta.taikai_m_id = tti.taikai_m_id
+			LEFT JOIN m_kaijo mka ON
+				mka.kaijo_id = tti.kaijo_id
+            LEFT JOIN t_taikai_offer_member tof ON
+            	tof.taikai_id = tti.taikai_id
+                AND tof.member_id = :memberId:
+			WHERE
+				tti.taikai_id = :taikaiId: 
+		', [...], 'array')
+ 6 APPPATH\Libraries\TaikaiLibrarie.php(48): App\Models\TaikaiModel->get_taikai_detail(5, 65)
+ 7 APPPATH\Controllers\Taikai.php(64): App\Libraries\TaikaiLibrarie->get_taikai_detail(5, 65)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->detail('5')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

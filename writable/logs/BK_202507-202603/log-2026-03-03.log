@@ -1,0 +1,60 @@
+CRITICAL - 2026-03-03 22:46:59 --> ErrorException: Undefined array key "kyokai_officer_flg"
+[Method: POST, Route: admin/taikai_revision]
+in APPPATH\Controllers\Admin\AdminTaikai.php on line 48.
+ 1 APPPATH\Controllers\Admin\AdminTaikai.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kyokai_officer_flg"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Controllers\\Admin\\AdminTaikai.php', 48)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminTaikai->taikai_revision()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminTaikai))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-03 23:06:37 --> TypeError: array_push(): Argument #1 ($array) must be of type array, null given
+[Method: GET, Route: shinsa/detail/39]
+in APPPATH\Controllers\Shinsa.php on line 97.
+ 1 APPPATH\Controllers\Shinsa.php(97): array_push(null, 'admin/form')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('39')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-03 23:07:30 --> TypeError: array_push(): Argument #1 ($array) must be of type array, null given
+[Method: GET, Route: shinsa/detail/39]
+in APPPATH\Controllers\Shinsa.php on line 99.
+ 1 APPPATH\Controllers\Shinsa.php(99): array_push(null, 'admin/form')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('39')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-03 23:14:20 --> ErrorException: Undefined array key "kasugai_flg"
+[Method: POST, Route: admin/shinsa_revision]
+in APPPATH\Controllers\Admin\AdminShinsa.php on line 49.
+ 1 APPPATH\Controllers\Admin\AdminShinsa.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kasugai_flg"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Controllers\\Admin\\AdminShinsa.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-03 23:15:18 --> ErrorException: Undefined array key "kasugai_flg"
+[Method: POST, Route: admin/shinsa_revision]
+in APPPATH\Controllers\Admin\AdminShinsa.php on line 49.
+ 1 APPPATH\Controllers\Admin\AdminShinsa.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kasugai_flg"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Controllers\\Admin\\AdminShinsa.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-03 23:20:35 --> ErrorException: Undefined variable $taikaiDetail
+[Method: POST, Route: admin/shinsa_revision]
+in APPPATH\Controllers\Admin\AdminShinsa.php on line 66.
+ 1 APPPATH\Controllers\Admin\AdminShinsa.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $taikaiDetail', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Controllers\\Admin\\AdminShinsa.php', 66)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

@@ -1,0 +1,827 @@
+ERROR - 2026-01-10 23:05:48 --> mysqli_sql_exception: Duplicate entry '11-2' for key 'PRIMARY' in C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n\t\t\tINSERT INTO...', 0)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t\tINSERT INTO...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t\tINSERT INTO...')
+#3 C:\xampp_htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('\n\t\t\tINSERT INTO...', Array)
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Models\TaikaiModel.php(357): App\Models\BaseQueryModel->get_result_query('\n\t\t\tINSERT INTO...', Array)
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php(249): App\Models\TaikaiModel->insert_document_taikai(11, 2, 0, 'WEB\xE3\x83\x9A\xE3\x83\xBC\xE3\x82\xB8\xE8\xA6\x81...', 'txt', '/upload/taikai/...')
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Admin.php(255): App\Libraries\AdminLibrarie->notice_files_proc(122, Array, Array)
+#7 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-01-10 23:05:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '11-2' for key 'PRIMARY'
+[Method: POST, Route: admin/notice_regist_proc]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				:taikaiId:,
+				:documentId:,
+				:documentTypeId:,
+				:documentName:,
+				:documentExt:,
+				:documentPath:,
+				NOW()
+			)
+		', [...])
+ 2 APPPATH\Models\TaikaiModel.php(357): App\Models\BaseQueryModel->get_result_query('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				:taikaiId:,
+				:documentId:,
+				:documentTypeId:,
+				:documentName:,
+				:documentExt:,
+				:documentPath:,
+				NOW()
+			)
+		', [...])
+ 3 APPPATH\Libraries\AdminLibrarie.php(249): App\Models\TaikaiModel->insert_document_taikai(11, 2, 0, 'WEBページ要望.txt', 'txt', '/upload/taikai/122/WEBページ要望.txt')
+ 4 APPPATH\Controllers\Admin.php(255): App\Libraries\AdminLibrarie->notice_files_proc(122, [...], [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-10 23:05:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '11-2' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				11,
+				2,
+				0,
+				\'WEBページ要望.txt\',
+				\'txt\',
+				\'/upload/taikai/122/WEBページ要望.txt\',
+				NOW()
+			)
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				11,
+				2,
+				0,
+				\'WEBページ要望.txt\',
+				\'txt\',
+				\'/upload/taikai/122/WEBページ要望.txt\',
+				NOW()
+			)
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				:taikaiId:,
+				:documentId:,
+				:documentTypeId:,
+				:documentName:,
+				:documentExt:,
+				:documentPath:,
+				NOW()
+			)
+		', [...])
+ 4 APPPATH\Models\TaikaiModel.php(357): App\Models\BaseQueryModel->get_result_query('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				:taikaiId:,
+				:documentId:,
+				:documentTypeId:,
+				:documentName:,
+				:documentExt:,
+				:documentPath:,
+				NOW()
+			)
+		', [...])
+ 5 APPPATH\Libraries\AdminLibrarie.php(249): App\Models\TaikaiModel->insert_document_taikai(11, 2, 0, 'WEBページ要望.txt', 'txt', '/upload/taikai/122/WEBページ要望.txt')
+ 6 APPPATH\Controllers\Admin.php(255): App\Libraries\AdminLibrarie->notice_files_proc(122, [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-10 23:05:48 --> [Caused by] mysqli_sql_exception: Duplicate entry '11-2' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				11,
+				2,
+				0,
+				\'WEBページ要望.txt\',
+				\'txt\',
+				\'/upload/taikai/122/WEBページ要望.txt\',
+				NOW()
+			)
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				11,
+				2,
+				0,
+				\'WEBページ要望.txt\',
+				\'txt\',
+				\'/upload/taikai/122/WEBページ要望.txt\',
+				NOW()
+			)
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				11,
+				2,
+				0,
+				\'WEBページ要望.txt\',
+				\'txt\',
+				\'/upload/taikai/122/WEBページ要望.txt\',
+				NOW()
+			)
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				:taikaiId:,
+				:documentId:,
+				:documentTypeId:,
+				:documentName:,
+				:documentExt:,
+				:documentPath:,
+				NOW()
+			)
+		', [...])
+ 5 APPPATH\Models\TaikaiModel.php(357): App\Models\BaseQueryModel->get_result_query('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				:taikaiId:,
+				:documentId:,
+				:documentTypeId:,
+				:documentName:,
+				:documentExt:,
+				:documentPath:,
+				NOW()
+			)
+		', [...])
+ 6 APPPATH\Libraries\AdminLibrarie.php(249): App\Models\TaikaiModel->insert_document_taikai(11, 2, 0, 'WEBページ要望.txt', 'txt', '/upload/taikai/122/WEBページ要望.txt')
+ 7 APPPATH\Controllers\Admin.php(255): App\Libraries\AdminLibrarie->notice_files_proc(122, [...], [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-01-10 23:10:31 --> mysqli_sql_exception: Duplicate entry '11-3' for key 'PRIMARY' in C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n\t\t\tINSERT INTO...', 0)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t\tINSERT INTO...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t\tINSERT INTO...')
+#3 C:\xampp_htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('\n\t\t\tINSERT INTO...', Array)
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Models\TaikaiModel.php(357): App\Models\BaseQueryModel->get_result_query('\n\t\t\tINSERT INTO...', Array)
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php(249): App\Models\TaikaiModel->insert_document_taikai(11, 3, 0, 'WEB\xE3\x83\x9A\xE3\x83\xBC\xE3\x82\xB8\xE8\xA6\x81...', 'txt', '/upload/taikai/...')
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Admin.php(255): App\Libraries\AdminLibrarie->notice_files_proc(122, Array, Array)
+#7 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-01-10 23:10:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '11-3' for key 'PRIMARY'
+[Method: POST, Route: admin/notice_regist_proc]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				:taikaiId:,
+				:documentId:,
+				:documentTypeId:,
+				:documentName:,
+				:documentExt:,
+				:documentPath:,
+				NOW()
+			)
+		', [...])
+ 2 APPPATH\Models\TaikaiModel.php(357): App\Models\BaseQueryModel->get_result_query('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				:taikaiId:,
+				:documentId:,
+				:documentTypeId:,
+				:documentName:,
+				:documentExt:,
+				:documentPath:,
+				NOW()
+			)
+		', [...])
+ 3 APPPATH\Libraries\AdminLibrarie.php(249): App\Models\TaikaiModel->insert_document_taikai(11, 3, 0, 'WEBページ要望.txt', 'txt', '/upload/taikai/122/WEBページ要望.txt')
+ 4 APPPATH\Controllers\Admin.php(255): App\Libraries\AdminLibrarie->notice_files_proc(122, [...], [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-10 23:10:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '11-3' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				11,
+				3,
+				0,
+				\'WEBページ要望.txt\',
+				\'txt\',
+				\'/upload/taikai/122/WEBページ要望.txt\',
+				NOW()
+			)
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				11,
+				3,
+				0,
+				\'WEBページ要望.txt\',
+				\'txt\',
+				\'/upload/taikai/122/WEBページ要望.txt\',
+				NOW()
+			)
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				:taikaiId:,
+				:documentId:,
+				:documentTypeId:,
+				:documentName:,
+				:documentExt:,
+				:documentPath:,
+				NOW()
+			)
+		', [...])
+ 4 APPPATH\Models\TaikaiModel.php(357): App\Models\BaseQueryModel->get_result_query('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				:taikaiId:,
+				:documentId:,
+				:documentTypeId:,
+				:documentName:,
+				:documentExt:,
+				:documentPath:,
+				NOW()
+			)
+		', [...])
+ 5 APPPATH\Libraries\AdminLibrarie.php(249): App\Models\TaikaiModel->insert_document_taikai(11, 3, 0, 'WEBページ要望.txt', 'txt', '/upload/taikai/122/WEBページ要望.txt')
+ 6 APPPATH\Controllers\Admin.php(255): App\Libraries\AdminLibrarie->notice_files_proc(122, [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-10 23:10:31 --> [Caused by] mysqli_sql_exception: Duplicate entry '11-3' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				11,
+				3,
+				0,
+				\'WEBページ要望.txt\',
+				\'txt\',
+				\'/upload/taikai/122/WEBページ要望.txt\',
+				NOW()
+			)
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				11,
+				3,
+				0,
+				\'WEBページ要望.txt\',
+				\'txt\',
+				\'/upload/taikai/122/WEBページ要望.txt\',
+				NOW()
+			)
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				11,
+				3,
+				0,
+				\'WEBページ要望.txt\',
+				\'txt\',
+				\'/upload/taikai/122/WEBページ要望.txt\',
+				NOW()
+			)
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				:taikaiId:,
+				:documentId:,
+				:documentTypeId:,
+				:documentName:,
+				:documentExt:,
+				:documentPath:,
+				NOW()
+			)
+		', [...])
+ 5 APPPATH\Models\TaikaiModel.php(357): App\Models\BaseQueryModel->get_result_query('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				:taikaiId:,
+				:documentId:,
+				:documentTypeId:,
+				:documentName:,
+				:documentExt:,
+				:documentPath:,
+				NOW()
+			)
+		', [...])
+ 6 APPPATH\Libraries\AdminLibrarie.php(249): App\Models\TaikaiModel->insert_document_taikai(11, 3, 0, 'WEBページ要望.txt', 'txt', '/upload/taikai/122/WEBページ要望.txt')
+ 7 APPPATH\Controllers\Admin.php(255): App\Libraries\AdminLibrarie->notice_files_proc(122, [...], [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-01-10 23:11:05 --> mysqli_sql_exception: Duplicate entry '11-4' for key 'PRIMARY' in C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n\t\t\tINSERT INTO...', 0)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t\tINSERT INTO...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t\tINSERT INTO...')
+#3 C:\xampp_htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('\n\t\t\tINSERT INTO...', Array)
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Models\TaikaiModel.php(357): App\Models\BaseQueryModel->get_result_query('\n\t\t\tINSERT INTO...', Array)
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php(249): App\Models\TaikaiModel->insert_document_taikai(11, 4, 0, 'WEB\xE3\x83\x9A\xE3\x83\xBC\xE3\x82\xB8\xE8\xA6\x81...', 'txt', '/upload/taikai/...')
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Admin.php(255): App\Libraries\AdminLibrarie->notice_files_proc(122, Array, Array)
+#7 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-01-10 23:11:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '11-4' for key 'PRIMARY'
+[Method: POST, Route: admin/notice_regist_proc]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				:taikaiId:,
+				:documentId:,
+				:documentTypeId:,
+				:documentName:,
+				:documentExt:,
+				:documentPath:,
+				NOW()
+			)
+		', [...])
+ 2 APPPATH\Models\TaikaiModel.php(357): App\Models\BaseQueryModel->get_result_query('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				:taikaiId:,
+				:documentId:,
+				:documentTypeId:,
+				:documentName:,
+				:documentExt:,
+				:documentPath:,
+				NOW()
+			)
+		', [...])
+ 3 APPPATH\Libraries\AdminLibrarie.php(249): App\Models\TaikaiModel->insert_document_taikai(11, 4, 0, 'WEBページ要望.txt', 'txt', '/upload/taikai/122/WEBページ要望.txt')
+ 4 APPPATH\Controllers\Admin.php(255): App\Libraries\AdminLibrarie->notice_files_proc(122, [...], [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-10 23:11:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '11-4' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				11,
+				4,
+				0,
+				\'WEBページ要望.txt\',
+				\'txt\',
+				\'/upload/taikai/122/WEBページ要望.txt\',
+				NOW()
+			)
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				11,
+				4,
+				0,
+				\'WEBページ要望.txt\',
+				\'txt\',
+				\'/upload/taikai/122/WEBページ要望.txt\',
+				NOW()
+			)
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				:taikaiId:,
+				:documentId:,
+				:documentTypeId:,
+				:documentName:,
+				:documentExt:,
+				:documentPath:,
+				NOW()
+			)
+		', [...])
+ 4 APPPATH\Models\TaikaiModel.php(357): App\Models\BaseQueryModel->get_result_query('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				:taikaiId:,
+				:documentId:,
+				:documentTypeId:,
+				:documentName:,
+				:documentExt:,
+				:documentPath:,
+				NOW()
+			)
+		', [...])
+ 5 APPPATH\Libraries\AdminLibrarie.php(249): App\Models\TaikaiModel->insert_document_taikai(11, 4, 0, 'WEBページ要望.txt', 'txt', '/upload/taikai/122/WEBページ要望.txt')
+ 6 APPPATH\Controllers\Admin.php(255): App\Libraries\AdminLibrarie->notice_files_proc(122, [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-10 23:11:05 --> [Caused by] mysqli_sql_exception: Duplicate entry '11-4' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				11,
+				4,
+				0,
+				\'WEBページ要望.txt\',
+				\'txt\',
+				\'/upload/taikai/122/WEBページ要望.txt\',
+				NOW()
+			)
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				11,
+				4,
+				0,
+				\'WEBページ要望.txt\',
+				\'txt\',
+				\'/upload/taikai/122/WEBページ要望.txt\',
+				NOW()
+			)
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				11,
+				4,
+				0,
+				\'WEBページ要望.txt\',
+				\'txt\',
+				\'/upload/taikai/122/WEBページ要望.txt\',
+				NOW()
+			)
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				:taikaiId:,
+				:documentId:,
+				:documentTypeId:,
+				:documentName:,
+				:documentExt:,
+				:documentPath:,
+				NOW()
+			)
+		', [...])
+ 5 APPPATH\Models\TaikaiModel.php(357): App\Models\BaseQueryModel->get_result_query('
+			INSERT INTO t_document_taikai (
+				taikai_id
+				,document_id
+				,document_type_id
+				,document_name
+				,document_ext
+				,document_path
+				,created
+			) VALUES (
+				:taikaiId:,
+				:documentId:,
+				:documentTypeId:,
+				:documentName:,
+				:documentExt:,
+				:documentPath:,
+				NOW()
+			)
+		', [...])
+ 6 APPPATH\Libraries\AdminLibrarie.php(249): App\Models\TaikaiModel->insert_document_taikai(11, 4, 0, 'WEBページ要望.txt', 'txt', '/upload/taikai/122/WEBページ要望.txt')
+ 7 APPPATH\Controllers\Admin.php(255): App\Libraries\AdminLibrarie->notice_files_proc(122, [...], [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-10 23:36:33 --> TypeError: App\Models\TaikaiModel::insert_document_taikai(): Argument #2 ($documentId) must be of type int, array given, called in C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php on line 250
+[Method: POST, Route: admin/notice_regist_proc]
+in APPPATH\Models\TaikaiModel.php on line 324.
+ 1 APPPATH\Libraries\AdminLibrarie.php(250): App\Models\TaikaiModel->insert_document_taikai(11, [...], '0', '2025年度四段・五段・錬士五段講習会実施要項.xls', 'xls', '/upload/taikai/122/2025年度四段・五段・錬士五段講習会実施要項.xls')
+ 2 APPPATH\Controllers\Admin.php(255): App\Libraries\AdminLibrarie->notice_files_proc(122, [...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-10 23:37:49 --> ErrorException: Undefined variable $documentId
+[Method: POST, Route: admin/notice_regist_proc]
+in APPPATH\Libraries\AdminLibrarie.php on line 238.
+ 1 APPPATH\Libraries\AdminLibrarie.php(238): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $documentId', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\AdminLibrarie.php', 238)
+ 2 APPPATH\Controllers\Admin.php(255): App\Libraries\AdminLibrarie->notice_files_proc(122, [...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-10 23:38:36 --> ErrorException: Undefined variable $documentId
+[Method: POST, Route: admin/notice_regist_proc]
+in APPPATH\Libraries\AdminLibrarie.php on line 238.
+ 1 APPPATH\Libraries\AdminLibrarie.php(238): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $documentId', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\AdminLibrarie.php', 238)
+ 2 APPPATH\Controllers\Admin.php(255): App\Libraries\AdminLibrarie->notice_files_proc(122, [...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-10 23:55:15 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: POST, Route: admin/notice_regist_proc]
+in SYSTEMPATH\Database\BaseConnection.php on line 927.
+ 1 SYSTEMPATH\Model.php(716): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(922): CodeIgniter\Model->builder()
+ 3 APPPATH\Libraries\AdminLibrarie.php(202): CodeIgniter\Model->__call('insert_notice_rerlation_document_shinsa', [...])
+ 4 APPPATH\Controllers\Admin.php(255): App\Libraries\AdminLibrarie->notice_files_proc(121, [...], [])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-10 23:56:00 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: POST, Route: admin/notice_regist_proc]
+in SYSTEMPATH\Database\BaseConnection.php on line 927.
+ 1 SYSTEMPATH\Model.php(716): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(922): CodeIgniter\Model->builder()
+ 3 APPPATH\Libraries\AdminLibrarie.php(202): CodeIgniter\Model->__call('insert_notice_rerlation_document_shinsa', [...])
+ 4 APPPATH\Controllers\Admin.php(255): App\Libraries\AdminLibrarie->notice_files_proc(121, [...], [])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

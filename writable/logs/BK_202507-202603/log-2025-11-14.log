@@ -1,0 +1,10 @@
+CRITICAL - 2025-11-14 23:25:33 --> ParseError: syntax error, unexpected token "else", expecting end of file
+[Method: GET, Route: shinsa/detail/6]
+in APPPATH\Helpers\shinsa_helper.php on line 645.
+ 1 APPPATH\Controllers\Shinsa.php(14): helper([...])
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Shinsa->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

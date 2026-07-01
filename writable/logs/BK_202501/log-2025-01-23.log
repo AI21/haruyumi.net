@@ -1,0 +1,30 @@
+CRITICAL - 2025-01-23 23:28:21 --> Error: Undefined constant "PERIOD_NOW"
+[Method: GET, Route: taikai/detail/3]
+in APPPATH\Helpers\datetime_helper.php on line 118.
+ 1 APPPATH\Helpers\taikai_helper.php(149): date_period_check(null, null)
+ 2 APPPATH\Views\taikai\detail_kasugai.php(4): get_kasugai_taikai_detail_html([...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\taikai\\detail_kasugai.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('taikai/detail_kasugai', [], true)
+ 6 APPPATH\Controllers\Taikai.php(73): view('taikai/detail_kasugai', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->detail('3')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-23 23:29:08 --> Error: Undefined constant "PERIOD_NOW"
+[Method: GET, Route: taikai/detail/3]
+in APPPATH\Helpers\datetime_helper.php on line 118.
+ 1 APPPATH\Helpers\taikai_helper.php(149): date_period_check(null, null)
+ 2 APPPATH\Views\taikai\detail_kasugai.php(4): get_kasugai_taikai_detail_html([...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\taikai\\detail_kasugai.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('taikai/detail_kasugai', [], true)
+ 6 APPPATH\Controllers\Taikai.php(73): view('taikai/detail_kasugai', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->detail('3')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

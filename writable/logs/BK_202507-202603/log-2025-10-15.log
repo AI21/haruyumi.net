@@ -1,0 +1,27 @@
+CRITICAL - 2025-10-15 07:27:36 --> Error: Call to undefined method App\Libraries\CommonLibrarie::get_gender_list()
+[Method: POST, Route: admin/member_regist_conf]
+in APPPATH\Controllers\Admin.php on line 812.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_member_regist_conf()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-15 07:29:07 --> Error: Call to undefined method App\Libraries\CommonLibrarie::get_gender_list()
+[Method: POST, Route: admin/member_regist_conf]
+in APPPATH\Controllers\Admin.php on line 812.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_member_regist_conf()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-15 07:40:58 --> Error: Call to undefined function App\Controllers\member_regist_confirm()
+[Method: POST, Route: admin/member_regist_conf]
+in APPPATH\Controllers\Admin.php on line 806.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_member_regist_conf()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

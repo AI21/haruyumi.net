@@ -1,0 +1,19 @@
+ERROR - 2025-07-10 19:11:18 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2025-07-10 19:11:18 --> 
+ERROR - 2025-07-10 19:11:53 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2025-07-10 19:11:53 --> 
+CRITICAL - 2025-07-10 23:24:53 --> ErrorException: Undefined variable $noticeId
+[Method: GET, Route: kyokai/detail/29]
+in APPPATH\Helpers\kyokai_helper.php on line 205.
+ 1 APPPATH\Helpers\kyokai_helper.php(205): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $noticeId', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\kyokai_helper.php', 205)
+ 2 APPPATH\Views\kyokai\detail.php(11): event_detail_notice_list_html([...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\kyokai\\detail.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('kyokai/detail', [], true)
+ 6 APPPATH\Controllers\Kyokai.php(89): view('kyokai/detail')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kyokai->detail('29')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kyokai))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

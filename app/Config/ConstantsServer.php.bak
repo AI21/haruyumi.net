@@ -1,0 +1,192 @@
+<?php
+
+/*
+ | --------------------------------------------------------------------
+ | App Namespace
+ | --------------------------------------------------------------------
+ |
+ | This defines the default Namespace that is used throughout
+ | CodeIgniter to refer to the Application directory. Change
+ | this constant to change the namespace that all application
+ | classes should use.
+ |
+ | NOTE: changing this will require manually modifying the
+ | existing namespaces of App\* namespaced-classes.
+ */
+defined('APP_NAMESPACE') || define('APP_NAMESPACE', 'App');
+
+/*
+ | --------------------------------------------------------------------------
+ | Composer Path
+ | --------------------------------------------------------------------------
+ |
+ | The path that Composer's autoload file is expected to live. By default,
+ | the vendor folder is in the Root directory, but you can customize that here.
+ */
+defined('COMPOSER_PATH') || define('COMPOSER_PATH', ROOTPATH . 'vendor/autoload.php');
+
+/*
+ |--------------------------------------------------------------------------
+ | Timing Constants
+ |--------------------------------------------------------------------------
+ |
+ | Provide simple ways to work with the myriad of PHP functions that
+ | require information to be in seconds.
+ */
+defined('SECOND') || define('SECOND', 1);
+defined('MINUTE') || define('MINUTE', 60);
+defined('HOUR')   || define('HOUR', 3600);
+defined('DAY')    || define('DAY', 86400);
+defined('WEEK')   || define('WEEK', 604800);
+defined('MONTH')  || define('MONTH', 2_592_000);
+defined('YEAR')   || define('YEAR', 31_536_000);
+defined('DECADE') || define('DECADE', 315_360_000);
+
+/*
+ | --------------------------------------------------------------------------
+ | Exit Status Codes
+ | --------------------------------------------------------------------------
+ |
+ | Used to indicate the conditions under which the script is exit()ing.
+ | While there is no universal standard for error codes, there are some
+ | broad conventions.  Three such conventions are mentioned below, for
+ | those who wish to make use of them.  The CodeIgniter defaults were
+ | chosen for the least overlap with these conventions, while still
+ | leaving room for others to be defined in future versions and user
+ | applications.
+ |
+ | The three main conventions used for determining exit status codes
+ | are as follows:
+ |
+ |    Standard C/C++ Library (stdlibc):
+ |       http://www.gnu.org/software/libc/manual/html_node/Exit-Status.html
+ |       (This link also contains other GNU-specific conventions)
+ |    BSD sysexits.h:
+ |       http://www.gsp.com/cgi-bin/man.cgi?section=3&topic=sysexits
+ |    Bash scripting:
+ |       http://tldp.org/LDP/abs/html/exitcodes.html
+ |
+ */
+defined('EXIT_SUCCESS')        || define('EXIT_SUCCESS', 0);        // no errors
+defined('EXIT_ERROR')          || define('EXIT_ERROR', 1);          // generic error
+defined('EXIT_CONFIG')         || define('EXIT_CONFIG', 3);         // configuration error
+defined('EXIT_UNKNOWN_FILE')   || define('EXIT_UNKNOWN_FILE', 4);   // file not found
+defined('EXIT_UNKNOWN_CLASS')  || define('EXIT_UNKNOWN_CLASS', 5);  // unknown class
+defined('EXIT_UNKNOWN_METHOD') || define('EXIT_UNKNOWN_METHOD', 6); // unknown class member
+defined('EXIT_USER_INPUT')     || define('EXIT_USER_INPUT', 7);     // invalid user input
+defined('EXIT_DATABASE')       || define('EXIT_DATABASE', 8);       // database error
+defined('EXIT__AUTO_MIN')      || define('EXIT__AUTO_MIN', 9);      // lowest automatically-assigned error code
+defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125);    // highest automatically-assigned error code
+
+/**
+ * @deprecated Use \CodeIgniter\Events\Events::PRIORITY_LOW instead.
+ */
+define('EVENT_PRIORITY_LOW', 200);
+
+/**
+ * @deprecated Use \CodeIgniter\Events\Events::PRIORITY_NORMAL instead.
+ */
+define('EVENT_PRIORITY_NORMAL', 100);
+
+/**
+ * @deprecated Use \CodeIgniter\Events\Events::PRIORITY_HIGH instead.
+ */
+define('EVENT_PRIORITY_HIGH', 10);
+
+define('SITE_ROOT', '');
+define('SITE_URL', 'https://haruyumi.net/');
+
+define('APP_CONTROLLER', '\\App\\Controllers\\');
+
+define('SEND_MAIL_FROM', 'teras@haruyumi.net');
+define('SEND_MAIL_FROM_NAME', '春日井弓道協会 情報システム');
+
+// 会員リストPDFファイル
+define('KASUGAI_MEMBER_LIST_PATH', '/assets/document/kasugai/member/');
+define('KASUGAI_MEMBER_LIST_FILE', 'member.pdf');
+
+define('FLG_OFF', '0');
+define('FLG_ON', '1');
+
+define('DB_FLG_OFF', '0');
+define('DB_FLG_ON', '1');
+
+define('LANG_JP', 'jp');
+define('LANG_EN', 'en');
+
+define('PERIOD_ID_BEFORE', 0);      // 期間前
+define('PERIOD_ID_NOW', 1);         // 期間中
+define('PERIOD_ID_END', 2);         // 終了
+define('PERIOD_ID_UNDEFINED', 9);   // 未定
+
+define('PERIOD_TEXT_BEFORE', '前');
+define('PERIOD_TEXT_NOW', '中');
+define('PERIOD_TEXT_END', '終了');
+define('PERIOD_TEXT_UNDEFINED', '未定');
+
+define('DATA_MIRAI', 'mirai');
+define('DATA_KAKO', 'kako');
+
+define('CONTROLLER_NAME_HOME', 'home');
+define('CONTROLLER_NAME_SHINSA', 'shinsa');
+define('CONTROLLER_NAME_TAIKAI', 'taikai');
+define('CONTROLLER_NAME_SEMINAR', 'seminar');
+define('CONTROLLER_NAME_WORKSHOP', 'workshop');
+define('CONTROLLER_NAME_MEMBER', 'member');
+define('CONTROLLER_NAME_CALENDER', 'calender');
+define('CONTROLLER_NAME_LOGIN_CHANGE', 'login/change');
+
+define('NOTICE_CATEGORY_ID_OTHER', '0');
+define('NOTICE_CATEGORY_ID_KASUGAI', '1');
+define('NOTICE_CATEGORY_ID_SHINSA', '2');
+define('NOTICE_CATEGORY_ID_TAIKAI', '3');
+define('NOTICE_CATEGORY_ID_SEMINAR', '4');
+define('NOTICE_CATEGORY_ID_WORKSHOP', '5');
+
+define('SHINSA_CLASS_ID_CHUOU', '1');
+define('SHINSA_CLASS_ID_RENGO', '2');
+define('SHINSA_CLASS_ID_CHIHO', '3');
+define('SHINSA_CLASS_ID_VIDEO', '4');
+
+define('FISCAL_YEAR_ID', 24);
+
+define('KASUGAI_KYOKAI_NAME', '春弓-haruyumi-テラス');
+define('SYSTEM_NAME', '春弓協掲示板');
+
+define('URL_AIKYUREN', 'http://www.aikyuren.com/');
+define('URL_ZENKYUREN', 'https://www.kyudo.jp/');
+
+define('VIEW_MIKAISAI', '未開催');
+define('VIEW_END', '終了');
+
+define('REQUEST_JOIN', 'join');
+define('REQUEST_CANCEL', 'cancel');
+
+define('REQUEST_NAME_JOIN', '申込');
+define('REQUEST_NAME_CANCEL', 'キャンセル');
+
+define('DATE_FORMAT_YYMMDD', 'yyyymmdd');
+define('DATE_FORMAT_YMD', 'ymd');
+define('DATE_FORMAT_MMDD', 'mmdd');
+define('DATE_FORMAT_DD', 'dd');
+define('DATE_FORMAT_MD', 'md');
+define('DATE_FORMAT_D', 'd');
+
+define('TIME_FORMAT_HI', 'Hi');
+define('TIME_FORMAT_HIS', 'His');
+define('TIME_FORMAT_GI', 'Gi');
+define('TIME_FORMAT_GIS', 'Gis');
+
+define('VALIDATION_LOGIN_PW_MIN', 4);    // パスワード最小文字数
+define('VALIDATION_LOGIN_PW_MAX', 16);    // パスワード最大文字数
+
+define('UPLOAD_FILE_DIR', 'upload');
+define('UPLOAD_FILE_MAX', 10);
+define('UPLOAD_FILE_MAX_SIZE', 1024 * 40);  // MB単位
+
+define('UPLOAD_FILE_EXT_ICON_PDF', '/assets/img/icon/pdf_32.png');
+define('UPLOAD_FILE_EXT_ICON_EXCEL', '/assets/img/icon/excel_32.png');
+define('UPLOAD_FILE_EXT_ICON_WORD', '/assets/img/icon/word_32.png');
+define('UPLOAD_FILE_EXT_ICON_JPG', '/assets/img/icon/jpg_32.png');
+define('UPLOAD_FILE_EXT_ICON_ZIP', '/assets/img/icon/zip_32.png');
+define('UPLOAD_FILE_EXT_ICON_TXT', '/assets/img/icon/txt_32.png');

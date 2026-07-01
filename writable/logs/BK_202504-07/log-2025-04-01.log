@@ -1,0 +1,59 @@
+CRITICAL - 2025-04-01 23:00:45 --> ErrorException: Undefined array key "seminar_name"
+[Method: GET, Route: seminar]
+in APPPATH\Helpers\seminar_helper.php on line 30.
+ 1 APPPATH\Helpers\seminar_helper.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "seminar_name"', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Helpers\\seminar_helper.php', 30)
+ 2 APPPATH\Views\seminar\index.php(6): get_seminar_tab_html([...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\seminar\\index.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('seminar/index', [], true)
+ 6 APPPATH\Controllers\Seminar.php(45): view('seminar/index')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Seminar->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Seminar))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-01 23:03:21 --> Error: Call to undefined method App\Libraries\SeminarLibrarie::get_seminar_detail()
+[Method: GET, Route: seminar/detail/1]
+in APPPATH\Controllers\Seminar.php on line 64.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Seminar->detail('1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Seminar))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-01 23:04:15 --> Error: Call to undefined method App\Libraries\SeminarLibrarie::get_seminar_detail()
+[Method: GET, Route: seminar/detail/1]
+in APPPATH\Controllers\Seminar.php on line 64.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Seminar->detail('1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Seminar))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-01 23:38:15 --> CodeIgniter\Validation\Exceptions\ValidationException: "callback__check_member" is not a valid rule.
+[Method: POST, Route: login/login_change_check]
+in SYSTEMPATH\Validation\Validation.php on line 348.
+ 1 SYSTEMPATH\Validation\Validation.php(348): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('callback__check_member')
+ 2 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('mail_address', 'メールアドレス', '', [...], [...], 'mail_address')
+ 3 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Login.php(114): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->ajax_login_change_check()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-01 23:41:48 --> CodeIgniter\Validation\Exceptions\ValidationException: "_check_member" is not a valid rule.
+[Method: POST, Route: login/login_change_check]
+in SYSTEMPATH\Validation\Validation.php on line 348.
+ 1 SYSTEMPATH\Validation\Validation.php(348): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('_check_member')
+ 2 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('mail_address', 'メールアドレス', '', [...], [...], 'mail_address')
+ 3 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Login.php(114): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->ajax_login_change_check()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

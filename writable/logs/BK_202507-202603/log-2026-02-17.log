@@ -1,0 +1,22 @@
+CRITICAL - 2026-02-17 22:49:37 --> ErrorException: Undefined array key "taikai_no_flg"
+[Method: POST, Route: admin/taikai_regist_conf]
+in APPPATH\Helpers\Admin\taikai_helper.php on line 296.
+ 1 APPPATH\Helpers\Admin\taikai_helper.php(296): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "taikai_no_flg"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\Admin\\taikai_helper.php', 296)
+ 2 APPPATH\Controllers\Admin\AdminTaikai.php(269): form_taikai_regist_confrim([...], [...], [])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminTaikai->ajax_taikai_regist_conf()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminTaikai))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-17 23:20:59 --> ErrorException: Undefined array key "taikai_no_flg"
+[Method: POST, Route: admin/taikai_regist_conf]
+in APPPATH\Helpers\Admin\taikai_helper.php on line 296.
+ 1 APPPATH\Helpers\Admin\taikai_helper.php(296): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "taikai_no_flg"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\Admin\\taikai_helper.php', 296)
+ 2 APPPATH\Controllers\Admin\AdminTaikai.php(269): form_taikai_regist_confrim([...], [...], [])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminTaikai->ajax_taikai_regist_conf()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminTaikai))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

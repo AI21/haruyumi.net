@@ -1,0 +1,53 @@
+.document-area {
+	}
+	.document-area h3 {
+		font-size: 16px;
+	}
+	.document-area ul {
+		list-style-type: none;
+		}
+		.document-area li {
+			display: inline-block;
+			width: 6em;
+		}
+	.shinsa {
+		}
+		.shinsa td span {
+			padding: 4px;
+			border-radius: 4px;
+			}
+			.shinsa td span a {
+				color: #fff;
+				}
+
+table.table-detail {
+	}
+	table.table-detail th {
+		padding-left: 0.5em;
+		padding-right: 1em;
+		vertical-align: top;
+		white-space: nowrap;
+		}
+	table.table-detail ul,
+	table.table-detail ol {
+		margin: 0;
+		}
+	table.table-detail li {
+		width: 100%;
+		/* margin: 0 0 0 -1em; */
+		}
+
+/* 関連資料 */
+#document-area {
+	background-color: var(--bs-body-bg);
+	padding: 0.2em 0.5em;
+	}
+	#document-area li {
+		margin-left: 1em;
+	}
+	#document-area img {
+		padding-right: 10px;
+	}
+	.document-list li {
+		margin-bottom: 0.5em;
+	}

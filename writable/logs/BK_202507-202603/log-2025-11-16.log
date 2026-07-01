@@ -1,0 +1,76 @@
+CRITICAL - 2025-11-16 00:39:58 --> ArgumentCountError: Too few arguments to function App\Libraries\ShinsaLibrarie::get_shinsa_offer_member_list(), 1 passed in C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Admin.php on line 92 and exactly 2 expected
+[Method: GET, Route: admin/notice_regist_shinsa_promotion/25]
+in APPPATH\Libraries\ShinsaLibrarie.php on line 340.
+ 1 APPPATH\Controllers\Admin.php(92): App\Libraries\ShinsaLibrarie->get_shinsa_offer_member_list(25)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->notice_regist_shinsa_promotion('25')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-16 00:41:11 --> ArgumentCountError: Too few arguments to function App\Libraries\ShinsaLibrarie::get_shinsa_offer_member_list(), 1 passed in C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Admin.php on line 92 and exactly 2 expected
+[Method: GET, Route: admin/notice_regist_shinsa_promotion/25]
+in APPPATH\Libraries\ShinsaLibrarie.php on line 340.
+ 1 APPPATH\Controllers\Admin.php(92): App\Libraries\ShinsaLibrarie->get_shinsa_offer_member_list(25)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->notice_regist_shinsa_promotion('25')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-16 00:41:11 --> ArgumentCountError: Too few arguments to function App\Libraries\ShinsaLibrarie::get_shinsa_offer_member_list(), 1 passed in C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Admin.php on line 92 and exactly 2 expected
+[Method: GET, Route: admin/notice_regist_shinsa_promotion/25]
+in APPPATH\Libraries\ShinsaLibrarie.php on line 340.
+ 1 APPPATH\Controllers\Admin.php(92): App\Libraries\ShinsaLibrarie->get_shinsa_offer_member_list(25)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->notice_regist_shinsa_promotion('25')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-16 00:42:44 --> ArgumentCountError: Too few arguments to function App\Libraries\ShinsaLibrarie::get_shinsa_offer_member_list(), 1 passed in C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Admin.php on line 92 and exactly 2 expected
+[Method: GET, Route: admin/notice_regist_shinsa_promotion/25]
+in APPPATH\Libraries\ShinsaLibrarie.php on line 340.
+ 1 APPPATH\Controllers\Admin.php(92): App\Libraries\ShinsaLibrarie->get_shinsa_offer_member_list(25)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->notice_regist_shinsa_promotion('25')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-16 00:43:31 --> ArgumentCountError: Too few arguments to function App\Libraries\ShinsaLibrarie::get_shinsa_offer_member_list(), 1 passed in C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Admin.php on line 92 and exactly 2 expected
+[Method: GET, Route: admin/notice_regist_shinsa_promotion/25]
+in APPPATH\Libraries\ShinsaLibrarie.php on line 340.
+ 1 APPPATH\Controllers\Admin.php(92): App\Libraries\ShinsaLibrarie->get_shinsa_offer_member_list(25)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->notice_regist_shinsa_promotion('25')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-16 00:44:29 --> ArgumentCountError: Too few arguments to function App\Libraries\ShinsaLibrarie::get_shinsa_offer_member_list(), 1 passed in C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Admin.php on line 92 and exactly 2 expected
+[Method: GET, Route: admin/notice_regist_shinsa_promotion/25]
+in APPPATH\Libraries\ShinsaLibrarie.php on line 340.
+ 1 APPPATH\Controllers\Admin.php(92): App\Libraries\ShinsaLibrarie->get_shinsa_offer_member_list(25)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->notice_regist_shinsa_promotion('25')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-16 00:54:01 --> ErrorException: Cannot redeclare App\Libraries\ShinsaLibrarie::get_shinsa_offer_member_list()
+[Method: GET, Route: shinsa]
+in APPPATH\Libraries\ShinsaLibrarie.php on line 364.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-16 00:54:05 --> ErrorException: Cannot redeclare App\Libraries\ShinsaLibrarie::get_shinsa_offer_member_list()
+[Method: GET, Route: admin/notice_regist_shinsa_promotion/25]
+in APPPATH\Libraries\ShinsaLibrarie.php on line 364.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-16 00:54:05 --> ErrorException: Cannot redeclare App\Libraries\ShinsaLibrarie::get_shinsa_offer_member_list()
+[Method: GET, Route: admin/notice_regist_shinsa_promotion/25]
+in APPPATH\Libraries\ShinsaLibrarie.php on line 364.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-16 00:54:06 --> ErrorException: Cannot redeclare App\Libraries\ShinsaLibrarie::get_shinsa_offer_member_list()
+[Method: GET, Route: shinsa/detail/25]
+in APPPATH\Libraries\ShinsaLibrarie.php on line 364.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

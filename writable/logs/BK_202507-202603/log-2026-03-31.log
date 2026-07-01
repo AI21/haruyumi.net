@@ -1,0 +1,56 @@
+ERROR - 2026-03-31 22:41:05 --> mysqli_sql_exception: Unknown column 'kaijo_id' in 'field list' in C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n\t\t\tUPDATE\n\t\t\t\t...', 0)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t\tUPDATE\n\t\t\t\t...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t\tUPDATE\n\t\t\t\t...')
+#3 C:\xampp_htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('\n\t\t\tUPDATE\n\t\t\t\t...', Array)
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Models\Admin\AdminShinsaModel.php(270): App\Models\BaseQueryModel->get_result_query('\n\t\t\tUPDATE\n\t\t\t\t...', Array)
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\Admin\AdminShinsaLibrarie.php(121): App\Models\Admin\AdminShinsaModel->update_shinsa_info(Array)
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Admin\AdminShinsa.php(244): App\Libraries\Admin\AdminShinsaLibrarie->shinsa_info_proc(Array, 65, 0)
+#7 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_shinsa_regist_proc()
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-03-31 22:48:49 --> ErrorException: Undefined array key "kaijo_name_short"
+[Method: GET, Route: shinsa/25]
+in APPPATH\Helpers\shinsa_helper.php on line 77.
+ 1 APPPATH\Helpers\shinsa_helper.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kaijo_name_short"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\shinsa_helper.php', 77)
+ 2 APPPATH\Views\shinsa\index.php(7): get_shinsa_tab_html(Object(stdClass), [...], [...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\index.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shinsa/index', [], true)
+ 6 APPPATH\Controllers\Shinsa.php(63): view('shinsa/index')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->index('25')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-31 23:01:22 --> ErrorException: Undefined variable $kaijoName
+[Method: GET, Route: shinsa/detail/30]
+in APPPATH\Helpers\shinsa_helper.php on line 129.
+ 1 APPPATH\Helpers\shinsa_helper.php(129): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kaijoName', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\shinsa_helper.php', 129)
+ 2 APPPATH\Views\shinsa\detail_chuou.php(4): get_shinsa_chuou_detail_html([...], [...], [...], true)
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\detail_chuou.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shinsa/detail_chuou', [], true)
+ 6 APPPATH\Controllers\Shinsa.php(146): view('shinsa/detail_chuou')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('30')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-31 23:24:08 --> ParseError: Unclosed '{' on line 5
+[Method: GET, Route: shinsa/26]
+in APPPATH\Helpers\shinsa_helper.php on line 781.
+ 1 APPPATH\Controllers\Shinsa.php(14): helper([...])
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Shinsa->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

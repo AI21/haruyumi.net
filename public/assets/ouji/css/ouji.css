@@ -1,0 +1,85 @@
+p.error {
+	margin-bottom: 0;
+	color: #F33;
+	font-weight: bold;
+	font-size: 1.2em;
+	}
+.nouse  { background-color:#CCC; color: #000; }
+.no-use { background-color: #f5f5f5; }
+.use    { background-color:#94CDE7; color: #000; }
+.taiiku {
+	color: #B23D3B;
+	font-size: 0.9em;
+	}
+
+#mail_set_area {
+	margin-top: 20px;
+	width: 100%;
+	text-align: center;
+	}
+
+table#ouji_shejule {
+	width: 100%;
+	}
+	table#ouji_shejule th,
+	table#ouji_shejule td {
+	}
+	table#ouji_shejule th {
+		background-color: #0A0A0A;
+		color: #FFF0F0;
+		text-align: center;
+		border-right-color: #fff;
+		}
+	table#ouji_shejule th:last-child {
+		border-right-color: #000;
+		}
+	table#ouji_shejule td {
+		padding: 4px;
+		text-align: center;
+		vertical-align: middle;
+		}
+	table#ouji_shejule .day {
+		width: 80px;
+		text-align: right;
+		padding-right: 1em;
+		}
+	table#ouji_shejule .times {
+		width: 100px;
+		}
+	table#ouji_shejule .event {
+		text-align: left;
+		}
+	table#ouji_shejule tr.saturday {
+		background-color: #DEF1FF;
+		}
+	table#ouji_shejule tr.sunday {
+		background-color: #FFF0F0;
+		}
+	table#ouji_shejule .open {
+		padding-top: 0;
+		font-weight: bold;
+		}
+		table#ouji_shejule .open span {
+			display: block;
+			font-weight: normal;
+			font-size: 80%;
+			line-height: 0.8em;
+			}
+	table#ouji_shejule
+	table#ouji_shejule td.conf {
+		color: #0A2FCA;
+		}
+
+@media screen and (max-width: 600px){
+
+	main {
+		width: 100%;
+		}
+	table#ouji_shejule .day {
+		width: 5em;
+		padding-right: 4px;
+		}
+	table#ouji_shejule .times {
+		width: 4.2em;
+		}
+}

@@ -1,0 +1,80 @@
+ERROR - 2026-05-30 14:40:44 --> Email: sendWithMail throwed ErrorException: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php:1762
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed ...', 'C:\\xampp_htdocs...', 1762)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1762): mail('imai.0221@gmail...', '=?UTF-8?Q?=E3=8...', '\xE5\xAF\xA9\xE6\x9F\xBB\xE7\x94\xB3\xE8\xBE\xBC\xE3\x82\xAD...', 'Date: Sat, 30 M...', '-f k.kyudo.xamp...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1694): CodeIgniter\Email\Email->sendWithMail()
+#3 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1589): CodeIgniter\Email\Email->spoolEmail()
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\CommonLibrarie.php(97): CodeIgniter\Email\Email->send()
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\ShinsaLibrarie.php(350): App\Libraries\CommonLibrarie->send_mail_proc(Array, Array, Array, '\xE3\x80\x90\xE5\xAF\xA9\xE6\x9F\xBB \xEF\xBC\x9A \xE3...', '\xE5\xAF\xA9\xE6\x9F\xBB\xE7\x94\xB3\xE8\xBE\xBC\xE3\x82\xAD...')
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Shinsa.php(184): App\Libraries\ShinsaLibrarie->shinsa_request_member(73, 11, Array, 'cancel')
+#7 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2026-05-30 14:40:44 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2026-05-30 14:40:44 --> 
+ERROR - 2026-05-30 14:41:00 --> Email: sendWithMail throwed ErrorException: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php:1762
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed ...', 'C:\\xampp_htdocs...', 1762)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1762): mail('imai.0221@gmail...', '=?UTF-8?Q?=E3=8...', '\xE5\xAF\xA9\xE6\x9F\xBB\xE7\x94\xB3\xE8\xBE\xBC\xE3\x81\x8C...', 'Date: Sat, 30 M...', '-f k.kyudo.xamp...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1694): CodeIgniter\Email\Email->sendWithMail()
+#3 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1589): CodeIgniter\Email\Email->spoolEmail()
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\CommonLibrarie.php(97): CodeIgniter\Email\Email->send()
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\ShinsaLibrarie.php(350): App\Libraries\CommonLibrarie->send_mail_proc(Array, Array, Array, '\xE3\x80\x90\xE5\xAF\xA9\xE6\x9F\xBB \xEF\xBC\x9A \xE7...', '\xE5\xAF\xA9\xE6\x9F\xBB\xE7\x94\xB3\xE8\xBE\xBC\xE3\x81\x8C...')
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Shinsa.php(184): App\Libraries\ShinsaLibrarie->shinsa_request_member(73, 12, Array, 'join')
+#7 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2026-05-30 14:41:00 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2026-05-30 14:41:00 --> 
+CRITICAL - 2026-05-30 23:43:47 --> ErrorException: Undefined property: stdClass::$menu_id
+[Method: GET, Route: master]
+in APPPATH\Libraries\LoginLibrarie.php on line 179.
+ 1 APPPATH\Libraries\LoginLibrarie.php(179): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$menu_id', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\LoginLibrarie.php', 179)
+ 2 APPPATH\Controllers\Master\MasterIndex.php(29): App\Libraries\LoginLibrarie->chk_officer_menu([...], Object(stdClass))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Master\MasterIndex->index()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master\MasterIndex))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-30 23:44:20 --> ErrorException: Undefined property: stdClass::$menu_id
+[Method: GET, Route: master]
+in APPPATH\Libraries\LoginLibrarie.php on line 179.
+ 1 APPPATH\Libraries\LoginLibrarie.php(179): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$menu_id', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\LoginLibrarie.php', 179)
+ 2 APPPATH\Controllers\Master\MasterIndex.php(29): App\Libraries\LoginLibrarie->chk_officer_menu([...], Object(stdClass))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Master\MasterIndex->index()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master\MasterIndex))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-30 23:46:09 --> ErrorException: Undefined property: stdClass::$menu_id
+[Method: GET, Route: master]
+in APPPATH\Libraries\LoginLibrarie.php on line 179.
+ 1 APPPATH\Libraries\LoginLibrarie.php(179): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$menu_id', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\LoginLibrarie.php', 179)
+ 2 APPPATH\Controllers\Master\MasterIndex.php(29): App\Libraries\LoginLibrarie->chk_officer_menu([...], Object(stdClass))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Master\MasterIndex->index()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master\MasterIndex))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-30 23:47:50 --> ErrorException: Undefined property: stdClass::$menu_id
+[Method: GET, Route: master]
+in APPPATH\Libraries\LoginLibrarie.php on line 179.
+ 1 APPPATH\Libraries\LoginLibrarie.php(179): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$menu_id', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\LoginLibrarie.php', 179)
+ 2 APPPATH\Controllers\Master\MasterIndex.php(29): App\Libraries\LoginLibrarie->chk_officer_menu([...], Object(stdClass))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Master\MasterIndex->index()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master\MasterIndex))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

@@ -1,0 +1,966 @@
+ERROR - 2026-01-07 22:34:39 --> mysqli_sql_exception: Duplicate entry '11-3' for key 'PRIMARY' in C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n\t\t\tINSERT INTO...', 0)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t\tINSERT INTO...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t\tINSERT INTO...')
+#3 C:\xampp_htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('\n\t\t\tINSERT INTO...', Array)
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Models\TaikaiModel.php(395): App\Models\BaseQueryModel->get_result_query('\n\t\t\tINSERT INTO...', Array)
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php(205): App\Models\TaikaiModel->insert_notice_rerlation_document_taikai(11, 123)
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Admin.php(252): App\Libraries\AdminLibrarie->notice_files_proc(123, Array, Array)
+#7 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-01-07 22:34:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '11-3' for key 'PRIMARY'
+[Method: POST, Route: admin/notice_regist_proc]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				:taikaiId:
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, :dbFlgOff:
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = :noticeInfoId:
+		', [...])
+ 2 APPPATH\Models\TaikaiModel.php(395): App\Models\BaseQueryModel->get_result_query('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				:taikaiId:
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, :dbFlgOff:
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = :noticeInfoId:
+		', [...])
+ 3 APPPATH\Libraries\AdminLibrarie.php(205): App\Models\TaikaiModel->insert_notice_rerlation_document_taikai(11, 123)
+ 4 APPPATH\Controllers\Admin.php(252): App\Libraries\AdminLibrarie->notice_files_proc(123, [...], [])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-07 22:34:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '11-3' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				11
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, \'0\'
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = 123
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				11
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, \'0\'
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = 123
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				:taikaiId:
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, :dbFlgOff:
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = :noticeInfoId:
+		', [...])
+ 4 APPPATH\Models\TaikaiModel.php(395): App\Models\BaseQueryModel->get_result_query('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				:taikaiId:
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, :dbFlgOff:
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = :noticeInfoId:
+		', [...])
+ 5 APPPATH\Libraries\AdminLibrarie.php(205): App\Models\TaikaiModel->insert_notice_rerlation_document_taikai(11, 123)
+ 6 APPPATH\Controllers\Admin.php(252): App\Libraries\AdminLibrarie->notice_files_proc(123, [...], [])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-07 22:34:39 --> [Caused by] mysqli_sql_exception: Duplicate entry '11-3' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				11
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, \'0\'
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = 123
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				11
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, \'0\'
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = 123
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				11
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, \'0\'
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = 123
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				:taikaiId:
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, :dbFlgOff:
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = :noticeInfoId:
+		', [...])
+ 5 APPPATH\Models\TaikaiModel.php(395): App\Models\BaseQueryModel->get_result_query('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				:taikaiId:
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, :dbFlgOff:
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = :noticeInfoId:
+		', [...])
+ 6 APPPATH\Libraries\AdminLibrarie.php(205): App\Models\TaikaiModel->insert_notice_rerlation_document_taikai(11, 123)
+ 7 APPPATH\Controllers\Admin.php(252): App\Libraries\AdminLibrarie->notice_files_proc(123, [...], [])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-01-07 22:36:07 --> mysqli_sql_exception: Duplicate entry '11-3' for key 'PRIMARY' in C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n\t\t\tINSERT INTO...', 0)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t\tINSERT INTO...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t\tINSERT INTO...')
+#3 C:\xampp_htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('\n\t\t\tINSERT INTO...', Array)
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Models\TaikaiModel.php(395): App\Models\BaseQueryModel->get_result_query('\n\t\t\tINSERT INTO...', Array)
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php(205): App\Models\TaikaiModel->insert_notice_rerlation_document_taikai(11, 123)
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Admin.php(252): App\Libraries\AdminLibrarie->notice_files_proc(123, Array, Array)
+#7 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-01-07 22:36:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '11-3' for key 'PRIMARY'
+[Method: POST, Route: admin/notice_regist_proc]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				:taikaiId:
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, :dbFlgOff:
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = :noticeInfoId:
+		', [...])
+ 2 APPPATH\Models\TaikaiModel.php(395): App\Models\BaseQueryModel->get_result_query('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				:taikaiId:
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, :dbFlgOff:
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = :noticeInfoId:
+		', [...])
+ 3 APPPATH\Libraries\AdminLibrarie.php(205): App\Models\TaikaiModel->insert_notice_rerlation_document_taikai(11, 123)
+ 4 APPPATH\Controllers\Admin.php(252): App\Libraries\AdminLibrarie->notice_files_proc(123, [...], [])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-07 22:36:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '11-3' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				11
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, \'0\'
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = 123
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				11
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, \'0\'
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = 123
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				:taikaiId:
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, :dbFlgOff:
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = :noticeInfoId:
+		', [...])
+ 4 APPPATH\Models\TaikaiModel.php(395): App\Models\BaseQueryModel->get_result_query('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				:taikaiId:
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, :dbFlgOff:
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = :noticeInfoId:
+		', [...])
+ 5 APPPATH\Libraries\AdminLibrarie.php(205): App\Models\TaikaiModel->insert_notice_rerlation_document_taikai(11, 123)
+ 6 APPPATH\Controllers\Admin.php(252): App\Libraries\AdminLibrarie->notice_files_proc(123, [...], [])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-07 22:36:07 --> [Caused by] mysqli_sql_exception: Duplicate entry '11-3' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				11
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, \'0\'
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = 123
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				11
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, \'0\'
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = 123
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				11
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, \'0\'
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = 123
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				:taikaiId:
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, :dbFlgOff:
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = :noticeInfoId:
+		', [...])
+ 5 APPPATH\Models\TaikaiModel.php(395): App\Models\BaseQueryModel->get_result_query('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				:taikaiId:
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, :dbFlgOff:
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = :noticeInfoId:
+		', [...])
+ 6 APPPATH\Libraries\AdminLibrarie.php(205): App\Models\TaikaiModel->insert_notice_rerlation_document_taikai(11, 123)
+ 7 APPPATH\Controllers\Admin.php(252): App\Libraries\AdminLibrarie->notice_files_proc(123, [...], [])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-01-07 22:37:24 --> mysqli_sql_exception: Duplicate entry '11-3' for key 'PRIMARY' in C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n\t\t\tINSERT INTO...', 0)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t\tINSERT INTO...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t\tINSERT INTO...')
+#3 C:\xampp_htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('\n\t\t\tINSERT INTO...', Array)
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Models\TaikaiModel.php(395): App\Models\BaseQueryModel->get_result_query('\n\t\t\tINSERT INTO...', Array)
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php(205): App\Models\TaikaiModel->insert_notice_rerlation_document_taikai(11, 123)
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Admin.php(252): App\Libraries\AdminLibrarie->notice_files_proc(123, Array, Array)
+#7 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-01-07 22:37:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '11-3' for key 'PRIMARY'
+[Method: POST, Route: admin/notice_regist_proc]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				:taikaiId:
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, :dbFlgOff:
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = :noticeInfoId:
+		', [...])
+ 2 APPPATH\Models\TaikaiModel.php(395): App\Models\BaseQueryModel->get_result_query('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				:taikaiId:
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, :dbFlgOff:
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = :noticeInfoId:
+		', [...])
+ 3 APPPATH\Libraries\AdminLibrarie.php(205): App\Models\TaikaiModel->insert_notice_rerlation_document_taikai(11, 123)
+ 4 APPPATH\Controllers\Admin.php(252): App\Libraries\AdminLibrarie->notice_files_proc(123, [...], [])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-07 22:37:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '11-3' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				11
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, \'0\'
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = 123
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				11
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, \'0\'
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = 123
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				:taikaiId:
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, :dbFlgOff:
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = :noticeInfoId:
+		', [...])
+ 4 APPPATH\Models\TaikaiModel.php(395): App\Models\BaseQueryModel->get_result_query('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				:taikaiId:
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, :dbFlgOff:
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = :noticeInfoId:
+		', [...])
+ 5 APPPATH\Libraries\AdminLibrarie.php(205): App\Models\TaikaiModel->insert_notice_rerlation_document_taikai(11, 123)
+ 6 APPPATH\Controllers\Admin.php(252): App\Libraries\AdminLibrarie->notice_files_proc(123, [...], [])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-07 22:37:24 --> [Caused by] mysqli_sql_exception: Duplicate entry '11-3' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				11
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, \'0\'
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = 123
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				11
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, \'0\'
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = 123
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				11
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, \'0\'
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = 123
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				:taikaiId:
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, :dbFlgOff:
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = :noticeInfoId:
+		', [...])
+ 5 APPPATH\Models\TaikaiModel.php(395): App\Models\BaseQueryModel->get_result_query('
+			INSERT INTO t_document_taikai( 
+				taikai_id
+				, document_id
+				, document_type_id
+				, document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path
+				, notice_info_id                            -- お知らせ投稿ID
+				, created
+			) 
+			SELECT
+				:taikaiId:
+				, (SELECT IFNULL(MAX(document_id), 0) FROM t_document_taikai WHERE taikai_id = 31) + ROW_NUMBER() OVER (ORDER BY document_id) AS new_document_id
+				, :dbFlgOff:
+				, document_name                             -- document_name
+				, document_ext                              -- ファイル拡張子
+				, document_path                             -- document_path
+				, notice_info_id                            -- notice_info_id
+				, NOW() 
+			FROM
+				t_document_notice 
+			WHERE
+				notice_info_id = :noticeInfoId:
+		', [...])
+ 6 APPPATH\Libraries\AdminLibrarie.php(205): App\Models\TaikaiModel->insert_notice_rerlation_document_taikai(11, 123)
+ 7 APPPATH\Controllers\Admin.php(252): App\Libraries\AdminLibrarie->notice_files_proc(123, [...], [])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

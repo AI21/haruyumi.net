@@ -1,0 +1,20 @@
+CRITICAL - 2024-12-24 23:45:40 --> Error: Call to a member function setFlashdata() on null
+[Method: GET, Route: /]
+in APPPATH\Controllers\CommonController.php on line 24.
+ 1 APPPATH\Controllers\Home.php(9): App\Controllers\CommonController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-24 23:47:20 --> Error: Call to a member function setFlashdata() on null
+[Method: GET, Route: /]
+in APPPATH\Controllers\CommonController.php on line 24.
+ 1 APPPATH\Controllers\Home.php(9): App\Controllers\CommonController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

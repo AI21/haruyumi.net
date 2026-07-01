@@ -1,0 +1,1304 @@
+ERROR - 2026-04-08 00:12:15 --> mysqli_sql_exception: Unknown column 'mka.kaijo_name' in 'field list' in C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n\t\t    SELECT\n ...', 0)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t    SELECT\n ...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t    SELECT\n ...')
+#3 C:\xampp_htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(75): CodeIgniter\Database\BaseConnection->query('\n\t\t    SELECT\n ...', Array)
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Models\ShinsaModel.php(552): App\Models\BaseQueryModel->get_result_array('\n\t\t    SELECT\n ...', Array)
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Models\ShinsaModel.php(401): App\Models\ShinsaModel->get_shinsa_kaijo(55)
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\ShinsaLibrarie.php(136): App\Models\ShinsaModel->get_shinsa_detail(55, 65)
+#7 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Admin\AdminShinsa.php(42): App\Libraries\ShinsaLibrarie->get_shinsa_detail(55, 65)
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-04-08 00:12:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'mka.kaijo_name' in 'field list'
+[Method: POST, Route: admin/shinsa_revision]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(75): CodeIgniter\Database\BaseConnection->query('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = :shinsaId:) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = :shinsaId:
+            ORDER BY
+                tsk.order_no
+		', [...])
+ 2 APPPATH\Models\ShinsaModel.php(552): App\Models\BaseQueryModel->get_result_array('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = :shinsaId:) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = :shinsaId:
+            ORDER BY
+                tsk.order_no
+		', [...])
+ 3 APPPATH\Models\ShinsaModel.php(401): App\Models\ShinsaModel->get_shinsa_kaijo(55)
+ 4 APPPATH\Libraries\ShinsaLibrarie.php(136): App\Models\ShinsaModel->get_shinsa_detail(55, 65)
+ 5 APPPATH\Controllers\Admin\AdminShinsa.php(42): App\Libraries\ShinsaLibrarie->get_shinsa_detail(55, 65)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 00:12:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'mka.kaijo_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = 55) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = 55
+            ORDER BY
+                tsk.order_no
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = 55) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = 55
+            ORDER BY
+                tsk.order_no
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(75): CodeIgniter\Database\BaseConnection->query('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = :shinsaId:) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = :shinsaId:
+            ORDER BY
+                tsk.order_no
+		', [...])
+ 4 APPPATH\Models\ShinsaModel.php(552): App\Models\BaseQueryModel->get_result_array('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = :shinsaId:) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = :shinsaId:
+            ORDER BY
+                tsk.order_no
+		', [...])
+ 5 APPPATH\Models\ShinsaModel.php(401): App\Models\ShinsaModel->get_shinsa_kaijo(55)
+ 6 APPPATH\Libraries\ShinsaLibrarie.php(136): App\Models\ShinsaModel->get_shinsa_detail(55, 65)
+ 7 APPPATH\Controllers\Admin\AdminShinsa.php(42): App\Libraries\ShinsaLibrarie->get_shinsa_detail(55, 65)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 00:12:15 --> [Caused by] mysqli_sql_exception: Unknown column 'mka.kaijo_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = 55) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = 55
+            ORDER BY
+                tsk.order_no
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = 55) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = 55
+            ORDER BY
+                tsk.order_no
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = 55) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = 55
+            ORDER BY
+                tsk.order_no
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(75): CodeIgniter\Database\BaseConnection->query('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = :shinsaId:) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = :shinsaId:
+            ORDER BY
+                tsk.order_no
+		', [...])
+ 5 APPPATH\Models\ShinsaModel.php(552): App\Models\BaseQueryModel->get_result_array('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = :shinsaId:) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = :shinsaId:
+            ORDER BY
+                tsk.order_no
+		', [...])
+ 6 APPPATH\Models\ShinsaModel.php(401): App\Models\ShinsaModel->get_shinsa_kaijo(55)
+ 7 APPPATH\Libraries\ShinsaLibrarie.php(136): App\Models\ShinsaModel->get_shinsa_detail(55, 65)
+ 8 APPPATH\Controllers\Admin\AdminShinsa.php(42): App\Libraries\ShinsaLibrarie->get_shinsa_detail(55, 65)
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-04-08 00:12:30 --> mysqli_sql_exception: Unknown column 'mka.kaijo_name' in 'field list' in C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n\t\t    SELECT\n ...', 0)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t    SELECT\n ...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t    SELECT\n ...')
+#3 C:\xampp_htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(75): CodeIgniter\Database\BaseConnection->query('\n\t\t    SELECT\n ...', Array)
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Models\ShinsaModel.php(552): App\Models\BaseQueryModel->get_result_array('\n\t\t    SELECT\n ...', Array)
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Models\ShinsaModel.php(401): App\Models\ShinsaModel->get_shinsa_kaijo(55)
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\ShinsaLibrarie.php(136): App\Models\ShinsaModel->get_shinsa_detail(55, 65)
+#7 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Admin\AdminShinsa.php(42): App\Libraries\ShinsaLibrarie->get_shinsa_detail(55, 65)
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-04-08 00:12:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'mka.kaijo_name' in 'field list'
+[Method: POST, Route: admin/shinsa_revision]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(75): CodeIgniter\Database\BaseConnection->query('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = :shinsaId:) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = :shinsaId:
+            ORDER BY
+                tsk.order_no
+		', [...])
+ 2 APPPATH\Models\ShinsaModel.php(552): App\Models\BaseQueryModel->get_result_array('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = :shinsaId:) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = :shinsaId:
+            ORDER BY
+                tsk.order_no
+		', [...])
+ 3 APPPATH\Models\ShinsaModel.php(401): App\Models\ShinsaModel->get_shinsa_kaijo(55)
+ 4 APPPATH\Libraries\ShinsaLibrarie.php(136): App\Models\ShinsaModel->get_shinsa_detail(55, 65)
+ 5 APPPATH\Controllers\Admin\AdminShinsa.php(42): App\Libraries\ShinsaLibrarie->get_shinsa_detail(55, 65)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 00:12:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'mka.kaijo_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = 55) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = 55
+            ORDER BY
+                tsk.order_no
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = 55) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = 55
+            ORDER BY
+                tsk.order_no
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(75): CodeIgniter\Database\BaseConnection->query('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = :shinsaId:) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = :shinsaId:
+            ORDER BY
+                tsk.order_no
+		', [...])
+ 4 APPPATH\Models\ShinsaModel.php(552): App\Models\BaseQueryModel->get_result_array('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = :shinsaId:) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = :shinsaId:
+            ORDER BY
+                tsk.order_no
+		', [...])
+ 5 APPPATH\Models\ShinsaModel.php(401): App\Models\ShinsaModel->get_shinsa_kaijo(55)
+ 6 APPPATH\Libraries\ShinsaLibrarie.php(136): App\Models\ShinsaModel->get_shinsa_detail(55, 65)
+ 7 APPPATH\Controllers\Admin\AdminShinsa.php(42): App\Libraries\ShinsaLibrarie->get_shinsa_detail(55, 65)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 00:12:30 --> [Caused by] mysqli_sql_exception: Unknown column 'mka.kaijo_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = 55) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = 55
+            ORDER BY
+                tsk.order_no
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = 55) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = 55
+            ORDER BY
+                tsk.order_no
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = 55) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = 55
+            ORDER BY
+                tsk.order_no
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(75): CodeIgniter\Database\BaseConnection->query('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = :shinsaId:) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = :shinsaId:
+            ORDER BY
+                tsk.order_no
+		', [...])
+ 5 APPPATH\Models\ShinsaModel.php(552): App\Models\BaseQueryModel->get_result_array('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = :shinsaId:) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = :shinsaId:
+            ORDER BY
+                tsk.order_no
+		', [...])
+ 6 APPPATH\Models\ShinsaModel.php(401): App\Models\ShinsaModel->get_shinsa_kaijo(55)
+ 7 APPPATH\Libraries\ShinsaLibrarie.php(136): App\Models\ShinsaModel->get_shinsa_detail(55, 65)
+ 8 APPPATH\Controllers\Admin\AdminShinsa.php(42): App\Libraries\ShinsaLibrarie->get_shinsa_detail(55, 65)
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-04-08 00:12:40 --> mysqli_sql_exception: Unknown column 'mka.kaijo_name' in 'field list' in C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n\t\t    SELECT\n ...', 0)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t    SELECT\n ...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t    SELECT\n ...')
+#3 C:\xampp_htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(75): CodeIgniter\Database\BaseConnection->query('\n\t\t    SELECT\n ...', Array)
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Models\ShinsaModel.php(552): App\Models\BaseQueryModel->get_result_array('\n\t\t    SELECT\n ...', Array)
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Models\ShinsaModel.php(401): App\Models\ShinsaModel->get_shinsa_kaijo(55)
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\ShinsaLibrarie.php(136): App\Models\ShinsaModel->get_shinsa_detail(55, 65)
+#7 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Admin\AdminShinsa.php(42): App\Libraries\ShinsaLibrarie->get_shinsa_detail(55, 65)
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-04-08 00:12:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'mka.kaijo_name' in 'field list'
+[Method: POST, Route: admin/shinsa_revision]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(75): CodeIgniter\Database\BaseConnection->query('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = :shinsaId:) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = :shinsaId:
+            ORDER BY
+                tsk.order_no
+		', [...])
+ 2 APPPATH\Models\ShinsaModel.php(552): App\Models\BaseQueryModel->get_result_array('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = :shinsaId:) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = :shinsaId:
+            ORDER BY
+                tsk.order_no
+		', [...])
+ 3 APPPATH\Models\ShinsaModel.php(401): App\Models\ShinsaModel->get_shinsa_kaijo(55)
+ 4 APPPATH\Libraries\ShinsaLibrarie.php(136): App\Models\ShinsaModel->get_shinsa_detail(55, 65)
+ 5 APPPATH\Controllers\Admin\AdminShinsa.php(42): App\Libraries\ShinsaLibrarie->get_shinsa_detail(55, 65)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 00:12:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'mka.kaijo_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = 55) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = 55
+            ORDER BY
+                tsk.order_no
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = 55) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = 55
+            ORDER BY
+                tsk.order_no
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(75): CodeIgniter\Database\BaseConnection->query('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = :shinsaId:) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = :shinsaId:
+            ORDER BY
+                tsk.order_no
+		', [...])
+ 4 APPPATH\Models\ShinsaModel.php(552): App\Models\BaseQueryModel->get_result_array('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = :shinsaId:) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = :shinsaId:
+            ORDER BY
+                tsk.order_no
+		', [...])
+ 5 APPPATH\Models\ShinsaModel.php(401): App\Models\ShinsaModel->get_shinsa_kaijo(55)
+ 6 APPPATH\Libraries\ShinsaLibrarie.php(136): App\Models\ShinsaModel->get_shinsa_detail(55, 65)
+ 7 APPPATH\Controllers\Admin\AdminShinsa.php(42): App\Libraries\ShinsaLibrarie->get_shinsa_detail(55, 65)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 00:12:40 --> [Caused by] mysqli_sql_exception: Unknown column 'mka.kaijo_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = 55) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = 55
+            ORDER BY
+                tsk.order_no
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = 55) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = 55
+            ORDER BY
+                tsk.order_no
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = 55) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = 55
+            ORDER BY
+                tsk.order_no
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(75): CodeIgniter\Database\BaseConnection->query('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = :shinsaId:) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = :shinsaId:
+            ORDER BY
+                tsk.order_no
+		', [...])
+ 5 APPPATH\Models\ShinsaModel.php(552): App\Models\BaseQueryModel->get_result_array('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = :shinsaId:) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = :shinsaId:
+            ORDER BY
+                tsk.order_no
+		', [...])
+ 6 APPPATH\Models\ShinsaModel.php(401): App\Models\ShinsaModel->get_shinsa_kaijo(55)
+ 7 APPPATH\Libraries\ShinsaLibrarie.php(136): App\Models\ShinsaModel->get_shinsa_detail(55, 65)
+ 8 APPPATH\Controllers\Admin\AdminShinsa.php(42): App\Libraries\ShinsaLibrarie->get_shinsa_detail(55, 65)
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-04-08 00:13:15 --> mysqli_sql_exception: Unknown column 'mka.kaijo_name' in 'field list' in C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n\t\t    SELECT\n ...', 0)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t    SELECT\n ...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t    SELECT\n ...')
+#3 C:\xampp_htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(75): CodeIgniter\Database\BaseConnection->query('\n\t\t    SELECT\n ...', Array)
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Models\ShinsaModel.php(552): App\Models\BaseQueryModel->get_result_array('\n\t\t    SELECT\n ...', Array)
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Models\ShinsaModel.php(401): App\Models\ShinsaModel->get_shinsa_kaijo(55)
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\ShinsaLibrarie.php(136): App\Models\ShinsaModel->get_shinsa_detail(55, 65)
+#7 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Admin\AdminShinsa.php(42): App\Libraries\ShinsaLibrarie->get_shinsa_detail(55, 65)
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-04-08 00:13:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'mka.kaijo_name' in 'field list'
+[Method: POST, Route: admin/shinsa_revision]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(75): CodeIgniter\Database\BaseConnection->query('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = :shinsaId:) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = :shinsaId:
+            ORDER BY
+                tsk.order_no
+		', [...])
+ 2 APPPATH\Models\ShinsaModel.php(552): App\Models\BaseQueryModel->get_result_array('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = :shinsaId:) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = :shinsaId:
+            ORDER BY
+                tsk.order_no
+		', [...])
+ 3 APPPATH\Models\ShinsaModel.php(401): App\Models\ShinsaModel->get_shinsa_kaijo(55)
+ 4 APPPATH\Libraries\ShinsaLibrarie.php(136): App\Models\ShinsaModel->get_shinsa_detail(55, 65)
+ 5 APPPATH\Controllers\Admin\AdminShinsa.php(42): App\Libraries\ShinsaLibrarie->get_shinsa_detail(55, 65)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 00:13:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'mka.kaijo_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = 55) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = 55
+            ORDER BY
+                tsk.order_no
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = 55) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = 55
+            ORDER BY
+                tsk.order_no
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(75): CodeIgniter\Database\BaseConnection->query('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = :shinsaId:) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = :shinsaId:
+            ORDER BY
+                tsk.order_no
+		', [...])
+ 4 APPPATH\Models\ShinsaModel.php(552): App\Models\BaseQueryModel->get_result_array('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = :shinsaId:) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = :shinsaId:
+            ORDER BY
+                tsk.order_no
+		', [...])
+ 5 APPPATH\Models\ShinsaModel.php(401): App\Models\ShinsaModel->get_shinsa_kaijo(55)
+ 6 APPPATH\Libraries\ShinsaLibrarie.php(136): App\Models\ShinsaModel->get_shinsa_detail(55, 65)
+ 7 APPPATH\Controllers\Admin\AdminShinsa.php(42): App\Libraries\ShinsaLibrarie->get_shinsa_detail(55, 65)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 00:13:15 --> [Caused by] mysqli_sql_exception: Unknown column 'mka.kaijo_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = 55) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = 55
+            ORDER BY
+                tsk.order_no
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = 55) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = 55
+            ORDER BY
+                tsk.order_no
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = 55) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = 55
+            ORDER BY
+                tsk.order_no
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(75): CodeIgniter\Database\BaseConnection->query('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = :shinsaId:) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = :shinsaId:
+            ORDER BY
+                tsk.order_no
+		', [...])
+ 5 APPPATH\Models\ShinsaModel.php(552): App\Models\BaseQueryModel->get_result_array('
+		    SELECT
+                tsk.kaijo_id
+                ,tsk.kaijo_other_name
+                ,tsk.kaijo_other_name_abb
+                ,tsk.additional_info
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name ELSE mka.kaijo_name END kaijo_name
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_short ELSE mka.kaijo_name_short END kaijo_name_short
+                ,CASE WHEN knh.kaijo_name IS NOT NULL THEN knh.kaijo_name_abb ELSE mka.kaijo_name_abb END kaijo_name_abb
+            FROM
+                t_shinsa_kaijo tsk
+                INNER JOIN m_kaijo mk ON
+                    mka.kaijo_id = tsk.kaijo_id
+				-- 審査日の最小値
+                INNER JOIN (SELECT MIN(shinsa_date) AS shinsa_date, shinsa_id FROM t_shinsa_date_target WHERE shinsa_id = :shinsaId:) sdt ON
+                    sdt.shinsa_id = tsk.shinsa_id
+				-- 審査日からネーミングライツ権利のある会場の名称を取得
+                LEFT JOIN m_kaijo_name_history knh ON
+                    knh.kaijo_id = mka.kaijo_id
+                    AND sdt.shinsa_date BETWEEN knh.change_date_st AND knh.change_date_ed
+            WHERE
+                tsk.shinsa_id = :shinsaId:
+            ORDER BY
+                tsk.order_no
+		', [...])
+ 6 APPPATH\Models\ShinsaModel.php(401): App\Models\ShinsaModel->get_shinsa_kaijo(55)
+ 7 APPPATH\Libraries\ShinsaLibrarie.php(136): App\Models\ShinsaModel->get_shinsa_detail(55, 65)
+ 8 APPPATH\Controllers\Admin\AdminShinsa.php(42): App\Libraries\ShinsaLibrarie->get_shinsa_detail(55, 65)
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

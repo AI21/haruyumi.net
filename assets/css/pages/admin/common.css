@@ -1,0 +1,40 @@
+/* 審査参加者一覧テーブル */
+#offer-ilst tr {
+	vertical-align: middle;
+}
+
+/* tablesorter アイコン表示 */
+#offer-ilst thead th {
+	position: relative;
+	cursor: pointer;
+	user-select: none;
+}
+#offer-ilst thead th .tablesorter-icon {
+	position: absolute;
+	right: 8px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 0.9rem;
+	color: #6c757d;
+}
+#offer-ilst thead th .tablesorter-icon,
+#offer-ilst thead th .tablesorter-icon::after {
+	/* アイコンを斜体ではなく通常にする */
+	font-style: normal;
+	font-weight: normal;
+	font-family: inherit;
+}
+
+/* 「辞退登録」などソート無効列のアイコンを非表示にする */
+#offer-ilst thead th.sorter-false .tablesorter-icon {
+	display: none;
+}
+#offer-ilst thead th.tablesorter-headerAsc .tablesorter-icon::after {
+	content: "▲";
+}
+#offer-ilst thead th.tablesorter-headerDesc .tablesorter-icon::after {
+	content: "▼";
+}
+#offer-ilst thead th.tablesorter-headerUnSorted .tablesorter-icon::after {
+	content: "⇅";
+}

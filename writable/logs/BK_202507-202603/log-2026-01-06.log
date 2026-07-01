@@ -1,0 +1,32 @@
+CRITICAL - 2026-01-06 23:19:36 --> Error: Undefined constant "App\Libraries\FLAG_ON"
+[Method: POST, Route: admin/notice_regist_proc]
+in APPPATH\Libraries\AdminLibrarie.php on line 207.
+ 1 APPPATH\Controllers\Admin.php(252): App\Libraries\AdminLibrarie->notice_files_proc(123, [...], [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-06 23:20:36 --> ErrorException: Undefined variable $categoryNoticeDetail
+[Method: POST, Route: admin/notice_regist_proc]
+in APPPATH\Libraries\AdminLibrarie.php on line 165.
+ 1 APPPATH\Libraries\AdminLibrarie.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categoryNoticeDetail', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\AdminLibrarie.php', 165)
+ 2 APPPATH\Controllers\Admin.php(252): App\Libraries\AdminLibrarie->notice_files_proc(123, [...], [])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-06 23:20:44 --> ErrorException: Undefined variable $categoryNoticeDetail
+[Method: POST, Route: admin/notice_regist_proc]
+in APPPATH\Libraries\AdminLibrarie.php on line 165.
+ 1 APPPATH\Libraries\AdminLibrarie.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categoryNoticeDetail', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\AdminLibrarie.php', 165)
+ 2 APPPATH\Controllers\Admin.php(252): App\Libraries\AdminLibrarie->notice_files_proc(123, [...], [])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

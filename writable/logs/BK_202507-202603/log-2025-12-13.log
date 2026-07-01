@@ -1,0 +1,94 @@
+CRITICAL - 2025-12-13 23:35:53 --> TypeError: App\Libraries\TaikaiLibrarie::taikai_add_member_proxy(): Argument #2 ($memberData) must be of type array, string given, called in C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\AdminTaikai.php on line 201
+[Method: POST, Route: admin/taikai_add_member_proxy]
+in APPPATH\Libraries\TaikaiLibrarie.php on line 151.
+ 1 APPPATH\Controllers\AdminTaikai.php(201): App\Libraries\TaikaiLibrarie->taikai_add_member_proxy(11, '2,144,29,53')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminTaikai->ajax_taikai_add_member_proxy()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminTaikai))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-13 23:37:12 --> TypeError: App\Libraries\TaikaiLibrarie::taikai_add_member_proxy(): Argument #2 ($memberData) must be of type array, string given, called in C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\AdminTaikai.php on line 201
+[Method: POST, Route: admin/taikai_add_member_proxy]
+in APPPATH\Libraries\TaikaiLibrarie.php on line 151.
+ 1 APPPATH\Controllers\AdminTaikai.php(201): App\Libraries\TaikaiLibrarie->taikai_add_member_proxy(11, '2,144,29,53')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminTaikai->ajax_taikai_add_member_proxy()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminTaikai))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-13 23:43:26 --> ErrorException: Undefined property: App\Libraries\TaikaiLibrarie::$adminModel
+[Method: POST, Route: admin/taikai_add_member_proxy]
+in APPPATH\Libraries\TaikaiLibrarie.php on line 155.
+ 1 APPPATH\Libraries\TaikaiLibrarie.php(155): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Libraries\\TaikaiLibrarie::$adminModel', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\TaikaiLibrarie.php', 155)
+ 2 APPPATH\Controllers\AdminTaikai.php(201): App\Libraries\TaikaiLibrarie->taikai_add_member_proxy(11, '2')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminTaikai->ajax_taikai_add_member_proxy()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminTaikai))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-13 23:43:36 --> ErrorException: Undefined property: App\Libraries\TaikaiLibrarie::$adminModel
+[Method: POST, Route: admin/taikai_add_member_proxy]
+in APPPATH\Libraries\TaikaiLibrarie.php on line 155.
+ 1 APPPATH\Libraries\TaikaiLibrarie.php(155): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Libraries\\TaikaiLibrarie::$adminModel', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\TaikaiLibrarie.php', 155)
+ 2 APPPATH\Controllers\AdminTaikai.php(201): App\Libraries\TaikaiLibrarie->taikai_add_member_proxy(11, '2')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminTaikai->ajax_taikai_add_member_proxy()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminTaikai))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-13 23:51:00 --> Error: Call to a member function taikai_add_member_proxy() on null
+[Method: POST, Route: admin/taikai_add_member_proxy]
+in APPPATH\Controllers\AdminTaikai.php on line 203.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminTaikai->ajax_taikai_add_member_proxy()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminTaikai))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-13 23:52:27 --> ErrorException: Undefined property: App\Libraries\AdminTaikaiLibrarie::$taikaiModel
+[Method: POST, Route: admin/taikai_add_member_proxy]
+in APPPATH\Libraries\AdminTaikaiLibrarie.php on line 37.
+ 1 APPPATH\Libraries\AdminTaikaiLibrarie.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Libraries\\AdminTaikaiLibrarie::$taikaiModel', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\AdminTaikaiLibrarie.php', 37)
+ 2 APPPATH\Controllers\AdminTaikai.php(204): App\Libraries\AdminTaikaiLibrarie->taikai_add_member_proxy(11, '2')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminTaikai->ajax_taikai_add_member_proxy()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminTaikai))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-13 23:53:13 --> Error: Call to a member function taikai_join_member() on null
+[Method: POST, Route: admin/taikai_add_member_proxy]
+in APPPATH\Libraries\AdminTaikaiLibrarie.php on line 37.
+ 1 APPPATH\Controllers\AdminTaikai.php(204): App\Libraries\AdminTaikaiLibrarie->taikai_add_member_proxy(11, '2')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminTaikai->ajax_taikai_add_member_proxy()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminTaikai))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-13 23:54:00 --> ErrorException: Undefined variable $memberData
+[Method: POST, Route: admin/taikai_add_member_proxy]
+in APPPATH\Libraries\AdminTaikaiLibrarie.php on line 38.
+ 1 APPPATH\Libraries\AdminTaikaiLibrarie.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $memberData', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\AdminTaikaiLibrarie.php', 38)
+ 2 APPPATH\Controllers\AdminTaikai.php(204): App\Libraries\AdminTaikaiLibrarie->taikai_add_member_proxy(11, '2')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminTaikai->ajax_taikai_add_member_proxy()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminTaikai))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-13 23:54:28 --> ErrorException: Undefined property: App\Libraries\AdminTaikaiLibrarie::$memberModel
+[Method: POST, Route: admin/taikai_add_member_proxy]
+in APPPATH\Libraries\AdminTaikaiLibrarie.php on line 46.
+ 1 APPPATH\Libraries\AdminTaikaiLibrarie.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Libraries\\AdminTaikaiLibrarie::$memberModel', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\AdminTaikaiLibrarie.php', 46)
+ 2 APPPATH\Controllers\AdminTaikai.php(204): App\Libraries\AdminTaikaiLibrarie->taikai_add_member_proxy(11, '2')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminTaikai->ajax_taikai_add_member_proxy()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminTaikai))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

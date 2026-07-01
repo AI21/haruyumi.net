@@ -1,0 +1,15 @@
+CRITICAL - 2025-10-13 20:45:11 --> ErrorException: Undefined variable $taikaiDetail
+[Method: GET, Route: member]
+in APPPATH\Helpers\member_helper.php on line 36.
+ 1 APPPATH\Helpers\member_helper.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $taikaiDetail', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\member_helper.php', 36)
+ 2 APPPATH\Views\member\index.php(9): get_kaiin_list_html([...], [...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\member\\index.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('member/index', [], true)
+ 6 APPPATH\Controllers\Member.php(40): view('member/index')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Member->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Member))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

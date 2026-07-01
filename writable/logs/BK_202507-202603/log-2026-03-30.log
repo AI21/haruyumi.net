@@ -1,0 +1,129 @@
+CRITICAL - 2026-03-30 23:07:07 --> Error: Call to undefined method App\Libraries\Admin\AdminShinsaLibrarie::shinsa_files_proc()
+[Method: POST, Route: admin/shinsa_regist_proc]
+in APPPATH\Controllers\Admin\AdminShinsa.php on line 247.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_shinsa_regist_proc()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-03-30 23:13:09 --> mysqli_sql_exception: Column 'order_no' cannot be null in C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n\t\t\tINSERT INTO...', 0)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t\tINSERT INTO...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t\tINSERT INTO...')
+#3 C:\xampp_htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('\n\t\t\tINSERT INTO...', Array)
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Models\Admin\AdminShinsaModel.php(231): App\Models\BaseQueryModel->get_result_query('\n\t\t\tINSERT INTO...', Array)
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\Admin\AdminShinsaLibrarie.php(130): App\Models\Admin\AdminShinsaModel->insert_shinsa_kaijo(33, Array)
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Admin\AdminShinsa.php(244): App\Libraries\Admin\AdminShinsaLibrarie->shinsa_info_proc(Array, 65, 0)
+#7 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_shinsa_regist_proc()
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2026-03-30 23:13:35 --> mysqli_sql_exception: Column 'order_no' cannot be null in C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n\t\t\tINSERT INTO...', 0)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t\tINSERT INTO...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t\tINSERT INTO...')
+#3 C:\xampp_htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(117): CodeIgniter\Database\BaseConnection->query('\n\t\t\tINSERT INTO...', Array)
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Models\Admin\AdminShinsaModel.php(231): App\Models\BaseQueryModel->get_result_query('\n\t\t\tINSERT INTO...', Array)
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\Admin\AdminShinsaLibrarie.php(130): App\Models\Admin\AdminShinsaModel->insert_shinsa_kaijo(33, Array)
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Admin\AdminShinsa.php(244): App\Libraries\Admin\AdminShinsaLibrarie->shinsa_info_proc(Array, 65, 0)
+#7 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_shinsa_regist_proc()
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-03-30 23:22:51 --> Error: Call to undefined method App\Libraries\Admin\AdminShinsaLibrarie::get_next_document_id()
+[Method: POST, Route: admin/shinsa_regist_proc]
+in APPPATH\Libraries\Admin\AdminShinsaLibrarie.php on line 178.
+ 1 APPPATH\Controllers\Admin\AdminShinsa.php(247): App\Libraries\Admin\AdminShinsaLibrarie->shinsa_files_proc(0, [...], [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_shinsa_regist_proc()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-30 23:31:15 --> ErrorException: Undefined array key "ext_file"
+[Method: POST, Route: admin/shinsa_revision]
+in APPPATH\Helpers\admin_helper.php on line 224.
+ 1 APPPATH\Helpers\admin_helper.php(224): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "ext_file"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\admin_helper.php', 224)
+ 2 APPPATH\Helpers\Admin\shinsa_helper.php(174): form_file_document('shinsa', 'shinsa-files', [...], 10)
+ 3 APPPATH\Views\admin\shinsa\shinsa_regist.php(7): form_shinsa_detail([...], [...], [...], [...], 10)
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\admin\\shinsa\\shinsa_regist.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/shinsa/shinsa_regist', [], true)
+ 7 APPPATH\Controllers\Admin\AdminShinsa.php(87): view('admin/shinsa/shinsa_regist')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-30 23:32:56 --> ErrorException: Undefined array key "ext_file"
+[Method: POST, Route: admin/shinsa_revision]
+in APPPATH\Helpers\admin_helper.php on line 224.
+ 1 APPPATH\Helpers\admin_helper.php(224): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "ext_file"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\admin_helper.php', 224)
+ 2 APPPATH\Helpers\Admin\shinsa_helper.php(174): form_file_document('shinsa', 'shinsa-files', [...], 10)
+ 3 APPPATH\Views\admin\shinsa\shinsa_regist.php(7): form_shinsa_detail([...], [...], [...], [...], 10)
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\admin\\shinsa\\shinsa_regist.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/shinsa/shinsa_regist', [], true)
+ 7 APPPATH\Controllers\Admin\AdminShinsa.php(87): view('admin/shinsa/shinsa_regist')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-30 23:34:11 --> ErrorException: Undefined array key "ext_file"
+[Method: POST, Route: admin/shinsa_revision]
+in APPPATH\Helpers\admin_helper.php on line 224.
+ 1 APPPATH\Helpers\admin_helper.php(224): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "ext_file"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\admin_helper.php', 224)
+ 2 APPPATH\Helpers\Admin\shinsa_helper.php(174): form_file_document('shinsa', 'shinsa-files', [...], 10)
+ 3 APPPATH\Views\admin\shinsa\shinsa_regist.php(7): form_shinsa_detail([...], [...], [...], [...], 10)
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\admin\\shinsa\\shinsa_regist.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/shinsa/shinsa_regist', [], true)
+ 7 APPPATH\Controllers\Admin\AdminShinsa.php(87): view('admin/shinsa/shinsa_regist')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-30 23:50:56 --> ErrorException: Undefined array key 1
+[Method: POST, Route: admin/shinsa_revision]
+in APPPATH\Helpers\Admin\shinsa_helper.php on line 89.
+ 1 APPPATH\Helpers\Admin\shinsa_helper.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\Admin\\shinsa_helper.php', 89)
+ 2 APPPATH\Views\admin\shinsa\shinsa_regist.php(7): form_shinsa_detail([...], [...], [...], [...], 10)
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\admin\\shinsa\\shinsa_regist.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/shinsa/shinsa_regist', [], true)
+ 6 APPPATH\Controllers\Admin\AdminShinsa.php(87): view('admin/shinsa/shinsa_regist')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-30 23:55:31 --> ErrorException: Undefined array key 1
+[Method: POST, Route: admin/shinsa_revision]
+in APPPATH\Helpers\Admin\shinsa_helper.php on line 89.
+ 1 APPPATH\Helpers\Admin\shinsa_helper.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\Admin\\shinsa_helper.php', 89)
+ 2 APPPATH\Views\admin\shinsa\shinsa_regist.php(7): form_shinsa_detail([...], [...], [...], [...], 10)
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\admin\\shinsa\\shinsa_regist.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/shinsa/shinsa_regist', [], true)
+ 6 APPPATH\Controllers\Admin\AdminShinsa.php(87): view('admin/shinsa/shinsa_regist')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->shinsa_revision()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

@@ -1,0 +1,15 @@
+CRITICAL - 2024-12-06 21:58:19 --> ErrorException: Undefined variable $rank
+[Method: GET, Route: member]
+in APPPATH\Helpers\MemberHelper.php on line 25.
+ 1 APPPATH\Helpers\MemberHelper.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rank', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Helpers\\MemberHelper.php', 25)
+ 2 APPPATH\Views\member\index.php(20): get_kaiin_list_html([...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\member\\index.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('member/index', [], true)
+ 6 APPPATH\Controllers\Member.php(34): view('member/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Member->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Member))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

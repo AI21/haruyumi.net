@@ -1,0 +1,20 @@
+CRITICAL - 2026-01-09 23:20:13 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: home/get_notice_detail]
+in APPPATH\Controllers\Home.php on line 58.
+ 1 APPPATH\Controllers\Home.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Controllers\\Home.php', 58)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->ajax_get_notice_detail()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-09 23:20:18 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: home/get_notice_detail]
+in APPPATH\Controllers\Home.php on line 58.
+ 1 APPPATH\Controllers\Home.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Controllers\\Home.php', 58)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->ajax_get_notice_detail()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

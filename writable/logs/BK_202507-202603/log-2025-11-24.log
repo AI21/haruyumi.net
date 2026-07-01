@@ -1,0 +1,54 @@
+CRITICAL - 2025-11-24 22:31:44 --> ErrorException: Undefined array key "notice_send_flg"
+[Method: POST, Route: admin/member_regist_conf]
+in APPPATH\Helpers\admin_helper.php on line 463.
+ 1 APPPATH\Helpers\admin_helper.php(463): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "notice_send_flg"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\admin_helper.php', 463)
+ 2 APPPATH\Controllers\AdminMember.php(279): member_regist_confirm([...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminMember->ajax_member_regist_conf()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminMember))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-24 22:32:24 --> ErrorException: Undefined array key 1
+[Method: POST, Route: admin/member_regist_proc]
+in APPPATH\Libraries\AdminLibrarie.php on line 123.
+ 1 APPPATH\Libraries\AdminLibrarie.php(123): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\AdminLibrarie.php', 123)
+ 2 APPPATH\Controllers\AdminMember.php(328): App\Libraries\AdminLibrarie->member_regist_proc([...], 25, 152)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminMember->ajax_member_regist_proc()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminMember))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-24 22:34:14 --> ErrorException: Undefined array key 1
+[Method: POST, Route: admin/member_regist_proc]
+in APPPATH\Libraries\AdminLibrarie.php on line 123.
+ 1 APPPATH\Libraries\AdminLibrarie.php(123): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\AdminLibrarie.php', 123)
+ 2 APPPATH\Controllers\AdminMember.php(328): App\Libraries\AdminLibrarie->member_regist_proc([...], 25, 153)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminMember->ajax_member_regist_proc()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminMember))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-24 22:37:08 --> TypeError: App\Models\MemberModel::get_member_data(): Return value must be of type object, array returned
+[Method: POST, Route: admin/member_revision]
+in APPPATH\Models\MemberModel.php on line 158.
+ 1 APPPATH\Libraries\MemberLibrarie.php(67): App\Models\MemberModel->get_member_data('154')
+ 2 APPPATH\Controllers\AdminMember.php(116): App\Libraries\MemberLibrarie->get_member_data('154')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminMember->member_revision()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminMember))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-24 23:27:26 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "名簿（名前と段位）令和7年7月20日.pdf"
+[Method: GET, Route: assets/document/kasugai/member/%E5%90%8D%E7%B0%BF%EF%BC%88%E5%90%8D%E5%89%8D%E3%81%A8%E6%AE%B5%E4%BD%8D%EF%BC%89%E4%BB%A4%E5%92%8C7%E5%B9%B47%E6%9C%8820%E6%97%A5.pdf]
+in SYSTEMPATH\Router\Router.php on line 737.
+ 1 SYSTEMPATH\Router\Router.php(204): CodeIgniter\Router\Router->checkDisallowedChars('assets/document/kasugai/member/名簿（名前と段位）令和7年7月20日.pdf')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('assets/document/kasugai/member/名簿（名前と段位）令和7年7月20日.pdf')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

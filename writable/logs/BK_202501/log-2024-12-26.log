@@ -1,0 +1,26 @@
+CRITICAL - 2024-12-26 22:16:21 --> ErrorException: A void function must not return a value
+[Method: GET, Route: /]
+in APPPATH\Controllers\CommonController.php on line 46.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-12-26 22:16:54 --> ErrorException: A void function must not return a value
+[Method: GET, Route: login]
+in APPPATH\Controllers\CommonController.php on line 46.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-12-26 22:17:13 --> ErrorException: A void function must not return a value
+[Method: GET, Route: login]
+in APPPATH\Controllers\CommonController.php on line 46.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-12-26 22:18:00 --> ErrorException: Undefined variable $memuInfo
+[Method: GET, Route: login]
+in APPPATH\Views\login\index.php on line 2.
+ 1 APPPATH\Views\login\index.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $memuInfo', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\login\\index.php', 2)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\login\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('login/index', [], true)
+ 5 APPPATH\Controllers\Login.php(16): view('login/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

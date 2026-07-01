@@ -1,0 +1,228 @@
+CRITICAL - 2025-11-19 21:20:58 --> TypeError: App\Libraries\ShinsaLibrarie::shinsa_rankup_notice_body(): Return value must be of type array, string returned
+[Method: GET, Route: admin/notice_regist_shinsa_promotion/6]
+in APPPATH\Libraries\ShinsaLibrarie.php on line 397.
+ 1 APPPATH\Controllers\Admin.php(93): App\Libraries\ShinsaLibrarie->shinsa_rankup_notice_body([...], 6)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->notice_regist_shinsa_promotion('6')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 21:21:25 --> ErrorException: Undefined variable $shisaDetail
+[Method: GET, Route: admin/notice_regist_shinsa_promotion/6]
+in APPPATH\Libraries\ShinsaLibrarie.php on line 396.
+ 1 APPPATH\Libraries\ShinsaLibrarie.php(396): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $shisaDetail', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\ShinsaLibrarie.php', 396)
+ 2 APPPATH\Controllers\Admin.php(93): App\Libraries\ShinsaLibrarie->shinsa_rankup_notice_body([...], 6)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->notice_regist_shinsa_promotion('6')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 21:21:51 --> ErrorException: Undefined variable $shisaDetail
+[Method: GET, Route: admin/notice_regist_shinsa_promotion/6]
+in APPPATH\Libraries\ShinsaLibrarie.php on line 396.
+ 1 APPPATH\Libraries\ShinsaLibrarie.php(396): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $shisaDetail', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\ShinsaLibrarie.php', 396)
+ 2 APPPATH\Controllers\Admin.php(93): App\Libraries\ShinsaLibrarie->shinsa_rankup_notice_body([...], 6)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->notice_regist_shinsa_promotion('6')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 21:21:59 --> ErrorException: Undefined variable $shisaDetail
+[Method: GET, Route: admin/notice_regist_shinsa_promotion/6]
+in APPPATH\Libraries\ShinsaLibrarie.php on line 396.
+ 1 APPPATH\Libraries\ShinsaLibrarie.php(396): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $shisaDetail', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\ShinsaLibrarie.php', 396)
+ 2 APPPATH\Controllers\Admin.php(93): App\Libraries\ShinsaLibrarie->shinsa_rankup_notice_body([...], 6)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->notice_regist_shinsa_promotion('6')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 21:22:38 --> TypeError: App\Libraries\ShinsaLibrarie::shinsa_rankup_notice_body(): Return value must be of type array, string returned
+[Method: GET, Route: admin/notice_regist_shinsa_promotion/6]
+in APPPATH\Libraries\ShinsaLibrarie.php on line 403.
+ 1 APPPATH\Controllers\Admin.php(93): App\Libraries\ShinsaLibrarie->shinsa_rankup_notice_body([...], 6)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->notice_regist_shinsa_promotion('6')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 21:23:03 --> ErrorException: Undefined variable $shinsaRankupMemberList
+[Method: GET, Route: admin/notice_regist_shinsa_promotion/6]
+in APPPATH\Controllers\Admin.php on line 94.
+ 1 APPPATH\Controllers\Admin.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $shinsaRankupMemberList', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Controllers\\Admin.php', 94)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->notice_regist_shinsa_promotion('6')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 21:23:42 --> ErrorException: Undefined variable $shinsaRankupMemberList
+[Method: GET, Route: admin/notice_regist_shinsa_promotion/6]
+in APPPATH\Controllers\Admin.php on line 94.
+ 1 APPPATH\Controllers\Admin.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $shinsaRankupMemberList', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Controllers\\Admin.php', 94)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->notice_regist_shinsa_promotion('6')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 21:30:56 --> ErrorException: Array to string conversion
+[Method: GET, Route: admin/notice_regist_shinsa_promotion/6]
+in APPPATH\Libraries\ShinsaLibrarie.php on line 398.
+ 1 APPPATH\Libraries\ShinsaLibrarie.php(398): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\ShinsaLibrarie.php', 398)
+ 2 APPPATH\Controllers\Admin.php(93): App\Libraries\ShinsaLibrarie->shinsa_rankup_notice_body([...], 6)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->notice_regist_shinsa_promotion('6')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 21:31:18 --> ErrorException: Array to string conversion
+[Method: GET, Route: admin/notice_regist_shinsa_promotion/6]
+in APPPATH\Libraries\ShinsaLibrarie.php on line 398.
+ 1 APPPATH\Libraries\ShinsaLibrarie.php(398): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\ShinsaLibrarie.php', 398)
+ 2 APPPATH\Controllers\Admin.php(93): App\Libraries\ShinsaLibrarie->shinsa_rankup_notice_body([...], 6)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->notice_regist_shinsa_promotion('6')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 21:32:16 --> ErrorException: Array to string conversion
+[Method: GET, Route: admin/notice_regist_shinsa_promotion/6]
+in APPPATH\Libraries\ShinsaLibrarie.php on line 398.
+ 1 APPPATH\Libraries\ShinsaLibrarie.php(398): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\ShinsaLibrarie.php', 398)
+ 2 APPPATH\Controllers\Admin.php(93): App\Libraries\ShinsaLibrarie->shinsa_rankup_notice_body([...], 6)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->notice_regist_shinsa_promotion('6')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-19 21:41:17 --> Email: sendWithMail throwed ErrorException: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php:1762
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed ...', 'C:\\xampp_htdocs...', 1762)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1762): mail('k.kyudo.xampp@g...', '=?UTF-8?Q?=E5=A...', '\xE6\x9C\xAC\xE6\x97\xA511\xE6\x9C\x8819\xE6\x97...', 'Date: Wed, 19 N...', '-f k.kyudo.xamp...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1694): CodeIgniter\Email\Email->sendWithMail()
+#3 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1589): CodeIgniter\Email\Email->spoolEmail()
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php(458): CodeIgniter\Email\Email->send()
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php(377): App\Libraries\AdminLibrarie->send_mail_proc(Array, '\xE5\xAF\xA9\xE6\x9F\xBB\xE5\x90\x88\xE6\xA0\xBC\xE3\x81\xAE...', '\xE6\x9C\xAC\xE6\x97\xA511\xE6\x9C\x8819\xE6\x97...')
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Admin.php(538): App\Libraries\AdminLibrarie->notice_mail_proc(Array, Array, 25)
+#7 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-11-19 21:41:17 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2025-11-19 21:41:17 --> 
+ERROR - 2025-11-19 21:41:43 --> Email: sendWithMail throwed ErrorException: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php:1762
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed ...', 'C:\\xampp_htdocs...', 1762)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1762): mail('k.kyudo.xampp@g...', '=?UTF-8?Q?=E5=A...', '\xE6\x9C\xAC\xE6\x97\xA511\xE6\x9C\x8819\xE6\x97...', 'Date: Wed, 19 N...', '-f k.kyudo.xamp...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1694): CodeIgniter\Email\Email->sendWithMail()
+#3 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1589): CodeIgniter\Email\Email->spoolEmail()
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php(458): CodeIgniter\Email\Email->send()
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php(377): App\Libraries\AdminLibrarie->send_mail_proc(Array, '\xE5\xAF\xA9\xE6\x9F\xBB\xE5\x90\x88\xE6\xA0\xBC\xE3\x81\xAE...', '\xE6\x9C\xAC\xE6\x97\xA511\xE6\x9C\x8819\xE6\x97...')
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Admin.php(538): App\Libraries\AdminLibrarie->notice_mail_proc(Array, Array, 25)
+#7 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-11-19 21:41:43 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2025-11-19 21:41:43 --> 
+CRITICAL - 2025-11-19 21:51:08 --> ErrorException: Undefined variable $shinsa_id
+[Method: GET, Route: admin/notice_regist_shinsa_promotion/6]
+in APPPATH\Models\ShinsaModel.php on line 57.
+ 1 APPPATH\Models\ShinsaModel.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $shinsa_id', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Models\\ShinsaModel.php', 57)
+ 2 APPPATH\Libraries\ShinsaLibrarie.php(387): App\Models\ShinsaModel->get_shinsa_last_date(6)
+ 3 APPPATH\Controllers\Admin.php(93): App\Libraries\ShinsaLibrarie->shinsa_rankup_notice_body([...], 6)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->notice_regist_shinsa_promotion('6')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 21:51:37 --> ErrorException: Undefined variable $shinsa_id
+[Method: GET, Route: admin/notice_regist_shinsa_promotion/6]
+in APPPATH\Models\ShinsaModel.php on line 57.
+ 1 APPPATH\Models\ShinsaModel.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $shinsa_id', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Models\\ShinsaModel.php', 57)
+ 2 APPPATH\Libraries\ShinsaLibrarie.php(387): App\Models\ShinsaModel->get_shinsa_last_date(6)
+ 3 APPPATH\Controllers\Admin.php(93): App\Libraries\ShinsaLibrarie->shinsa_rankup_notice_body([...], 6)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->notice_regist_shinsa_promotion('6')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 21:53:52 --> TypeError: App\Models\ShinsaModel::get_shinsa_last_date(): Return value must be of type array, string returned
+[Method: GET, Route: admin/notice_regist_shinsa_promotion/6]
+in APPPATH\Models\ShinsaModel.php on line 61.
+ 1 APPPATH\Libraries\ShinsaLibrarie.php(387): App\Models\ShinsaModel->get_shinsa_last_date(6)
+ 2 APPPATH\Controllers\Admin.php(93): App\Libraries\ShinsaLibrarie->shinsa_rankup_notice_body([...], 6)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->notice_regist_shinsa_promotion('6')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 21:54:27 --> TypeError: App\Models\ShinsaModel::get_shinsa_last_date(): Return value must be of type array, string returned
+[Method: GET, Route: admin/notice_regist_shinsa_promotion/6]
+in APPPATH\Models\ShinsaModel.php on line 61.
+ 1 APPPATH\Libraries\ShinsaLibrarie.php(387): App\Models\ShinsaModel->get_shinsa_last_date(6)
+ 2 APPPATH\Controllers\Admin.php(93): App\Libraries\ShinsaLibrarie->shinsa_rankup_notice_body([...], 6)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->notice_regist_shinsa_promotion('6')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 22:03:27 --> ParseError: syntax error, unexpected token "if"
+[Method: GET, Route: admin/notice_regist_shinsa_promotion/6]
+in APPPATH\Libraries\ShinsaLibrarie.php on line 390.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\ShinsaLibrarie.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Libraries\\ShinsaLibrarie')
+ 3 APPPATH\Controllers\CommonController.php(41): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Libraries\\ShinsaLibrarie')
+ 4 APPPATH\Controllers\Admin.php(12): App\Controllers\CommonController->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 22:57:23 --> TypeError: Cannot access offset of type string on string
+[Method: POST, Route: admin/member_revision]
+in APPPATH\Controllers\Admin.php on line 414.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->member_revision()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 22:57:36 --> TypeError: Cannot access offset of type string on string
+[Method: POST, Route: admin/member_revision]
+in APPPATH\Controllers\Admin.php on line 414.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->member_revision()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 22:58:29 --> TypeError: Cannot access offset of type string on string
+[Method: POST, Route: admin/member_revision]
+in APPPATH\Controllers\Admin.php on line 414.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->member_revision()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

@@ -1,0 +1,103 @@
+CRITICAL - 2025-05-11 10:46:33 --> ErrorException: Undefined variable $noticeProcId
+[Method: POST, Route: admin/notice_regist_proc]
+in APPPATH\Libraries\AdminLibrarie.php on line 57.
+ 1 APPPATH\Libraries\AdminLibrarie.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $noticeProcId', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\AdminLibrarie.php', 57)
+ 2 APPPATH\Controllers\Admin.php(262): App\Libraries\AdminLibrarie->notice_files_proc([...], [], 65)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-11 10:46:57 --> TypeError: App\Models\NoticeModel::insert_notice_info(): Argument #5 ($insertId) must be of type int, string given, called in C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php on line 47
+[Method: POST, Route: admin/notice_regist_proc]
+in APPPATH\Models\NoticeModel.php on line 243.
+ 1 APPPATH\Libraries\AdminLibrarie.php(47): App\Models\NoticeModel->insert_notice_info(1, 'TESTe', 'aaa', 65, '')
+ 2 APPPATH\Controllers\Admin.php(262): App\Libraries\AdminLibrarie->notice_files_proc([...], [], 65)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-11 10:47:49 --> TypeError: App\Models\NoticeModel::insert_notice_info(): Argument #5 ($insertId) must be of type int, string given, called in C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php on line 47
+[Method: POST, Route: admin/notice_regist_proc]
+in APPPATH\Models\NoticeModel.php on line 243.
+ 1 APPPATH\Libraries\AdminLibrarie.php(47): App\Models\NoticeModel->insert_notice_info(1, 'TESTe', 'aaa', 65, '')
+ 2 APPPATH\Controllers\Admin.php(262): App\Libraries\AdminLibrarie->notice_files_proc([...], [], 65)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-11 10:48:23 --> TypeError: App\Models\NoticeModel::insert_notice_info(): Argument #5 ($insertId) must be of type int, string given, called in C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php on line 47
+[Method: POST, Route: admin/notice_regist_proc]
+in APPPATH\Models\NoticeModel.php on line 243.
+ 1 APPPATH\Libraries\AdminLibrarie.php(47): App\Models\NoticeModel->insert_notice_info(1, 'TESTe', 'aaa', 65, '')
+ 2 APPPATH\Controllers\Admin.php(262): App\Libraries\AdminLibrarie->notice_files_proc([...], [], 65)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-11 10:49:25 --> Error: Call to undefined function App\Libraries\emptu()
+[Method: POST, Route: admin/notice_regist_proc]
+in APPPATH\Libraries\AdminLibrarie.php on line 40.
+ 1 APPPATH\Controllers\Admin.php(262): App\Libraries\AdminLibrarie->notice_files_proc([...], [], 65)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-05-11 10:49:42 --> Email: sendWithMail throwed ErrorException: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php:1762
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed ...', 'C:\\xampp_htdocs...', 1762)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1762): mail('k.kyudo.xampp@g...', '=?UTF-8?Q?TESTe...', 'aaa\r\n\r\n\xE8\xA9\xB3\xE7\xB4\xB0\xE3\x81...', 'Date: Sun, 11 M...', '-f k.kyudo.xamp...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1694): CodeIgniter\Email\Email->sendWithMail()
+#3 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1589): CodeIgniter\Email\Email->spoolEmail()
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php(310): CodeIgniter\Email\Email->send()
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php(230): App\Libraries\AdminLibrarie->send_mail_proc(Array, 'TESTe \xE3\x80\x90\xE3\x81\x8A\xE7\x9F\xA5...', 'aaa\n\n\xE8\xA9\xB3\xE7\xB4\xB0\xE3\x81\xAF\xE3...')
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Admin.php(267): App\Libraries\AdminLibrarie->notice_mail_proc(Array, Array, 25)
+#7 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-05-11 10:49:42 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2025-05-11 10:49:42 --> 
+CRITICAL - 2025-05-11 10:51:24 --> ArgumentCountError: Too few arguments to function App\Models\NoticeModel::insert_notice_info(), 4 passed in C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php on line 264 and exactly 5 expected
+[Method: POST, Route: admin/member_list_file_proc]
+in APPPATH\Models\NoticeModel.php on line 243.
+ 1 APPPATH\Libraries\AdminLibrarie.php(264): App\Models\NoticeModel->insert_notice_info(1, '【会員リスト】令和7年5月11日版', '会員リスト（令和7年5月11日版）を送付します。
+
+よろしくお願いいたします。', 65)
+ 2 APPPATH\Controllers\Admin.php(361): App\Libraries\AdminLibrarie->member_list_files_upload_mail_proc([...], 65, '')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_member_list_file_proc()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-05-11 10:52:45 --> Email: sendWithMail throwed ErrorException: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php:1762
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed ...', 'C:\\xampp_htdocs...', 1762)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1762): mail('k.kyudo.xampp@g...', '=?UTF-8?Q?TESTe...', '12345678\r\n\r\n\xE8\xA9\xB3...', 'Date: Sun, 11 M...', '-f k.kyudo.xamp...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1694): CodeIgniter\Email\Email->sendWithMail()
+#3 C:\xampp_htdocs\kasugaikyudo\production\system\Email\Email.php(1589): CodeIgniter\Email\Email->spoolEmail()
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php(311): CodeIgniter\Email\Email->send()
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php(230): App\Libraries\AdminLibrarie->send_mail_proc(Array, 'TESTe123456 \xE3\x80\x90...', '12345678\n\n\xE8\xA9\xB3\xE7\xB4...')
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Admin.php(267): App\Libraries\AdminLibrarie->notice_mail_proc(Array, Array, 25)
+#7 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-05-11 10:52:45 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2025-05-11 10:52:45 --> 

@@ -1,0 +1,49 @@
+CRITICAL - 2025-09-02 22:55:40 --> Error: Cannot access private property App\Controllers\Taikai::$taikaiLibrarie
+[Method: GET, Route: taikai/detail/24]
+in APPPATH\Controllers\CommonController.php on line 40.
+ 1 APPPATH\Controllers\Taikai.php(14): App\Controllers\CommonController->__construct('taikai')
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Taikai->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-02 23:00:08 --> ErrorException: Undefined variable $categoryNoticeList
+[Method: POST, Route: admin/taikai_revision]
+in APPPATH\Views\admin\taikai\taikai_regist.php on line 10.
+ 1 APPPATH\Views\admin\taikai\taikai_regist.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categoryNoticeList', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\admin\\taikai\\taikai_regist.php', 10)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\admin\\taikai\\taikai_regist.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/taikai/taikai_regist', [], true)
+ 5 APPPATH\Controllers\Admin.php(252): view('admin/taikai/taikai_regist')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->taikai_revision()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-02 23:00:43 --> ErrorException: Undefined variable $categoryNoticeList
+[Method: POST, Route: admin/taikai_revision]
+in APPPATH\Views\admin\taikai\taikai_regist.php on line 10.
+ 1 APPPATH\Views\admin\taikai\taikai_regist.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categoryNoticeList', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\admin\\taikai\\taikai_regist.php', 10)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\admin\\taikai\\taikai_regist.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/taikai/taikai_regist', [], true)
+ 5 APPPATH\Controllers\Admin.php(252): view('admin/taikai/taikai_regist')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->taikai_revision()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-02 23:16:01 --> ErrorException: Undefined array key "kyokai_officer_id"
+[Method: GET, Route: taikai/detail/9]
+in APPPATH\Libraries\TaikaiLibrarie.php on line 54.
+ 1 APPPATH\Libraries\TaikaiLibrarie.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kyokai_officer_id"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Libraries\\TaikaiLibrarie.php', 54)
+ 2 APPPATH\Controllers\Taikai.php(66): App\Libraries\TaikaiLibrarie->get_taikai_detail(9, 65)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->detail('9')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

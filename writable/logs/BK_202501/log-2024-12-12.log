@@ -1,0 +1,41 @@
+CRITICAL - 2024-12-12 23:19:34 --> Error: Call to undefined function App\Controllers\_get_main_menu_name()
+[Method: GET, Route: taikai]
+in APPPATH\Controllers\CommonController.php on line 48.
+ 1 APPPATH\Controllers\CommonController.php(24): App\Controllers\CommonController->get_menu('taikai')
+ 2 APPPATH\Controllers\Taikai.php(14): App\Controllers\CommonController->__construct('taikai')
+ 3 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Taikai->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-12 23:19:59 --> ErrorException: Undefined property: App\Controllers\Taikai::$fiscalYearId
+[Method: GET, Route: taikai]
+in APPPATH\Controllers\Taikai.php on line 23.
+ 1 APPPATH\Controllers\Taikai.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Taikai::$fiscalYearId', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Controllers\\Taikai.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-12 23:24:55 --> ErrorException: Undefined property: App\Controllers\Taikai::$_mainMenuName
+[Method: GET, Route: taikai]
+in APPPATH\Controllers\Taikai.php on line 27.
+ 1 APPPATH\Controllers\Taikai.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Taikai::$_mainMenuName', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Controllers\\Taikai.php', 27)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-12 23:25:06 --> ErrorException: Undefined property: App\Controllers\Taikai::$_mainMenuName
+[Method: GET, Route: taikai]
+in APPPATH\Controllers\Taikai.php on line 29.
+ 1 APPPATH\Controllers\Taikai.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Taikai::$_mainMenuName', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Controllers\\Taikai.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

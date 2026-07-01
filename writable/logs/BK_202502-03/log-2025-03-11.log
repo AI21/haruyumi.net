@@ -1,0 +1,488 @@
+CRITICAL - 2025-03-11 22:32:23 --> ErrorException: Undefined variable $ret
+[Method: POST, Route: admin/notice_regist_conf]
+in APPPATH\Helpers\common_helper.php on line 72.
+ 1 APPPATH\Helpers\common_helper.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ret', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Helpers\\common_helper.php', 72)
+ 2 APPPATH\Controllers\Admin.php(85): get_file_ext_icon_path('xlsx')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_conf()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-11 22:34:58 --> ErrorException: Undefined variable $ret
+[Method: POST, Route: admin/notice_regist_conf]
+in APPPATH\Helpers\common_helper.php on line 72.
+ 1 APPPATH\Helpers\common_helper.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ret', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Helpers\\common_helper.php', 72)
+ 2 APPPATH\Controllers\Admin.php(85): get_file_ext_icon_path('xlsx')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_conf()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-11 23:23:43 --> TypeError: App\Models\NoticeModel::get_notice_seq_no(): Argument #2 ($noticeCategoryId) must be of type int, string given, called in C:\xampp\htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php on line 93
+[Method: POST, Route: admin/notice_regist_proc]
+in APPPATH\Models\NoticeModel.php on line 155.
+ 1 APPPATH\Libraries\AdminLibrarie.php(93): App\Models\NoticeModel->get_notice_seq_no(24, 'kasugai')
+ 2 APPPATH\Controllers\Admin.php(139): App\Libraries\AdminLibrarie->notice_mail_proc([...], 24)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-11 23:25:51 --> TypeError: App\Libraries\AdminLibrarie::notice_mail_proc(): Return value must be of type bool, array returned
+[Method: POST, Route: admin/notice_regist_proc]
+in APPPATH\Libraries\AdminLibrarie.php on line 104.
+ 1 APPPATH\Controllers\Admin.php(139): App\Libraries\AdminLibrarie->notice_mail_proc([...], 24)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-11 23:28:25 --> ArgumentCountError: Too few arguments to function App\Models\NoticeModel::get_notice_seq_no(), 2 passed in C:\xampp\htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php on line 93 and exactly 3 expected
+[Method: POST, Route: admin/notice_regist_proc]
+in APPPATH\Models\NoticeModel.php on line 155.
+ 1 APPPATH\Libraries\AdminLibrarie.php(93): App\Models\NoticeModel->get_notice_seq_no(24, 1)
+ 2 APPPATH\Controllers\Admin.php(139): App\Libraries\AdminLibrarie->notice_mail_proc([...], 24)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-11 23:29:09 --> TypeError: App\Models\NoticeModel::get_notice_seq_no(): Argument #3 ($noticeSeqNo) must be of type int, null given, called in C:\xampp\htdocs\kasugaikyudo\production\app\Libraries\AdminLibrarie.php on line 93
+[Method: POST, Route: admin/notice_regist_proc]
+in APPPATH\Models\NoticeModel.php on line 155.
+ 1 APPPATH\Libraries\AdminLibrarie.php(93): App\Models\NoticeModel->get_notice_seq_no(24, 1, null)
+ 2 APPPATH\Controllers\Admin.php(139): App\Libraries\AdminLibrarie->notice_mail_proc([...], 24)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-11 23:30:23 --> TypeError: App\Libraries\AdminLibrarie::notice_mail_proc(): Return value must be of type bool, array returned
+[Method: POST, Route: admin/notice_regist_proc]
+in APPPATH\Libraries\AdminLibrarie.php on line 105.
+ 1 APPPATH\Controllers\Admin.php(139): App\Libraries\AdminLibrarie->notice_mail_proc([...], 24)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-11 23:33:53 --> ErrorException: Undefined variable $6
+[Method: POST, Route: admin/notice_regist_proc]
+in APPPATH\Libraries\AdminLibrarie.php on line 100.
+ 1 APPPATH\Libraries\AdminLibrarie.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $6', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Libraries\\AdminLibrarie.php', 100)
+ 2 APPPATH\Controllers\Admin.php(139): App\Libraries\AdminLibrarie->notice_mail_proc([...], 24)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->ajax_notice_regist_proc()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-03-11 23:52:11 --> mysqli_sql_exception: Unknown column 'doc.notice_category_id' in 'field list' in C:\xampp\htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n\t\t\tSELECT\n\t\t\t\t...', 0)
+#1 C:\xampp\htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t\tSELECT\n\t\t\t\t...')
+#2 C:\xampp\htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t\tSELECT\n\t\t\t\t...')
+#3 C:\xampp\htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('\n\t\t\tSELECT\n\t\t\t\t...', Array)
+#4 C:\xampp\htdocs\kasugaikyudo\production\app\Models\NoticeModel.php(118): App\Models\BaseQueryModel->get_result_array('\n\t\t\tSELECT\n\t\t\t\t...', Array)
+#5 C:\xampp\htdocs\kasugaikyudo\production\app\Libraries\NoticeLibrarie.php(47): App\Models\NoticeModel->get_notice_document_list(49)
+#6 C:\xampp\htdocs\kasugaikyudo\production\app\Controllers\Home.php(59): App\Libraries\NoticeLibrarie->get_notice_detail(49)
+#7 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Home->ajax_get_notice_detail()
+#8 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\kasugaikyudo\production\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-03-11 23:52:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'doc.notice_category_id' in 'field list'
+[Method: POST, Route: home/get_notice_detail]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				doc.notice_category_id
+				, doc.document_id
+				, doc.document_path
+				, doc.created
+				, doc.modefied
+			FROM 
+            	t_document_notice doc
+            WHERE
+				doc.notice_id = :noticeId:
+			ORDER BY
+				doc.document_id
+		', [...])
+ 2 APPPATH\Models\NoticeModel.php(118): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				doc.notice_category_id
+				, doc.document_id
+				, doc.document_path
+				, doc.created
+				, doc.modefied
+			FROM 
+            	t_document_notice doc
+            WHERE
+				doc.notice_id = :noticeId:
+			ORDER BY
+				doc.document_id
+		', [...])
+ 3 APPPATH\Libraries\NoticeLibrarie.php(47): App\Models\NoticeModel->get_notice_document_list(49)
+ 4 APPPATH\Controllers\Home.php(59): App\Libraries\NoticeLibrarie->get_notice_detail(49)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->ajax_get_notice_detail()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-11 23:52:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'doc.notice_category_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT
+				doc.notice_category_id
+				, doc.document_id
+				, doc.document_path
+				, doc.created
+				, doc.modefied
+			FROM 
+            	t_document_notice doc
+            WHERE
+				doc.notice_id = 49
+			ORDER BY
+				doc.document_id
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT
+				doc.notice_category_id
+				, doc.document_id
+				, doc.document_path
+				, doc.created
+				, doc.modefied
+			FROM 
+            	t_document_notice doc
+            WHERE
+				doc.notice_id = 49
+			ORDER BY
+				doc.document_id
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				doc.notice_category_id
+				, doc.document_id
+				, doc.document_path
+				, doc.created
+				, doc.modefied
+			FROM 
+            	t_document_notice doc
+            WHERE
+				doc.notice_id = :noticeId:
+			ORDER BY
+				doc.document_id
+		', [...])
+ 4 APPPATH\Models\NoticeModel.php(118): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				doc.notice_category_id
+				, doc.document_id
+				, doc.document_path
+				, doc.created
+				, doc.modefied
+			FROM 
+            	t_document_notice doc
+            WHERE
+				doc.notice_id = :noticeId:
+			ORDER BY
+				doc.document_id
+		', [...])
+ 5 APPPATH\Libraries\NoticeLibrarie.php(47): App\Models\NoticeModel->get_notice_document_list(49)
+ 6 APPPATH\Controllers\Home.php(59): App\Libraries\NoticeLibrarie->get_notice_detail(49)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->ajax_get_notice_detail()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-11 23:52:11 --> [Caused by] mysqli_sql_exception: Unknown column 'doc.notice_category_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+			SELECT
+				doc.notice_category_id
+				, doc.document_id
+				, doc.document_path
+				, doc.created
+				, doc.modefied
+			FROM 
+            	t_document_notice doc
+            WHERE
+				doc.notice_id = 49
+			ORDER BY
+				doc.document_id
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT
+				doc.notice_category_id
+				, doc.document_id
+				, doc.document_path
+				, doc.created
+				, doc.modefied
+			FROM 
+            	t_document_notice doc
+            WHERE
+				doc.notice_id = 49
+			ORDER BY
+				doc.document_id
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT
+				doc.notice_category_id
+				, doc.document_id
+				, doc.document_path
+				, doc.created
+				, doc.modefied
+			FROM 
+            	t_document_notice doc
+            WHERE
+				doc.notice_id = 49
+			ORDER BY
+				doc.document_id
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				doc.notice_category_id
+				, doc.document_id
+				, doc.document_path
+				, doc.created
+				, doc.modefied
+			FROM 
+            	t_document_notice doc
+            WHERE
+				doc.notice_id = :noticeId:
+			ORDER BY
+				doc.document_id
+		', [...])
+ 5 APPPATH\Models\NoticeModel.php(118): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				doc.notice_category_id
+				, doc.document_id
+				, doc.document_path
+				, doc.created
+				, doc.modefied
+			FROM 
+            	t_document_notice doc
+            WHERE
+				doc.notice_id = :noticeId:
+			ORDER BY
+				doc.document_id
+		', [...])
+ 6 APPPATH\Libraries\NoticeLibrarie.php(47): App\Models\NoticeModel->get_notice_document_list(49)
+ 7 APPPATH\Controllers\Home.php(59): App\Libraries\NoticeLibrarie->get_notice_detail(49)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->ajax_get_notice_detail()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-03-11 23:52:49 --> mysqli_sql_exception: Unknown column 'doc.notice_category_id' in 'field list' in C:\xampp\htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n\t\t\tSELECT\n\t\t\t\t...', 0)
+#1 C:\xampp\htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t\tSELECT\n\t\t\t\t...')
+#2 C:\xampp\htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t\tSELECT\n\t\t\t\t...')
+#3 C:\xampp\htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('\n\t\t\tSELECT\n\t\t\t\t...', Array)
+#4 C:\xampp\htdocs\kasugaikyudo\production\app\Models\NoticeModel.php(118): App\Models\BaseQueryModel->get_result_array('\n\t\t\tSELECT\n\t\t\t\t...', Array)
+#5 C:\xampp\htdocs\kasugaikyudo\production\app\Libraries\NoticeLibrarie.php(47): App\Models\NoticeModel->get_notice_document_list(49)
+#6 C:\xampp\htdocs\kasugaikyudo\production\app\Controllers\Home.php(59): App\Libraries\NoticeLibrarie->get_notice_detail(49)
+#7 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Home->ajax_get_notice_detail()
+#8 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\kasugaikyudo\production\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-03-11 23:52:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'doc.notice_category_id' in 'field list'
+[Method: POST, Route: home/get_notice_detail]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				doc.notice_category_id
+				, doc.document_id
+				, doc.document_path
+				, doc.created
+				, doc.modefied
+			FROM 
+            	t_document_notice doc
+            WHERE
+				doc.notice_id = :noticeId:
+			ORDER BY
+				doc.document_id
+		', [...])
+ 2 APPPATH\Models\NoticeModel.php(118): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				doc.notice_category_id
+				, doc.document_id
+				, doc.document_path
+				, doc.created
+				, doc.modefied
+			FROM 
+            	t_document_notice doc
+            WHERE
+				doc.notice_id = :noticeId:
+			ORDER BY
+				doc.document_id
+		', [...])
+ 3 APPPATH\Libraries\NoticeLibrarie.php(47): App\Models\NoticeModel->get_notice_document_list(49)
+ 4 APPPATH\Controllers\Home.php(59): App\Libraries\NoticeLibrarie->get_notice_detail(49)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->ajax_get_notice_detail()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-11 23:52:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'doc.notice_category_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT
+				doc.notice_category_id
+				, doc.document_id
+				, doc.document_path
+				, doc.created
+				, doc.modefied
+			FROM 
+            	t_document_notice doc
+            WHERE
+				doc.notice_id = 49
+			ORDER BY
+				doc.document_id
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT
+				doc.notice_category_id
+				, doc.document_id
+				, doc.document_path
+				, doc.created
+				, doc.modefied
+			FROM 
+            	t_document_notice doc
+            WHERE
+				doc.notice_id = 49
+			ORDER BY
+				doc.document_id
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				doc.notice_category_id
+				, doc.document_id
+				, doc.document_path
+				, doc.created
+				, doc.modefied
+			FROM 
+            	t_document_notice doc
+            WHERE
+				doc.notice_id = :noticeId:
+			ORDER BY
+				doc.document_id
+		', [...])
+ 4 APPPATH\Models\NoticeModel.php(118): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				doc.notice_category_id
+				, doc.document_id
+				, doc.document_path
+				, doc.created
+				, doc.modefied
+			FROM 
+            	t_document_notice doc
+            WHERE
+				doc.notice_id = :noticeId:
+			ORDER BY
+				doc.document_id
+		', [...])
+ 5 APPPATH\Libraries\NoticeLibrarie.php(47): App\Models\NoticeModel->get_notice_document_list(49)
+ 6 APPPATH\Controllers\Home.php(59): App\Libraries\NoticeLibrarie->get_notice_detail(49)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->ajax_get_notice_detail()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-11 23:52:49 --> [Caused by] mysqli_sql_exception: Unknown column 'doc.notice_category_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+			SELECT
+				doc.notice_category_id
+				, doc.document_id
+				, doc.document_path
+				, doc.created
+				, doc.modefied
+			FROM 
+            	t_document_notice doc
+            WHERE
+				doc.notice_id = 49
+			ORDER BY
+				doc.document_id
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT
+				doc.notice_category_id
+				, doc.document_id
+				, doc.document_path
+				, doc.created
+				, doc.modefied
+			FROM 
+            	t_document_notice doc
+            WHERE
+				doc.notice_id = 49
+			ORDER BY
+				doc.document_id
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT
+				doc.notice_category_id
+				, doc.document_id
+				, doc.document_path
+				, doc.created
+				, doc.modefied
+			FROM 
+            	t_document_notice doc
+            WHERE
+				doc.notice_id = 49
+			ORDER BY
+				doc.document_id
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(27): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				doc.notice_category_id
+				, doc.document_id
+				, doc.document_path
+				, doc.created
+				, doc.modefied
+			FROM 
+            	t_document_notice doc
+            WHERE
+				doc.notice_id = :noticeId:
+			ORDER BY
+				doc.document_id
+		', [...])
+ 5 APPPATH\Models\NoticeModel.php(118): App\Models\BaseQueryModel->get_result_array('
+			SELECT
+				doc.notice_category_id
+				, doc.document_id
+				, doc.document_path
+				, doc.created
+				, doc.modefied
+			FROM 
+            	t_document_notice doc
+            WHERE
+				doc.notice_id = :noticeId:
+			ORDER BY
+				doc.document_id
+		', [...])
+ 6 APPPATH\Libraries\NoticeLibrarie.php(47): App\Models\NoticeModel->get_notice_document_list(49)
+ 7 APPPATH\Controllers\Home.php(59): App\Libraries\NoticeLibrarie->get_notice_detail(49)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->ajax_get_notice_detail()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

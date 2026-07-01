@@ -1,0 +1,52 @@
+CRITICAL - 2025-12-24 22:47:25 --> CodeIgniter\Validation\Exceptions\ValidationException: "valid_time" is not a valid rule.
+[Method: POST, Route: admin/taikai_regist_conf]
+in SYSTEMPATH\Validation\Validation.php on line 348.
+ 1 SYSTEMPATH\Validation\Validation.php(348): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('valid_time')
+ 2 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('taikai_open_time', '開場時間', '02:27', [...], [...], 'taikai_open_time')
+ 3 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\AdminTaikai.php(125): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminTaikai->ajax_taikai_regist_conf()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminTaikai))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 22:48:28 --> CodeIgniter\Validation\Exceptions\ValidationException: "valid_time" is not a valid rule.
+[Method: POST, Route: admin/taikai_regist_conf]
+in SYSTEMPATH\Validation\Validation.php on line 348.
+ 1 SYSTEMPATH\Validation\Validation.php(348): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('valid_time')
+ 2 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('taikai_open_time', '開場時間', '02:27', [...], [...], 'taikai_open_time')
+ 3 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\AdminTaikai.php(125): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminTaikai->ajax_taikai_regist_conf()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminTaikai))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 22:48:42 --> CodeIgniter\Validation\Exceptions\ValidationException: "" is not a valid rule.
+[Method: POST, Route: admin/taikai_regist_conf]
+in SYSTEMPATH\Validation\Validation.php on line 348.
+ 1 SYSTEMPATH\Validation\Validation.php(348): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('')
+ 2 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('eligibility', '参加資格', '１１１', [...], [...], 'eligibility')
+ 3 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\AdminTaikai.php(125): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminTaikai->ajax_taikai_regist_conf()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminTaikai))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-24 23:04:29 --> CodeIgniter\Validation\Exceptions\ValidationException: "valid_time" is not a valid rule.
+[Method: POST, Route: admin/taikai_regist_conf]
+in SYSTEMPATH\Validation\Validation.php on line 348.
+ 1 SYSTEMPATH\Validation\Validation.php(348): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('valid_time')
+ 2 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('taikai_open_time', '開場時間', '02:27', [...], [...], 'taikai_open_time')
+ 3 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\AdminTaikai.php(125): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminTaikai->ajax_taikai_regist_conf()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminTaikai))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

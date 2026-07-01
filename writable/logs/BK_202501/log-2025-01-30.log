@@ -1,0 +1,47 @@
+CRITICAL - 2025-01-30 22:50:39 --> ErrorException: Undefined array key "area_group_name"
+[Method: GET, Route: shinsa/detail/4]
+in APPPATH\Helpers\shinsa_helper.php on line 105.
+ 1 APPPATH\Helpers\shinsa_helper.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "area_group_name"', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Helpers\\shinsa_helper.php', 105)
+ 2 APPPATH\Views\shinsa\detail_chuou.php(4): get_shinsa_chuou_detail_html([...], [...], [...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\detail_chuou.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shinsa/detail_chuou', [], true)
+ 6 APPPATH\Controllers\Shinsa.php(94): view('shinsa/detail_chuou', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('4')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-30 22:59:50 --> ErrorException: Undefined variable $weekFlg
+[Method: GET, Route: shinsa]
+in APPPATH\Helpers\datetime_helper.php on line 200.
+ 1 APPPATH\Helpers\datetime_helper.php(200): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $weekFlg', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Helpers\\datetime_helper.php', 200)
+ 2 APPPATH\Helpers\shinsa_helper.php(30): date_period_short_format('2025-02-21', '2025-02-23')
+ 3 APPPATH\Views\shinsa\index.php(10): get_shinsa_tab_html(Object(stdClass), [...])
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\index.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shinsa/index', [], true)
+ 7 APPPATH\Controllers\Shinsa.php(40): view('shinsa/index', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-30 23:00:07 --> ErrorException: Undefined variable $weekFlg
+[Method: GET, Route: shinsa]
+in APPPATH\Helpers\datetime_helper.php on line 200.
+ 1 APPPATH\Helpers\datetime_helper.php(200): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $weekFlg', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Helpers\\datetime_helper.php', 200)
+ 2 APPPATH\Helpers\shinsa_helper.php(30): date_period_short_format('2025-02-21', '2025-02-23')
+ 3 APPPATH\Views\shinsa\index.php(10): get_shinsa_tab_html(Object(stdClass), [...])
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\index.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shinsa/index', [], true)
+ 7 APPPATH\Controllers\Shinsa.php(40): view('shinsa/index', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

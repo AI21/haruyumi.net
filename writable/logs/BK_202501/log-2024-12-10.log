@@ -1,0 +1,230 @@
+CRITICAL - 2024-12-10 22:22:58 --> ParseError: syntax error, unexpected single-quoted string "), "
+[Method: GET, Route: member]
+in APPPATH\Models\MemberModel.php on line 72.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Models\\MemberModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\MemberModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\MemberModel')
+ 4 SYSTEMPATH\Config\Factories.php(297): class_exists('App\\Models\\MemberModel')
+ 5 SYSTEMPATH\Config\Factories.php(216): CodeIgniter\Config\Factories::locateClass([...], 'App\\Models\\MemberModel')
+ 6 SYSTEMPATH\Config\Factories.php(159): CodeIgniter\Config\Factories::getDefinedInstance([...], 'App\\Models\\MemberModel', [...])
+ 7 SYSTEMPATH\Common.php(802): CodeIgniter\Config\Factories::__callStatic('models', [...])
+ 8 APPPATH\Libraries\MemberLibrarie.php(11): model('App\\Models\\MemberModel')
+ 9 SYSTEMPATH\Config\Factories.php(235): App\Libraries\MemberLibrarie->__construct(null)
+10 SYSTEMPATH\Config\Factories.php(169): CodeIgniter\Config\Factories::createInstance('models', 'App\\Libraries\\MemberLibrarie', [...])
+11 SYSTEMPATH\Common.php(802): CodeIgniter\Config\Factories::__callStatic('models', [...])
+12 APPPATH\Controllers\Member.php(17): model('App\\Libraries\\MemberLibrarie')
+13 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Member->__construct()
+14 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+15 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-10 22:34:15 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: calender]
+in SYSTEMPATH\Database\BaseConnection.php on line 927.
+ 1 SYSTEMPATH\Model.php(716): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(922): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Calender.php(18): CodeIgniter\Model->__call('getHolder', [])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Calender->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Calender))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-10 22:55:54 --> ErrorException: Undefined property: App\Controllers\Member::$memuData
+[Method: GET, Route: member]
+in APPPATH\Controllers\Member.php on line 30.
+ 1 APPPATH\Controllers\Member.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Member::$memuData', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Controllers\\Member.php', 30)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Member->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Member))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-10 22:57:26 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: member]
+in APPPATH\Helpers\MenuHelper.php on line 11.
+ 1 APPPATH\Helpers\MenuHelper.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Helpers\\MenuHelper.php', 11)
+ 2 APPPATH\Views\common\menu.php(12): get_menu_html(null)
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\common\\menu.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('common/menu', [], true)
+ 6 APPPATH\Controllers\Member.php(33): view('common/menu', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Member->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Member))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-10 23:03:17 --> Error: Call to undefined method App\Controllers\Member::initController()
+[Method: GET, Route: member]
+in SYSTEMPATH\CodeIgniter.php on line 904.
+ 1 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-10 23:05:27 --> Error: Call to undefined function get_menu_html()
+[Method: GET, Route: member]
+in APPPATH\Views\common\menu.php on line 12.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('common/menu', [], true)
+ 4 APPPATH\Controllers\Member.php(33): view('common/menu', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Member->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Member))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-10 23:14:01 --> ErrorException: Undefined variable $mainMemu
+[Method: GET, Route: member]
+in APPPATH\Views\common\menu.php on line 12.
+ 1 APPPATH\Views\common\menu.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mainMemu', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\common\\menu.php', 12)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\common\\menu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('common/menu', [], true)
+ 5 APPPATH\Controllers\Member.php(34): view('common/menu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Member->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Member))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-10 23:14:41 --> ErrorException: Undefined variable $mainMemu
+[Method: GET, Route: member]
+in APPPATH\Views\common\menu.php on line 12.
+ 1 APPPATH\Views\common\menu.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mainMemu', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\common\\menu.php', 12)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\common\\menu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('common/menu', [], true)
+ 5 APPPATH\Controllers\Member.php(34): view('common/menu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Member->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Member))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-10 23:15:57 --> ErrorException: Undefined variable $mainMemu
+[Method: GET, Route: member]
+in APPPATH\Views\common\menu.php on line 12.
+ 1 APPPATH\Views\common\menu.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mainMemu', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\common\\menu.php', 12)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\common\\menu.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('common/menu', [], true)
+ 5 APPPATH\Controllers\Member.php(34): view('common/menu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Member->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Member))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-10 23:17:59 --> Error: Call to a member function get_main_menu() on null
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-10 23:18:48 --> TypeError: view(): Argument #2 ($data) must be of type array, null given, called in C:\xampp\htdocs\kasugaikyudo\production\app\Controllers\Home.php on line 20
+[Method: GET, Route: /]
+in SYSTEMPATH\Common.php on line 1159.
+ 1 APPPATH\Controllers\Home.php(20): view('common/menu', null)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-10 23:20:28 --> ErrorException: Undefined property: App\Controllers\Home::$memuData
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 20.
+ 1 APPPATH\Controllers\Home.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$memuData', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Controllers\\Home.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-10 23:20:44 --> ErrorException: Undefined property: App\Controllers\Home::$memuData
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 20.
+ 1 APPPATH\Controllers\Home.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$memuData', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Controllers\\Home.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-10 23:21:23 --> ErrorException: Access level to App\Controllers\Member::$memuModel must be protected (as in class App\Controllers\CommonController) or weaker
+[Method: GET, Route: member]
+in APPPATH\Controllers\Member.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-12-10 23:24:06 --> Error: Call to a member function get_member_list() on null
+[Method: GET, Route: shinsa]
+in APPPATH\Controllers\Shinsa.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-10 23:29:11 --> ErrorException: Undefined property: App\Controllers\Shinsa::$memuData
+[Method: GET, Route: shinsa]
+in APPPATH\Controllers\Shinsa.php on line 27.
+ 1 APPPATH\Controllers\Shinsa.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Shinsa::$memuData', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Controllers\\Shinsa.php', 27)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-10 23:30:25 --> TypeError: view(): Argument #2 ($data) must be of type array, null given, called in C:\xampp\htdocs\kasugaikyudo\production\app\Controllers\Shinsa.php on line 27
+[Method: GET, Route: shinsa]
+in SYSTEMPATH\Common.php on line 1159.
+ 1 APPPATH\Controllers\Shinsa.php(27): view('common/menu', null)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-10 23:35:18 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: calender]
+in SYSTEMPATH\Database\BaseConnection.php on line 927.
+ 1 SYSTEMPATH\Model.php(716): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(922): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Calender.php(18): CodeIgniter\Model->__call('getHolder', [])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Calender->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Calender))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-10 23:41:08 --> ErrorException: Cannot redeclare get_menu_html() (previously declared in C:\xampp\htdocs\kasugaikyudo\production\app\Helpers\MenuHelper.php:4)
+[Method: GET, Route: taikai]
+in APPPATH\Helpers\TaikaiHelper.php on line 19.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-12-10 23:41:12 --> ErrorException: Cannot redeclare get_menu_html() (previously declared in C:\xampp\htdocs\kasugaikyudo\production\app\Helpers\MenuHelper.php:4)
+[Method: GET, Route: shinsa]
+in APPPATH\Helpers\ShinsaHelper.php on line 19.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-12-10 23:41:19 --> ErrorException: Cannot redeclare get_menu_html() (previously declared in C:\xampp\htdocs\kasugaikyudo\production\app\Helpers\MenuHelper.php:4)
+[Method: GET, Route: shinsa]
+in APPPATH\Helpers\ShinsaHelper.php on line 19.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-12-10 23:42:32 --> Error: Call to undefined function get_kaiin_list_html()
+[Method: GET, Route: taikai]
+in APPPATH\Views\taikai\index.php on line 20.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('taikai/index', [], true)
+ 4 APPPATH\Controllers\Taikai.php(29): view('taikai/index', [])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

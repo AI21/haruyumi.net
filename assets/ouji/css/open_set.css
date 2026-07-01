@@ -1,0 +1,83 @@
+input[type=checkbox]{
+	position: relative;
+	top: 3px;
+	width: 16px;
+	height: 16px;
+	}
+select {
+	min-width: 6em;
+	}
+textarea {
+	width: 80%;
+	height: 4.5em;
+	resize: vertical;
+	}
+textarea::placeholder {
+	color: #999;
+	font-weight: normal;
+	font-size: 0.9em;
+	}
+
+#system_login {
+	}
+	#system_login table#admin {
+		margin: 0 auto;
+		width: auto;
+		}
+	#system_login table#admin th,
+	#system_login table#admin td {
+		text-align: left;
+		padding-left: 1em;
+		}
+	#system_login table#admin th {
+		min-width: 6em;
+		background-color: #FCB019;
+		}
+	#system_login table#admin td {
+		min-width: 280px;
+		}
+	#system_login input[type=password] {
+		width: 15em;
+		}
+
+#set_schejule_area {
+	margin-top: 20px;
+	width: 100%;
+	text-align: center;
+	}
+#set_schejule_area button {
+	margin: 0 20px;
+	padding: 4px 10px;
+	}
+#admin_user_area {
+	margin-top: 20px;
+	padding-left: 20px;
+	text-align: left;
+	}
+	#admin_user_area p {
+		margin-bottom: 10px;
+		font-size: 120%;
+		}
+table#ouji_shejule .open span {
+	margin-top: 4px;
+	font-size: 90%;
+	}
+#move_schejule_main {
+	margin-top: 30px;
+	padding-top: 20px;
+	border-top: 1px solid #000;
+	}
+#move_schejule_main2,
+#pw_change_area {
+	margin-top: 20px;
+	padding-top: 20px;
+	border-top: 1px solid #000;
+	}
+
+button.btn_pw_change {
+	margin-left: 2em;
+	}
+
+@media screen and (max-width: 600px){
+
+}

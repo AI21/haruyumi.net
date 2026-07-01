@@ -1,0 +1,61 @@
+CRITICAL - 2026-04-30 00:00:04 --> Error: Call to undefined method App\Libraries\Admin\AdminShinsaLibrarie::shinsa_add_member_proxy()
+[Method: POST, Route: admin/shinsa_add_member_proxy]
+in APPPATH\Controllers\Admin\AdminShinsa.php on line 451.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_shinsa_add_member_proxy()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-30 00:03:09 --> ArgumentCountError: Too few arguments to function App\Models\ShinsaModel::shinsa_join_member(), 2 passed in C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\Admin\AdminShinsaLibrarie.php on line 280 and exactly 3 expected
+[Method: POST, Route: admin/shinsa_add_member_proxy]
+in APPPATH\Models\ShinsaModel.php on line 840.
+ 1 APPPATH\Libraries\Admin\AdminShinsaLibrarie.php(280): App\Models\ShinsaModel->shinsa_join_member(69, 43)
+ 2 APPPATH\Controllers\Admin\AdminShinsa.php(451): App\Libraries\Admin\AdminShinsaLibrarie->shinsa_add_member_proxy(69, '43,56')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_shinsa_add_member_proxy()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-30 23:08:36 --> ErrorException: Trying to access array offset on value of type int
+[Method: GET, Route: shinsa/detail/33]
+in APPPATH\Helpers\shinsa_helper.php on line 840.
+ 1 APPPATH\Helpers\shinsa_helper.php(840): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\shinsa_helper.php', 840)
+ 2 APPPATH\Views\admin\shinsa\modal_proxy.php(14): shinsa_holder_grade_form_dropdown([...], 'all-holder-grade-id', '', 'holder_grade_id', 'holder_grade_name', '', true)
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\admin\\shinsa\\modal_proxy.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/shinsa/modal_proxy', [], true)
+ 6 APPPATH\Controllers\Shinsa.php(154): view('admin/shinsa/modal_proxy')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('33')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-30 23:09:31 --> ErrorException: Trying to access array offset on value of type int
+[Method: GET, Route: shinsa/detail/33]
+in APPPATH\Helpers\shinsa_helper.php on line 840.
+ 1 APPPATH\Helpers\shinsa_helper.php(840): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\shinsa_helper.php', 840)
+ 2 APPPATH\Views\admin\shinsa\modal_proxy.php(14): shinsa_holder_grade_form_dropdown([...], 'all-holder-grade-id', '', 'holder_grade_id', 'holder_grade_name', '', true)
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\admin\\shinsa\\modal_proxy.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/shinsa/modal_proxy', [], true)
+ 6 APPPATH\Controllers\Shinsa.php(154): view('admin/shinsa/modal_proxy')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('33')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-30 23:43:44 --> ArgumentCountError: Too few arguments to function App\Models\ShinsaModel::shinsa_join_member(), 2 passed in C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\Admin\AdminShinsaLibrarie.php on line 280 and exactly 3 expected
+[Method: POST, Route: admin/shinsa_add_member_proxy]
+in APPPATH\Models\ShinsaModel.php on line 840.
+ 1 APPPATH\Libraries\Admin\AdminShinsaLibrarie.php(280): App\Models\ShinsaModel->shinsa_join_member(33, 6)
+ 2 APPPATH\Controllers\Admin\AdminShinsa.php(453): App\Libraries\Admin\AdminShinsaLibrarie->shinsa_add_member_proxy(33, '6,9')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminShinsa->ajax_shinsa_add_member_proxy()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\AdminShinsa))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

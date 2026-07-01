@@ -1,0 +1,15 @@
+CRITICAL - 2025-10-23 23:06:51 --> ErrorException: Array to string conversion
+[Method: GET, Route: shinsa/detail/6]
+in APPPATH\Helpers\shinsa_helper.php on line 620.
+ 1 APPPATH\Helpers\shinsa_helper.php(620): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\shinsa_helper.php', 620)
+ 2 APPPATH\Views\shinsa\detail_chiho.php(11): shinsa_offer_member_list_html([...], [...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\detail_chiho.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shinsa/detail_chiho', [], true)
+ 6 APPPATH\Controllers\Shinsa.php(126): view('shinsa/detail_chiho')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('6')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

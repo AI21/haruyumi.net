@@ -1,0 +1,476 @@
+ERROR - 2025-07-24 22:15:38 --> mysqli_sql_exception: Unknown column 'mka.entry_fee' in 'field list' in C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp_htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n\t\t\tSELECT\n\t\t\t\t...', 0)
+#1 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n\t\t\tSELECT\n\t\t\t\t...')
+#2 C:\xampp_htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n\t\t\tSELECT\n\t\t\t\t...')
+#3 C:\xampp_htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('\n\t\t\tSELECT\n\t\t\t\t...', Array)
+#4 C:\xampp_htdocs\kasugaikyudo\production\app\Models\KyokaiModel.php(117): App\Models\BaseQueryModel->get_first_row('\n\t\t\tSELECT\n\t\t\t\t...', Array, 'array')
+#5 C:\xampp_htdocs\kasugaikyudo\production\app\Libraries\KyokaiLibrarie.php(49): App\Models\KyokaiModel->get_event_detail(29, 65)
+#6 C:\xampp_htdocs\kasugaikyudo\production\app\Controllers\Kyokai.php(66): App\Libraries\KyokaiLibrarie->get_event_detail(29, 65)
+#7 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Kyokai->detail('29')
+#8 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kyokai))
+#9 C:\xampp_htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp_htdocs\kasugaikyudo\production\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-07-24 22:15:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'mka.entry_fee' in 'field list'
+[Method: GET, Route: kyokai/detail/29]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				kei.event_id,
+				kei.category_id,
+				kei.event_sub_name,
+				kei.event_no,
+				kei.event_date_st,
+				kei.event_date_ed,
+				kei.event_date_ambiguous_flg,
+				kei.event_uketuke_date_st,
+				kei.event_uketuke_date_ed,
+				kei.event_open_time,
+				kei.event_uketuke_time,
+                CASE WHEN kei.event_time_st != "" THEN kei.event_time_st ELSE NULL END event_time_st,
+                CASE WHEN kei.event_time_ed != "" THEN kei.event_time_ed ELSE NULL END event_time_ed,
+				kei.recruit_flg,
+				kei.abort_flg,
+				mka.kaijo_name,
+				mka.kaijo_name_short,
+				kei.kaijo_other_name,
+                mke.kyokai_event_name,
+				mka.entry_fee,
+                CASE WHEN eof.event_offer_id IS NOT NULL THEN 1 ELSE 0 END sanka_flg,
+                CASE WHEN teo.event_id IS NOT NULL THEN 1 ELSE 0 END organizer_flg
+			FROM
+				t_event_info kei
+			LEFT JOIN m_kaijo mka ON
+				mka.kaijo_id = kei.kaijo_id
+			LEFT JOIN m_event mke ON
+				mke.kyokai_event_id = kei.kyokai_event_id
+			LEFT JOIN t_event_offer_member eof ON
+				eof.event_id = kei.event_id
+				AND eof.member_id = :memberId:
+            LEFT JOIN t_event_organizer teo ON
+                teo.event_id = kei.event_id
+                AND teo.member_id = :memberId:
+			WHERE
+				kei.event_id = :eventId: 
+		', [...])
+ 2 APPPATH\Models\KyokaiModel.php(117): App\Models\BaseQueryModel->get_first_row('
+			SELECT
+				kei.event_id,
+				kei.category_id,
+				kei.event_sub_name,
+				kei.event_no,
+				kei.event_date_st,
+				kei.event_date_ed,
+				kei.event_date_ambiguous_flg,
+				kei.event_uketuke_date_st,
+				kei.event_uketuke_date_ed,
+				kei.event_open_time,
+				kei.event_uketuke_time,
+                CASE WHEN kei.event_time_st != "" THEN kei.event_time_st ELSE NULL END event_time_st,
+                CASE WHEN kei.event_time_ed != "" THEN kei.event_time_ed ELSE NULL END event_time_ed,
+				kei.recruit_flg,
+				kei.abort_flg,
+				mka.kaijo_name,
+				mka.kaijo_name_short,
+				kei.kaijo_other_name,
+                mke.kyokai_event_name,
+				mka.entry_fee,
+                CASE WHEN eof.event_offer_id IS NOT NULL THEN 1 ELSE 0 END sanka_flg,
+                CASE WHEN teo.event_id IS NOT NULL THEN 1 ELSE 0 END organizer_flg
+			FROM
+				t_event_info kei
+			LEFT JOIN m_kaijo mka ON
+				mka.kaijo_id = kei.kaijo_id
+			LEFT JOIN m_event mke ON
+				mke.kyokai_event_id = kei.kyokai_event_id
+			LEFT JOIN t_event_offer_member eof ON
+				eof.event_id = kei.event_id
+				AND eof.member_id = :memberId:
+            LEFT JOIN t_event_organizer teo ON
+                teo.event_id = kei.event_id
+                AND teo.member_id = :memberId:
+			WHERE
+				kei.event_id = :eventId: 
+		', [...], 'array')
+ 3 APPPATH\Libraries\KyokaiLibrarie.php(49): App\Models\KyokaiModel->get_event_detail(29, 65)
+ 4 APPPATH\Controllers\Kyokai.php(66): App\Libraries\KyokaiLibrarie->get_event_detail(29, 65)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kyokai->detail('29')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kyokai))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-24 22:15:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'mka.entry_fee' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT
+				kei.event_id,
+				kei.category_id,
+				kei.event_sub_name,
+				kei.event_no,
+				kei.event_date_st,
+				kei.event_date_ed,
+				kei.event_date_ambiguous_flg,
+				kei.event_uketuke_date_st,
+				kei.event_uketuke_date_ed,
+				kei.event_open_time,
+				kei.event_uketuke_time,
+                CASE WHEN kei.event_time_st != "" THEN kei.event_time_st ELSE NULL END event_time_st,
+                CASE WHEN kei.event_time_ed != "" THEN kei.event_time_ed ELSE NULL END event_time_ed,
+				kei.recruit_flg,
+				kei.abort_flg,
+				mka.kaijo_name,
+				mka.kaijo_name_short,
+				kei.kaijo_other_name,
+                mke.kyokai_event_name,
+				mka.entry_fee,
+                CASE WHEN eof.event_offer_id IS NOT NULL THEN 1 ELSE 0 END sanka_flg,
+                CASE WHEN teo.event_id IS NOT NULL THEN 1 ELSE 0 END organizer_flg
+			FROM
+				t_event_info kei
+			LEFT JOIN m_kaijo mka ON
+				mka.kaijo_id = kei.kaijo_id
+			LEFT JOIN m_event mke ON
+				mke.kyokai_event_id = kei.kyokai_event_id
+			LEFT JOIN t_event_offer_member eof ON
+				eof.event_id = kei.event_id
+				AND eof.member_id = 65
+            LEFT JOIN t_event_organizer teo ON
+                teo.event_id = kei.event_id
+                AND teo.member_id = 65
+			WHERE
+				kei.event_id = 29 
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT
+				kei.event_id,
+				kei.category_id,
+				kei.event_sub_name,
+				kei.event_no,
+				kei.event_date_st,
+				kei.event_date_ed,
+				kei.event_date_ambiguous_flg,
+				kei.event_uketuke_date_st,
+				kei.event_uketuke_date_ed,
+				kei.event_open_time,
+				kei.event_uketuke_time,
+                CASE WHEN kei.event_time_st != "" THEN kei.event_time_st ELSE NULL END event_time_st,
+                CASE WHEN kei.event_time_ed != "" THEN kei.event_time_ed ELSE NULL END event_time_ed,
+				kei.recruit_flg,
+				kei.abort_flg,
+				mka.kaijo_name,
+				mka.kaijo_name_short,
+				kei.kaijo_other_name,
+                mke.kyokai_event_name,
+				mka.entry_fee,
+                CASE WHEN eof.event_offer_id IS NOT NULL THEN 1 ELSE 0 END sanka_flg,
+                CASE WHEN teo.event_id IS NOT NULL THEN 1 ELSE 0 END organizer_flg
+			FROM
+				t_event_info kei
+			LEFT JOIN m_kaijo mka ON
+				mka.kaijo_id = kei.kaijo_id
+			LEFT JOIN m_event mke ON
+				mke.kyokai_event_id = kei.kyokai_event_id
+			LEFT JOIN t_event_offer_member eof ON
+				eof.event_id = kei.event_id
+				AND eof.member_id = 65
+            LEFT JOIN t_event_organizer teo ON
+                teo.event_id = kei.event_id
+                AND teo.member_id = 65
+			WHERE
+				kei.event_id = 29 
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				kei.event_id,
+				kei.category_id,
+				kei.event_sub_name,
+				kei.event_no,
+				kei.event_date_st,
+				kei.event_date_ed,
+				kei.event_date_ambiguous_flg,
+				kei.event_uketuke_date_st,
+				kei.event_uketuke_date_ed,
+				kei.event_open_time,
+				kei.event_uketuke_time,
+                CASE WHEN kei.event_time_st != "" THEN kei.event_time_st ELSE NULL END event_time_st,
+                CASE WHEN kei.event_time_ed != "" THEN kei.event_time_ed ELSE NULL END event_time_ed,
+				kei.recruit_flg,
+				kei.abort_flg,
+				mka.kaijo_name,
+				mka.kaijo_name_short,
+				kei.kaijo_other_name,
+                mke.kyokai_event_name,
+				mka.entry_fee,
+                CASE WHEN eof.event_offer_id IS NOT NULL THEN 1 ELSE 0 END sanka_flg,
+                CASE WHEN teo.event_id IS NOT NULL THEN 1 ELSE 0 END organizer_flg
+			FROM
+				t_event_info kei
+			LEFT JOIN m_kaijo mka ON
+				mka.kaijo_id = kei.kaijo_id
+			LEFT JOIN m_event mke ON
+				mke.kyokai_event_id = kei.kyokai_event_id
+			LEFT JOIN t_event_offer_member eof ON
+				eof.event_id = kei.event_id
+				AND eof.member_id = :memberId:
+            LEFT JOIN t_event_organizer teo ON
+                teo.event_id = kei.event_id
+                AND teo.member_id = :memberId:
+			WHERE
+				kei.event_id = :eventId: 
+		', [...])
+ 4 APPPATH\Models\KyokaiModel.php(117): App\Models\BaseQueryModel->get_first_row('
+			SELECT
+				kei.event_id,
+				kei.category_id,
+				kei.event_sub_name,
+				kei.event_no,
+				kei.event_date_st,
+				kei.event_date_ed,
+				kei.event_date_ambiguous_flg,
+				kei.event_uketuke_date_st,
+				kei.event_uketuke_date_ed,
+				kei.event_open_time,
+				kei.event_uketuke_time,
+                CASE WHEN kei.event_time_st != "" THEN kei.event_time_st ELSE NULL END event_time_st,
+                CASE WHEN kei.event_time_ed != "" THEN kei.event_time_ed ELSE NULL END event_time_ed,
+				kei.recruit_flg,
+				kei.abort_flg,
+				mka.kaijo_name,
+				mka.kaijo_name_short,
+				kei.kaijo_other_name,
+                mke.kyokai_event_name,
+				mka.entry_fee,
+                CASE WHEN eof.event_offer_id IS NOT NULL THEN 1 ELSE 0 END sanka_flg,
+                CASE WHEN teo.event_id IS NOT NULL THEN 1 ELSE 0 END organizer_flg
+			FROM
+				t_event_info kei
+			LEFT JOIN m_kaijo mka ON
+				mka.kaijo_id = kei.kaijo_id
+			LEFT JOIN m_event mke ON
+				mke.kyokai_event_id = kei.kyokai_event_id
+			LEFT JOIN t_event_offer_member eof ON
+				eof.event_id = kei.event_id
+				AND eof.member_id = :memberId:
+            LEFT JOIN t_event_organizer teo ON
+                teo.event_id = kei.event_id
+                AND teo.member_id = :memberId:
+			WHERE
+				kei.event_id = :eventId: 
+		', [...], 'array')
+ 5 APPPATH\Libraries\KyokaiLibrarie.php(49): App\Models\KyokaiModel->get_event_detail(29, 65)
+ 6 APPPATH\Controllers\Kyokai.php(66): App\Libraries\KyokaiLibrarie->get_event_detail(29, 65)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kyokai->detail('29')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kyokai))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-24 22:15:38 --> [Caused by] mysqli_sql_exception: Unknown column 'mka.entry_fee' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+			SELECT
+				kei.event_id,
+				kei.category_id,
+				kei.event_sub_name,
+				kei.event_no,
+				kei.event_date_st,
+				kei.event_date_ed,
+				kei.event_date_ambiguous_flg,
+				kei.event_uketuke_date_st,
+				kei.event_uketuke_date_ed,
+				kei.event_open_time,
+				kei.event_uketuke_time,
+                CASE WHEN kei.event_time_st != "" THEN kei.event_time_st ELSE NULL END event_time_st,
+                CASE WHEN kei.event_time_ed != "" THEN kei.event_time_ed ELSE NULL END event_time_ed,
+				kei.recruit_flg,
+				kei.abort_flg,
+				mka.kaijo_name,
+				mka.kaijo_name_short,
+				kei.kaijo_other_name,
+                mke.kyokai_event_name,
+				mka.entry_fee,
+                CASE WHEN eof.event_offer_id IS NOT NULL THEN 1 ELSE 0 END sanka_flg,
+                CASE WHEN teo.event_id IS NOT NULL THEN 1 ELSE 0 END organizer_flg
+			FROM
+				t_event_info kei
+			LEFT JOIN m_kaijo mka ON
+				mka.kaijo_id = kei.kaijo_id
+			LEFT JOIN m_event mke ON
+				mke.kyokai_event_id = kei.kyokai_event_id
+			LEFT JOIN t_event_offer_member eof ON
+				eof.event_id = kei.event_id
+				AND eof.member_id = 65
+            LEFT JOIN t_event_organizer teo ON
+                teo.event_id = kei.event_id
+                AND teo.member_id = 65
+			WHERE
+				kei.event_id = 29 
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT
+				kei.event_id,
+				kei.category_id,
+				kei.event_sub_name,
+				kei.event_no,
+				kei.event_date_st,
+				kei.event_date_ed,
+				kei.event_date_ambiguous_flg,
+				kei.event_uketuke_date_st,
+				kei.event_uketuke_date_ed,
+				kei.event_open_time,
+				kei.event_uketuke_time,
+                CASE WHEN kei.event_time_st != "" THEN kei.event_time_st ELSE NULL END event_time_st,
+                CASE WHEN kei.event_time_ed != "" THEN kei.event_time_ed ELSE NULL END event_time_ed,
+				kei.recruit_flg,
+				kei.abort_flg,
+				mka.kaijo_name,
+				mka.kaijo_name_short,
+				kei.kaijo_other_name,
+                mke.kyokai_event_name,
+				mka.entry_fee,
+                CASE WHEN eof.event_offer_id IS NOT NULL THEN 1 ELSE 0 END sanka_flg,
+                CASE WHEN teo.event_id IS NOT NULL THEN 1 ELSE 0 END organizer_flg
+			FROM
+				t_event_info kei
+			LEFT JOIN m_kaijo mka ON
+				mka.kaijo_id = kei.kaijo_id
+			LEFT JOIN m_event mke ON
+				mke.kyokai_event_id = kei.kyokai_event_id
+			LEFT JOIN t_event_offer_member eof ON
+				eof.event_id = kei.event_id
+				AND eof.member_id = 65
+            LEFT JOIN t_event_organizer teo ON
+                teo.event_id = kei.event_id
+                AND teo.member_id = 65
+			WHERE
+				kei.event_id = 29 
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT
+				kei.event_id,
+				kei.category_id,
+				kei.event_sub_name,
+				kei.event_no,
+				kei.event_date_st,
+				kei.event_date_ed,
+				kei.event_date_ambiguous_flg,
+				kei.event_uketuke_date_st,
+				kei.event_uketuke_date_ed,
+				kei.event_open_time,
+				kei.event_uketuke_time,
+                CASE WHEN kei.event_time_st != "" THEN kei.event_time_st ELSE NULL END event_time_st,
+                CASE WHEN kei.event_time_ed != "" THEN kei.event_time_ed ELSE NULL END event_time_ed,
+				kei.recruit_flg,
+				kei.abort_flg,
+				mka.kaijo_name,
+				mka.kaijo_name_short,
+				kei.kaijo_other_name,
+                mke.kyokai_event_name,
+				mka.entry_fee,
+                CASE WHEN eof.event_offer_id IS NOT NULL THEN 1 ELSE 0 END sanka_flg,
+                CASE WHEN teo.event_id IS NOT NULL THEN 1 ELSE 0 END organizer_flg
+			FROM
+				t_event_info kei
+			LEFT JOIN m_kaijo mka ON
+				mka.kaijo_id = kei.kaijo_id
+			LEFT JOIN m_event mke ON
+				mke.kyokai_event_id = kei.kyokai_event_id
+			LEFT JOIN t_event_offer_member eof ON
+				eof.event_id = kei.event_id
+				AND eof.member_id = 65
+            LEFT JOIN t_event_organizer teo ON
+                teo.event_id = kei.event_id
+                AND teo.member_id = 65
+			WHERE
+				kei.event_id = 29 
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				kei.event_id,
+				kei.category_id,
+				kei.event_sub_name,
+				kei.event_no,
+				kei.event_date_st,
+				kei.event_date_ed,
+				kei.event_date_ambiguous_flg,
+				kei.event_uketuke_date_st,
+				kei.event_uketuke_date_ed,
+				kei.event_open_time,
+				kei.event_uketuke_time,
+                CASE WHEN kei.event_time_st != "" THEN kei.event_time_st ELSE NULL END event_time_st,
+                CASE WHEN kei.event_time_ed != "" THEN kei.event_time_ed ELSE NULL END event_time_ed,
+				kei.recruit_flg,
+				kei.abort_flg,
+				mka.kaijo_name,
+				mka.kaijo_name_short,
+				kei.kaijo_other_name,
+                mke.kyokai_event_name,
+				mka.entry_fee,
+                CASE WHEN eof.event_offer_id IS NOT NULL THEN 1 ELSE 0 END sanka_flg,
+                CASE WHEN teo.event_id IS NOT NULL THEN 1 ELSE 0 END organizer_flg
+			FROM
+				t_event_info kei
+			LEFT JOIN m_kaijo mka ON
+				mka.kaijo_id = kei.kaijo_id
+			LEFT JOIN m_event mke ON
+				mke.kyokai_event_id = kei.kyokai_event_id
+			LEFT JOIN t_event_offer_member eof ON
+				eof.event_id = kei.event_id
+				AND eof.member_id = :memberId:
+            LEFT JOIN t_event_organizer teo ON
+                teo.event_id = kei.event_id
+                AND teo.member_id = :memberId:
+			WHERE
+				kei.event_id = :eventId: 
+		', [...])
+ 5 APPPATH\Models\KyokaiModel.php(117): App\Models\BaseQueryModel->get_first_row('
+			SELECT
+				kei.event_id,
+				kei.category_id,
+				kei.event_sub_name,
+				kei.event_no,
+				kei.event_date_st,
+				kei.event_date_ed,
+				kei.event_date_ambiguous_flg,
+				kei.event_uketuke_date_st,
+				kei.event_uketuke_date_ed,
+				kei.event_open_time,
+				kei.event_uketuke_time,
+                CASE WHEN kei.event_time_st != "" THEN kei.event_time_st ELSE NULL END event_time_st,
+                CASE WHEN kei.event_time_ed != "" THEN kei.event_time_ed ELSE NULL END event_time_ed,
+				kei.recruit_flg,
+				kei.abort_flg,
+				mka.kaijo_name,
+				mka.kaijo_name_short,
+				kei.kaijo_other_name,
+                mke.kyokai_event_name,
+				mka.entry_fee,
+                CASE WHEN eof.event_offer_id IS NOT NULL THEN 1 ELSE 0 END sanka_flg,
+                CASE WHEN teo.event_id IS NOT NULL THEN 1 ELSE 0 END organizer_flg
+			FROM
+				t_event_info kei
+			LEFT JOIN m_kaijo mka ON
+				mka.kaijo_id = kei.kaijo_id
+			LEFT JOIN m_event mke ON
+				mke.kyokai_event_id = kei.kyokai_event_id
+			LEFT JOIN t_event_offer_member eof ON
+				eof.event_id = kei.event_id
+				AND eof.member_id = :memberId:
+            LEFT JOIN t_event_organizer teo ON
+                teo.event_id = kei.event_id
+                AND teo.member_id = :memberId:
+			WHERE
+				kei.event_id = :eventId: 
+		', [...], 'array')
+ 6 APPPATH\Libraries\KyokaiLibrarie.php(49): App\Models\KyokaiModel->get_event_detail(29, 65)
+ 7 APPPATH\Controllers\Kyokai.php(66): App\Libraries\KyokaiLibrarie->get_event_detail(29, 65)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kyokai->detail('29')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kyokai))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

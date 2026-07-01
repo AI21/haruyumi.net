@@ -1,0 +1,937 @@
+CRITICAL - 2025-01-29 23:06:07 --> ErrorException: Undefined array key "shinsa_date"
+[Method: GET, Route: shinsa/detail/2]
+in APPPATH\Helpers\shinsa_helper.php on line 190.
+ 1 APPPATH\Helpers\shinsa_helper.php(190): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "shinsa_date"', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Helpers\\shinsa_helper.php', 190)
+ 2 APPPATH\Views\shinsa\detail_chiho.php(4): get_shinsa_chiho_detail_html([...], [...], [...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\detail_chiho.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shinsa/detail_chiho', [], true)
+ 6 APPPATH\Controllers\Shinsa.php(94): view('shinsa/detail_chiho', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('2')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-29 23:18:42 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: shinsa/detail/4]
+in APPPATH\Helpers\shinsa_helper.php on line 258.
+ 1 APPPATH\Helpers\shinsa_helper.php(123): shinsa_target_name_html('六段・七段・八段・教士')
+ 2 APPPATH\Views\shinsa\detail_chuou.php(4): get_shinsa_chuou_detail_html([...], [...], [...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\detail_chuou.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shinsa/detail_chuou', [], true)
+ 6 APPPATH\Controllers\Shinsa.php(94): view('shinsa/detail_chuou', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('4')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-29 23:19:17 --> ErrorException: Undefined array key "all_date_holder_grade"
+[Method: GET, Route: shinsa/detail/4]
+in APPPATH\Helpers\shinsa_helper.php on line 123.
+ 1 APPPATH\Helpers\shinsa_helper.php(123): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "all_date_holder_grade"', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Helpers\\shinsa_helper.php', 123)
+ 2 APPPATH\Views\shinsa\detail_chuou.php(4): get_shinsa_chuou_detail_html([...], [...], [...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\detail_chuou.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shinsa/detail_chuou', [], true)
+ 6 APPPATH\Controllers\Shinsa.php(94): view('shinsa/detail_chuou', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('4')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-01-29 23:37:02 --> mysqli_sql_exception: Unknown column 'tsi.shinsa_date_st' in 'field list' in C:\xampp\htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n            SE...', 0)
+#1 C:\xampp\htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n            SE...')
+#2 C:\xampp\htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n            SE...')
+#3 C:\xampp\htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('\n            SE...', Array)
+#4 C:\xampp\htdocs\kasugaikyudo\production\app\Models\ShinsaModel.php(307): App\Models\BaseQueryModel->get_first_row('\n            SE...', Array, 'array')
+#5 C:\xampp\htdocs\kasugaikyudo\production\app\Libraries\ShinsaLibrarie.php(143): App\Models\ShinsaModel->get_shinsa_target(3, 7)
+#6 C:\xampp\htdocs\kasugaikyudo\production\app\Controllers\Shinsa.php(119): App\Libraries\ShinsaLibrarie->shinsa_request_member(3, 7, Array, 'cancel')
+#7 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+#8 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+#9 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\kasugaikyudo\production\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-01-29 23:37:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tsi.shinsa_date_st' in 'field list'
+[Method: POST, Route: shinsa/shinsa_request]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = :shinsaTargetId:
+			WHERE
+				tsi.shinsa_id = :shinsaId:
+		', [...])
+ 2 APPPATH\Models\ShinsaModel.php(307): App\Models\BaseQueryModel->get_first_row('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = :shinsaTargetId:
+			WHERE
+				tsi.shinsa_id = :shinsaId:
+		', [...], 'array')
+ 3 APPPATH\Libraries\ShinsaLibrarie.php(143): App\Models\ShinsaModel->get_shinsa_target(3, 7)
+ 4 APPPATH\Controllers\Shinsa.php(119): App\Libraries\ShinsaLibrarie->shinsa_request_member(3, 7, [...], 'cancel')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-29 23:37:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tsi.shinsa_date_st' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = 7
+			WHERE
+				tsi.shinsa_id = 3
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = 7
+			WHERE
+				tsi.shinsa_id = 3
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = :shinsaTargetId:
+			WHERE
+				tsi.shinsa_id = :shinsaId:
+		', [...])
+ 4 APPPATH\Models\ShinsaModel.php(307): App\Models\BaseQueryModel->get_first_row('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = :shinsaTargetId:
+			WHERE
+				tsi.shinsa_id = :shinsaId:
+		', [...], 'array')
+ 5 APPPATH\Libraries\ShinsaLibrarie.php(143): App\Models\ShinsaModel->get_shinsa_target(3, 7)
+ 6 APPPATH\Controllers\Shinsa.php(119): App\Libraries\ShinsaLibrarie->shinsa_request_member(3, 7, [...], 'cancel')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-29 23:37:02 --> [Caused by] mysqli_sql_exception: Unknown column 'tsi.shinsa_date_st' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = 7
+			WHERE
+				tsi.shinsa_id = 3
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = 7
+			WHERE
+				tsi.shinsa_id = 3
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = 7
+			WHERE
+				tsi.shinsa_id = 3
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = :shinsaTargetId:
+			WHERE
+				tsi.shinsa_id = :shinsaId:
+		', [...])
+ 5 APPPATH\Models\ShinsaModel.php(307): App\Models\BaseQueryModel->get_first_row('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = :shinsaTargetId:
+			WHERE
+				tsi.shinsa_id = :shinsaId:
+		', [...], 'array')
+ 6 APPPATH\Libraries\ShinsaLibrarie.php(143): App\Models\ShinsaModel->get_shinsa_target(3, 7)
+ 7 APPPATH\Controllers\Shinsa.php(119): App\Libraries\ShinsaLibrarie->shinsa_request_member(3, 7, [...], 'cancel')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-01-29 23:39:12 --> mysqli_sql_exception: Unknown column 'tsi.shinsa_date_st' in 'field list' in C:\xampp\htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n            SE...', 0)
+#1 C:\xampp\htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n            SE...')
+#2 C:\xampp\htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n            SE...')
+#3 C:\xampp\htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('\n            SE...', Array)
+#4 C:\xampp\htdocs\kasugaikyudo\production\app\Models\ShinsaModel.php(307): App\Models\BaseQueryModel->get_first_row('\n            SE...', Array, 'array')
+#5 C:\xampp\htdocs\kasugaikyudo\production\app\Libraries\ShinsaLibrarie.php(143): App\Models\ShinsaModel->get_shinsa_target(3, 7)
+#6 C:\xampp\htdocs\kasugaikyudo\production\app\Controllers\Shinsa.php(119): App\Libraries\ShinsaLibrarie->shinsa_request_member(3, 7, Array, 'cancel')
+#7 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+#8 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+#9 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\kasugaikyudo\production\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-01-29 23:39:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tsi.shinsa_date_st' in 'field list'
+[Method: POST, Route: shinsa/shinsa_request]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = :shinsaTargetId:
+			WHERE
+				tsi.shinsa_id = :shinsaId:
+		', [...])
+ 2 APPPATH\Models\ShinsaModel.php(307): App\Models\BaseQueryModel->get_first_row('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = :shinsaTargetId:
+			WHERE
+				tsi.shinsa_id = :shinsaId:
+		', [...], 'array')
+ 3 APPPATH\Libraries\ShinsaLibrarie.php(143): App\Models\ShinsaModel->get_shinsa_target(3, 7)
+ 4 APPPATH\Controllers\Shinsa.php(119): App\Libraries\ShinsaLibrarie->shinsa_request_member(3, 7, [...], 'cancel')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-29 23:39:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tsi.shinsa_date_st' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = 7
+			WHERE
+				tsi.shinsa_id = 3
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = 7
+			WHERE
+				tsi.shinsa_id = 3
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = :shinsaTargetId:
+			WHERE
+				tsi.shinsa_id = :shinsaId:
+		', [...])
+ 4 APPPATH\Models\ShinsaModel.php(307): App\Models\BaseQueryModel->get_first_row('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = :shinsaTargetId:
+			WHERE
+				tsi.shinsa_id = :shinsaId:
+		', [...], 'array')
+ 5 APPPATH\Libraries\ShinsaLibrarie.php(143): App\Models\ShinsaModel->get_shinsa_target(3, 7)
+ 6 APPPATH\Controllers\Shinsa.php(119): App\Libraries\ShinsaLibrarie->shinsa_request_member(3, 7, [...], 'cancel')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-29 23:39:12 --> [Caused by] mysqli_sql_exception: Unknown column 'tsi.shinsa_date_st' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = 7
+			WHERE
+				tsi.shinsa_id = 3
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = 7
+			WHERE
+				tsi.shinsa_id = 3
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = 7
+			WHERE
+				tsi.shinsa_id = 3
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = :shinsaTargetId:
+			WHERE
+				tsi.shinsa_id = :shinsaId:
+		', [...])
+ 5 APPPATH\Models\ShinsaModel.php(307): App\Models\BaseQueryModel->get_first_row('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = :shinsaTargetId:
+			WHERE
+				tsi.shinsa_id = :shinsaId:
+		', [...], 'array')
+ 6 APPPATH\Libraries\ShinsaLibrarie.php(143): App\Models\ShinsaModel->get_shinsa_target(3, 7)
+ 7 APPPATH\Controllers\Shinsa.php(119): App\Libraries\ShinsaLibrarie->shinsa_request_member(3, 7, [...], 'cancel')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-01-29 23:40:03 --> mysqli_sql_exception: Unknown column 'tsi.shinsa_date_st' in 'field list' in C:\xampp\htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n            SE...', 0)
+#1 C:\xampp\htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n            SE...')
+#2 C:\xampp\htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n            SE...')
+#3 C:\xampp\htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('\n            SE...', Array)
+#4 C:\xampp\htdocs\kasugaikyudo\production\app\Models\ShinsaModel.php(307): App\Models\BaseQueryModel->get_first_row('\n            SE...', Array, 'array')
+#5 C:\xampp\htdocs\kasugaikyudo\production\app\Libraries\ShinsaLibrarie.php(143): App\Models\ShinsaModel->get_shinsa_target(3, 7)
+#6 C:\xampp\htdocs\kasugaikyudo\production\app\Controllers\Shinsa.php(119): App\Libraries\ShinsaLibrarie->shinsa_request_member(3, 7, Array, 'join')
+#7 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+#8 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+#9 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\kasugaikyudo\production\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-01-29 23:40:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tsi.shinsa_date_st' in 'field list'
+[Method: POST, Route: shinsa/shinsa_request]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = :shinsaTargetId:
+			WHERE
+				tsi.shinsa_id = :shinsaId:
+		', [...])
+ 2 APPPATH\Models\ShinsaModel.php(307): App\Models\BaseQueryModel->get_first_row('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = :shinsaTargetId:
+			WHERE
+				tsi.shinsa_id = :shinsaId:
+		', [...], 'array')
+ 3 APPPATH\Libraries\ShinsaLibrarie.php(143): App\Models\ShinsaModel->get_shinsa_target(3, 7)
+ 4 APPPATH\Controllers\Shinsa.php(119): App\Libraries\ShinsaLibrarie->shinsa_request_member(3, 7, [...], 'join')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-29 23:40:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tsi.shinsa_date_st' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = 7
+			WHERE
+				tsi.shinsa_id = 3
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = 7
+			WHERE
+				tsi.shinsa_id = 3
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = :shinsaTargetId:
+			WHERE
+				tsi.shinsa_id = :shinsaId:
+		', [...])
+ 4 APPPATH\Models\ShinsaModel.php(307): App\Models\BaseQueryModel->get_first_row('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = :shinsaTargetId:
+			WHERE
+				tsi.shinsa_id = :shinsaId:
+		', [...], 'array')
+ 5 APPPATH\Libraries\ShinsaLibrarie.php(143): App\Models\ShinsaModel->get_shinsa_target(3, 7)
+ 6 APPPATH\Controllers\Shinsa.php(119): App\Libraries\ShinsaLibrarie->shinsa_request_member(3, 7, [...], 'join')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-29 23:40:03 --> [Caused by] mysqli_sql_exception: Unknown column 'tsi.shinsa_date_st' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = 7
+			WHERE
+				tsi.shinsa_id = 3
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = 7
+			WHERE
+				tsi.shinsa_id = 3
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = 7
+			WHERE
+				tsi.shinsa_id = 3
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = :shinsaTargetId:
+			WHERE
+				tsi.shinsa_id = :shinsaId:
+		', [...])
+ 5 APPPATH\Models\ShinsaModel.php(307): App\Models\BaseQueryModel->get_first_row('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = :shinsaTargetId:
+			WHERE
+				tsi.shinsa_id = :shinsaId:
+		', [...], 'array')
+ 6 APPPATH\Libraries\ShinsaLibrarie.php(143): App\Models\ShinsaModel->get_shinsa_target(3, 7)
+ 7 APPPATH\Controllers\Shinsa.php(119): App\Libraries\ShinsaLibrarie->shinsa_request_member(3, 7, [...], 'join')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-01-29 23:45:56 --> mysqli_sql_exception: Unknown column 'tsi.shinsa_date_st' in 'field list' in C:\xampp\htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\kasugaikyudo\production\system\Database\MySQLi\Connection.php(312): mysqli->query('\n            SE...', 0)
+#1 C:\xampp\htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\n            SE...')
+#2 C:\xampp\htdocs\kasugaikyudo\production\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\n            SE...')
+#3 C:\xampp\htdocs\kasugaikyudo\production\app\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('\n            SE...', Array)
+#4 C:\xampp\htdocs\kasugaikyudo\production\app\Models\ShinsaModel.php(307): App\Models\BaseQueryModel->get_first_row('\n            SE...', Array, 'array')
+#5 C:\xampp\htdocs\kasugaikyudo\production\app\Libraries\ShinsaLibrarie.php(143): App\Models\ShinsaModel->get_shinsa_target(3, 7)
+#6 C:\xampp\htdocs\kasugaikyudo\production\app\Controllers\Shinsa.php(119): App\Libraries\ShinsaLibrarie->shinsa_request_member(3, 7, Array, 'cancel')
+#7 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+#8 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+#9 C:\xampp\htdocs\kasugaikyudo\production\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\kasugaikyudo\production\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\kasugaikyudo\production\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\kasugaikyudo\production\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-01-29 23:45:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tsi.shinsa_date_st' in 'field list'
+[Method: POST, Route: shinsa/shinsa_request]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = :shinsaTargetId:
+			WHERE
+				tsi.shinsa_id = :shinsaId:
+		', [...])
+ 2 APPPATH\Models\ShinsaModel.php(307): App\Models\BaseQueryModel->get_first_row('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = :shinsaTargetId:
+			WHERE
+				tsi.shinsa_id = :shinsaId:
+		', [...], 'array')
+ 3 APPPATH\Libraries\ShinsaLibrarie.php(143): App\Models\ShinsaModel->get_shinsa_target(3, 7)
+ 4 APPPATH\Controllers\Shinsa.php(119): App\Libraries\ShinsaLibrarie->shinsa_request_member(3, 7, [...], 'cancel')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-29 23:45:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tsi.shinsa_date_st' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = 7
+			WHERE
+				tsi.shinsa_id = 3
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = 7
+			WHERE
+				tsi.shinsa_id = 3
+		')
+ 3 APPPATH\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = :shinsaTargetId:
+			WHERE
+				tsi.shinsa_id = :shinsaId:
+		', [...])
+ 4 APPPATH\Models\ShinsaModel.php(307): App\Models\BaseQueryModel->get_first_row('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = :shinsaTargetId:
+			WHERE
+				tsi.shinsa_id = :shinsaId:
+		', [...], 'array')
+ 5 APPPATH\Libraries\ShinsaLibrarie.php(143): App\Models\ShinsaModel->get_shinsa_target(3, 7)
+ 6 APPPATH\Controllers\Shinsa.php(119): App\Libraries\ShinsaLibrarie->shinsa_request_member(3, 7, [...], 'cancel')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-29 23:45:56 --> [Caused by] mysqli_sql_exception: Unknown column 'tsi.shinsa_date_st' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = 7
+			WHERE
+				tsi.shinsa_id = 3
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = 7
+			WHERE
+				tsi.shinsa_id = 3
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = 7
+			WHERE
+				tsi.shinsa_id = 3
+		')
+ 4 APPPATH\Models\BaseQueryModel.php(48): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = :shinsaTargetId:
+			WHERE
+				tsi.shinsa_id = :shinsaId:
+		', [...])
+ 5 APPPATH\Models\ShinsaModel.php(307): App\Models\BaseQueryModel->get_first_row('
+            SELECT 
+				msc.shinsa_class_name,
+				mst.shinsa_target_name,
+				tsi.shinsa_date_st,
+				tsi.shinsa_date_ed
+			FROM 
+				t_shinsa_info tsi
+				INNER JOIN m_shinsa_class msc
+					ON msc.shinsa_class_id = tsi.shinsa_class_id
+				INNER JOIN m_shinsa_target mst
+					ON mst.shinsa_class_id = msc.shinsa_class_id
+					AND mst.shinsa_target_id = :shinsaTargetId:
+			WHERE
+				tsi.shinsa_id = :shinsaId:
+		', [...], 'array')
+ 6 APPPATH\Libraries\ShinsaLibrarie.php(143): App\Models\ShinsaModel->get_shinsa_target(3, 7)
+ 7 APPPATH\Controllers\Shinsa.php(119): App\Libraries\ShinsaLibrarie->shinsa_request_member(3, 7, [...], 'cancel')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->ajax_shinsa_request()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

@@ -1,0 +1,58 @@
+#select_month_area {
+	display: table;
+	margin: 10px 0;
+	width: 96%;
+	}
+	#select_month_area #prev,
+	#select_month_area #view_month,
+	#select_month_area #next {
+		display: table-cell;
+		}
+		#select_month_area #prev,
+		#select_month_area #next {
+			width: 60px;
+			}
+		#select_month_area #prev {
+			text-align: left;
+			}
+		#select_month_area #view_month {
+			text-align: center;
+			font-size: 18px;
+			font-weight: bold;
+			}
+		#select_month_area #next {
+			text-align: right;
+			}
+		#select_month_area td.event {
+			text-align: left;
+			}
+		#set_schejule_area {
+			position: relative;
+			margin-top: 20px;
+			width: 100%;
+			text-align: center;
+			}
+			#set_schejule_area button {
+				/*margin: 0 20px;*/
+				padding: 4px 10px;
+				}
+				#set_schejule_area button#set_default_schejule_taiiku {
+					position: absolute;
+					right: 0;
+					top: 30px;
+					width: 150px;
+					}
+				#set_schejule_area button#set_default_schejule_ouji {
+					position: absolute;
+					right: 0;
+					top: 70px;
+					width: 150px;
+					}
+select { padding: 2px 6px; }
+select.taiiku {
+	background-color:#E8F198;
+	}
+
+@media screen and (max-width: 600px){
+
+}

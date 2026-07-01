@@ -1,0 +1,42 @@
+
+li.women {
+	color: #F00;
+	}
+
+/* 右寄せ・左寄せ・中央寄せを設定するタグのスタイル */
+.grade {
+	padding: 0.5em;
+	/*text-align: right;*/
+	background-color: ghostwhite;
+	}
+	.grade h3 {
+		font-weight: bold;
+		}
+	/* 縦書き設定・カラム数設定・height設定用タグのスタイル */
+	.grade p.member {
+		writing-mode: vertical-rl;
+		column-count: 1;
+		column-gap: 1em;
+		display: inline-block;
+		/*height: 600px;*/
+		text-align: justify;
+		vertical-align: top;
+		margin: 0 0.1em 0.5em 0;
+	    width: 2em;
+		}
+	.grade p.men {
+		}
+	.grade p.wem {
+		/*background-color: #ECCCCF;*/
+		color: #DF0174;
+		}
+
+/* 今年度会員の強調表示 */
+.member-new {
+	background-color: #fdfc97;
+}
+/* 今年度に昇段・昇級した会員の強調表示 */
+.rankup::after {
+    content: " ★";
+    color: #0f8300;
+}

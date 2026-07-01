@@ -1,0 +1,90 @@
+CRITICAL - 2025-01-25 14:37:04 --> ErrorException: Undefined array key "shinsa_offer_chiho"
+[Method: GET, Route: shinsa/detail/2]
+in APPPATH\Helpers\shinsa_helper.php on line 233.
+ 1 APPPATH\Helpers\shinsa_helper.php(233): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "shinsa_offer_chiho"', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Helpers\\shinsa_helper.php', 233)
+ 2 APPPATH\Views\shinsa\detail_chiho.php(4): get_shinsa_chiho_detail_html([...], [...], [...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\detail_chiho.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shinsa/detail_chiho', [], true)
+ 6 APPPATH\Controllers\Shinsa.php(94): view('shinsa/detail_chiho', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('2')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-25 14:38:19 --> ErrorException: Undefined array key "shinsa_offer_chiho"
+[Method: GET, Route: shinsa/detail/2]
+in APPPATH\Helpers\shinsa_helper.php on line 233.
+ 1 APPPATH\Helpers\shinsa_helper.php(233): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "shinsa_offer_chiho"', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Helpers\\shinsa_helper.php', 233)
+ 2 APPPATH\Views\shinsa\detail_chiho.php(4): get_shinsa_chiho_detail_html([...], [...], [...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\detail_chiho.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shinsa/detail_chiho', [], true)
+ 6 APPPATH\Controllers\Shinsa.php(94): view('shinsa/detail_chiho', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('2')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-25 14:57:29 --> ErrorException: Undefined array key "shinsa_offer_chuou"
+[Method: GET, Route: shinsa/detail/4]
+in APPPATH\Helpers\shinsa_helper.php on line 126.
+ 1 APPPATH\Helpers\shinsa_helper.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "shinsa_offer_chuou"', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Helpers\\shinsa_helper.php', 126)
+ 2 APPPATH\Views\shinsa\detail_chuou.php(4): get_shinsa_chuou_detail_html([...], [...], [...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\detail_chuou.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shinsa/detail_chuou', [], true)
+ 6 APPPATH\Controllers\Shinsa.php(94): view('shinsa/detail_chuou', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('4')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-25 14:57:48 --> ErrorException: Undefined array key "shinsa_offer_chuou"
+[Method: GET, Route: shinsa/detail/4]
+in APPPATH\Helpers\shinsa_helper.php on line 126.
+ 1 APPPATH\Helpers\shinsa_helper.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "shinsa_offer_chuou"', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Helpers\\shinsa_helper.php', 126)
+ 2 APPPATH\Views\shinsa\detail_chuou.php(4): get_shinsa_chuou_detail_html([...], [...], [...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\detail_chuou.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shinsa/detail_chuou', [], true)
+ 6 APPPATH\Controllers\Shinsa.php(94): view('shinsa/detail_chuou', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('4')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-25 14:57:54 --> ErrorException: Undefined array key "shinsa_offer_chuou"
+[Method: GET, Route: shinsa/detail/4]
+in APPPATH\Helpers\shinsa_helper.php on line 126.
+ 1 APPPATH\Helpers\shinsa_helper.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "shinsa_offer_chuou"', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Helpers\\shinsa_helper.php', 126)
+ 2 APPPATH\Views\shinsa\detail_chuou.php(4): get_shinsa_chuou_detail_html([...], [...], [...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\detail_chuou.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shinsa/detail_chuou', [], true)
+ 6 APPPATH\Controllers\Shinsa.php(94): view('shinsa/detail_chuou', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('4')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-25 14:58:49 --> ErrorException: Undefined array key "shinsa_offer_chuou"
+[Method: GET, Route: shinsa/detail/4]
+in APPPATH\Helpers\shinsa_helper.php on line 126.
+ 1 APPPATH\Helpers\shinsa_helper.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "shinsa_offer_chuou"', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Helpers\\shinsa_helper.php', 126)
+ 2 APPPATH\Views\shinsa\detail_chuou.php(4): get_shinsa_chuou_detail_html([...], [...], [...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\shinsa\\detail_chuou.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shinsa/detail_chuou', [], true)
+ 6 APPPATH\Controllers\Shinsa.php(94): view('shinsa/detail_chuou', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shinsa->detail('4')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shinsa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

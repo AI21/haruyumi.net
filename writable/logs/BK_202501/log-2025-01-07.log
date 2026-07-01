@@ -1,0 +1,22 @@
+CRITICAL - 2025-01-07 23:34:57 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "taikai/detail.php"
+[Method: GET, Route: taikai/detail/24/6]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('taikai/detail.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('taikai/detail', [], true)
+ 3 APPPATH\Controllers\Taikai.php(71): view('taikai/detail', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->detail('24', '6')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-07 23:52:09 --> ErrorException: Undefined variable $foote
+[Method: GET, Route: taikai/detail/24/5]
+in APPPATH\Controllers\Taikai.php on line 72.
+ 1 APPPATH\Controllers\Taikai.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $foote', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Controllers\\Taikai.php', 72)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Taikai->detail('24', '5')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taikai))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

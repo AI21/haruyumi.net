@@ -1,0 +1,64 @@
+CRITICAL - 2025-04-08 22:29:07 --> Error: Call to a member function get_event_list() on null
+[Method: GET, Route: calender]
+in APPPATH\Libraries\CalenderLibrarie.php on line 21.
+ 1 APPPATH\Controllers\Calender.php(37): App\Libraries\CalenderLibrarie->get_event_list()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Calender->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Calender))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-08 23:27:38 --> Error: Call to undefined function get_calender_html()
+[Method: GET, Route: calender]
+in APPPATH\Views\calender\index.php on line 6.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('calender/index', [], true)
+ 4 APPPATH\Controllers\Calender.php(46): view('calender/index')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Calender->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Calender))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-08 23:27:47 --> Error: Call to undefined function get_calender_html()
+[Method: GET, Route: calender]
+in APPPATH\Views\calender\index.php on line 6.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('calender/index', [], true)
+ 4 APPPATH\Controllers\Calender.php(46): view('calender/index')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Calender->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Calender))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-08 23:28:16 --> Error: Call to undefined function get_calender_html()
+[Method: GET, Route: calender]
+in APPPATH\Views\calender\index.php on line 6.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('calender/index', [], true)
+ 4 APPPATH\Controllers\Calender.php(46): view('calender/index')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Calender->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Calender))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-08 23:33:07 --> ErrorException: Undefined variable $setting
+[Method: GET, Route: calender]
+in APPPATH\Helpers\calender_helper.php on line 12.
+ 1 APPPATH\Helpers\calender_helper.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $setting', 'C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Helpers\\calender_helper.php', 12)
+ 2 APPPATH\Views\calender\index.php(6): get_calender_html([...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\kasugaikyudo\\production\\app\\Views\\calender\\index.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('calender/index', [], true)
+ 6 APPPATH\Controllers\Calender.php(44): view('calender/index')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Calender->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Calender))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

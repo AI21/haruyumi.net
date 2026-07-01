@@ -1,0 +1,30 @@
+CRITICAL - 2026-05-11 23:14:46 --> ErrorException: Undefined array key "officer_flg"
+[Method: GET, Route: document]
+in APPPATH\Helpers\document_helper.php on line 40.
+ 1 APPPATH\Helpers\document_helper.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "officer_flg"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\document_helper.php', 40)
+ 2 APPPATH\Views\document\index.php(6): get_document_tab_html([...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\document\\index.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('document/index', [], true)
+ 6 APPPATH\Controllers\Document.php(48): view('document/index')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Document->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Document))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-11 23:15:40 --> ErrorException: Undefined array key "officer_flg"
+[Method: GET, Route: document]
+in APPPATH\Helpers\document_helper.php on line 40.
+ 1 APPPATH\Helpers\document_helper.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "officer_flg"', 'C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Helpers\\document_helper.php', 40)
+ 2 APPPATH\Views\document\index.php(6): get_document_tab_html([...])
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp_htdocs\\kasugaikyudo\\production\\app\\Views\\document\\index.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('document/index', [], true)
+ 6 APPPATH\Controllers\Document.php(48): view('document/index')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Document->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Document))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
