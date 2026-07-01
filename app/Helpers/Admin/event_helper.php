@@ -196,6 +196,7 @@ function form_event_regist($eventClassId, $areaGroupList, $eventNameList, $syube
 function form_event_revision($eventDetail, $uploadFileNum) {
 
 	$html = '';
+	
 
 	// 審査名
 	$eventName = '';
