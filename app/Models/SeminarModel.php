@@ -120,7 +120,7 @@ class SeminarModel extends BaseQueryModel {
                 mke.kyokai_event_name
 			FROM
 				t_event_info kei
-			INNER JOIN m_event mke ON
+			INNER JOIN m_kyokai_event mke ON
 				mke.kyokai_event_id = kei.kyokai_event_id
 				AND mke.kyokai_event_id = :categoryId:
 			WHERE

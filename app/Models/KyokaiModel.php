@@ -78,7 +78,7 @@ class KyokaiModel extends BaseQueryModel {
 				t_event_info kei
 			LEFT JOIN m_kaijo mka ON
 				mka.kaijo_id = kei.kaijo_id
-			LEFT JOIN m_event mke ON
+			LEFT JOIN m_kyokai_event mke ON
 				mke.kyokai_event_id = kei.kyokai_event_id
 			WHERE
 				kei.fiscal_year_id = :fiscalYearId: 
@@ -110,7 +110,7 @@ class KyokaiModel extends BaseQueryModel {
                 mke.kyokai_event_name
 			FROM
 				t_event_info kei
-			INNER JOIN m_event mke ON
+			INNER JOIN m_kyokai_event mke ON
 				mke.kyokai_event_id = kei.kyokai_event_id
                 AND mke.kyokai_event_id IN (1,4,5,6,7)
 			WHERE
@@ -194,7 +194,7 @@ class KyokaiModel extends BaseQueryModel {
 				t_event_info kei
 			LEFT JOIN m_kaijo mka ON
 				mka.kaijo_id = kei.kaijo_id
-			LEFT JOIN m_event mke ON
+			LEFT JOIN m_kyokai_event mke ON
 				mke.kyokai_event_id = kei.kyokai_event_id
 			LEFT JOIN t_event_offer_member eof ON
 				eof.event_id = kei.event_id
